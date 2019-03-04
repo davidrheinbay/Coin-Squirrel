@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_04_142808) do
+ActiveRecord::Schema.define(version: 2019_03_04_150847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,27 @@ ActiveRecord::Schema.define(version: 2019_03_04_142808) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "transactions", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "transaction_type"
+    t.integer "gmv_eur"
+    t.float "commission_perc"
+    t.float "user_commission_share_perc"
+    t.float "user_commission_amount"
+    t.float "eur_currency_rate"
+    t.string "link_used"
+    t.bigint "partner_id"
+    t.bigint "game_id"
+    t.datetime "transaction_confirmed_date"
+    t.datetime "transaction_completed_date"
+    t.string "state"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_transactions_on_game_id"
+    t.index ["partner_id"], name: "index_transactions_on_partner_id"
+    t.index ["user_id"], name: "index_transactions_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -55,9 +76,20 @@ ActiveRecord::Schema.define(version: 2019_03_04_142808) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "profile_image"
+    t.string "first_name"
+    t.string "last_name"
+    t.bigint "game_id"
+    t.integer "balance_cents", default: 0, null: false
+    t.string "balance_currency", default: "EUR", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["game_id"], name: "index_users_on_game_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "exchange_rates", "games"
+  add_foreign_key "transactions", "games"
+  add_foreign_key "transactions", "partners"
+  add_foreign_key "transactions", "users"
+  add_foreign_key "users", "games"
 end
