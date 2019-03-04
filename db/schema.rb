@@ -77,6 +77,8 @@ ActiveRecord::Schema.define(version: 2019_03_04_150847) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "profile_image"
+    t.string "first_name"
+    t.string "last_name"
     t.bigint "game_id"
     t.integer "balance_cents", default: 0, null: false
     t.string "balance_currency", default: "EUR", null: false
