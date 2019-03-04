@@ -10,10 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_04_140238) do
+ActiveRecord::Schema.define(version: 2019_03_04_142808) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "exchange_rates", force: :cascade do |t|
+    t.string "currency_origin_short"
+    t.string "currency_target_short"
+    t.float "rate"
+    t.datetime "date_created"
+    t.datetime "date_updated"
+    t.bigint "game_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_exchange_rates_on_game_id"
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.string "name"
+    t.string "currency_name"
+    t.string "currency_short"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "partners", force: :cascade do |t|
     t.string "name"
@@ -39,4 +59,5 @@ ActiveRecord::Schema.define(version: 2019_03_04_140238) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "exchange_rates", "games"
 end
