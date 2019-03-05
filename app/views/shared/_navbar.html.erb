@@ -11,7 +11,7 @@
 
       <!-- Links when logged in -->
       <%= link_to "Go Shopping", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Your Game", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Your Game", game_path(current_user.game_id), class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Transactions", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
