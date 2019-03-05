@@ -1,3 +1,5 @@
+require 'date'
+
 # destroying everything
 ExchangeRate.destroy_all
 Game.destroy_all
@@ -231,6 +233,153 @@ exchange_rates.each do |exchange_rate|
 end
 
 p "finished seeding exchange rates"
+
+# seeding transactions
+
+p "starting to seed transactions"
+
+User.all.each do |user|
+  transactions = [
+    {
+      data: {
+        user: user,
+        transaction_type: "cash_out",
+        game: Game.first,
+        gmv_eur_cents: 0,
+        commission_perc: 0,
+        user_commission_share_perc: 0,
+        user_commission_amount_cents: 150,
+        eur_currency_rate: 100,
+        transaction_confirmed_date: Date.strptime('03-12-2018', '%d-%m-%Y'),
+        transaction_completed_date: Date.strptime('04-12-2018', '%d-%m-%Y'),
+        state: "completed",
+        link_used: "#"
+      }
+    },
+    {
+      data: {
+        user: user,
+        transaction_type: "cash_out",
+        game: Game.first,
+        gmv_eur_cents: 0,
+        commission_perc: 0,
+        user_commission_share_perc: 0,
+        user_commission_amount_cents: 200,
+        eur_currency_rate: 100,
+        transaction_confirmed_date: Date.strptime('02-01-2019', '%d-%m-%Y'),
+        transaction_completed_date: Date.strptime('15-01-2019', '%d-%m-%Y'),
+        state: "completed",
+        link_used: "#"
+      }
+    },
+    {
+      data: {
+        user: user,
+        transaction_type: "cash_out",
+        game: Game.first,
+        gmv_eur_cents: 0,
+        commission_perc: 0,
+        user_commission_share_perc: 0,
+        user_commission_amount_cents: 500,
+        eur_currency_rate: 100,
+        transaction_confirmed_date: Date.today,
+        transaction_completed_date: nil,
+        state: "confirmed",
+        link_used: "#"
+      }
+    },
+    {
+      data: {
+        user: user,
+        transaction_type: "cash_in",
+        game: Game.first,
+        gmv_eur_cents: 20000,
+        commission_perc: 10,
+        user_commission_share_perc: 5,
+        user_commission_amount_cents: 1000,
+        eur_currency_rate: 100,
+        transaction_confirmed_date: Date.strptime('01-01-2019', '%d-%m-%Y'),
+        transaction_completed_date: Date.strptime('01-01-2019', '%d-%m-%Y'),
+        state: "completed",
+        link_used: "#",
+        partner: Partner.first
+      }
+    },
+    {
+      data: {
+        user: user,
+        transaction_type: "cash_in",
+        game: Game.first,
+        gmv_eur_cents: 4000,
+        commission_perc: 10,
+        user_commission_share_perc: 5,
+        user_commission_amount_cents: 200,
+        eur_currency_rate: 100,
+        transaction_confirmed_date: Date.strptime('12-02-2019', '%d-%m-%Y'),
+        transaction_completed_date: Date.strptime('15-02-2019', '%d-%m-%Y'),
+        state: "completed",
+        link_used: "#",
+        partner: Partner.second
+      }
+    },
+    {
+      data: {
+        user: user,
+        transaction_type: "cash_in",
+        game: Game.first,
+        gmv_eur_cents: 3000,
+        commission_perc: 10,
+        user_commission_share_perc: 5,
+        user_commission_amount_cents: 150,
+        eur_currency_rate: 100,
+        transaction_confirmed_date: Date.today,
+        transaction_completed_date: nil,
+        state: "confirmed",
+        link_used: "#",
+        partner: Partner.third
+      }
+    },
+  ]
+
+  p "starting to seed transactions for user: #{user.email}"
+
+  transactions.each do |transaction|
+    transactionDB = Transaction.new(transaction[:data])
+    transactionDB.save!
+  end
+
+  p "finished seeding transactions for user: #{user.email}"
+
+end
+
+p "finished seeding transactions"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
