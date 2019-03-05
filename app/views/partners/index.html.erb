@@ -1,0 +1,13 @@
+<div class="container">
+  <% @partners.each do |partner| %>
+    <div>
+    <p><%= partner.name %></p>
+    <p><%= partner.company_entity_name %></p>
+    <p><%= partner.commission_perc %></p>
+    <p><%= partner.user_commission_perc %></p>
+    <%= image_tag partner.logo_image %>
+    <%= image_tag partner.card_image %>
+    </div>
+  <% end %>
+</div>
+
