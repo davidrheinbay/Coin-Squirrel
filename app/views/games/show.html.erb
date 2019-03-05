@@ -5,10 +5,19 @@
       <div class="col-md-6">
         <div class="store-card">
           <%= image_tag "#{item.image}", alt: "alttext", class: 'store-image' %>
-          <div class="store-image">
+          <div class="store-card-content">
             <p><%= item.name %></p>
             <p><%= item.rarity %></p>
             <p>cost: <%= item.cost %> V-Bucks</p>
+            <% if current_user.balance_cents >= item.cost.to_i %>
+              <div class="store-progression-green">
+
+              </div>
+            <% else %>
+              <div class="store-progression-grey">
+                <div class="store-progression-red" style="width: <%=(current_user.balance_cents / item.cost.to_f) * 100 %>% ;"></div>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>

@@ -16,8 +16,28 @@
   img {
     margin-left: -50px;
   }
+}
 
-  div {
-    margin-left: 10px;
-  }
+.store-card-content {
+  margin-left: 10px;
+}
+
+.store-progression-green {
+  height: 20px;
+  width: 300px;
+  background-color: green;
+}
+
+.store-progression-grey {
+  width: 300px;
+  height: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: right;
+}
+.store-progression-red {
+  height: 20px;
+  width: 100px;
+  background-color: red;
+  margin-left: 0px;
 }
