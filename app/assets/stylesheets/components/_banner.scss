@@ -28,9 +28,8 @@
 
 .partners-wrapper {
   background-color: $light-grey;
-  height: 400px;
-  margin: 100px -50px;
-
+  margin: 100px -50px 30px -50px;
+  padding: 0px 50px;
 }
 
 .partners-banner {
@@ -38,15 +37,26 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+  padding: 30px;
 }
 
-.partners-element {
-  background-size: cover;
-  width: 25%;
+.partners-logo {
+  display: flex;
+  align-items: center;
+  width: 200px;
   height: 50px;
-  margin: 10px;
+  margin: 40px 10px;
+
+  img {
+    width: 100%;
+  }
 }
 
 .zalando {
   background-image: url('https://res.cloudinary.com/dmr1qubzk/image/upload/v1551801638/lsiozdjsyvqmvtbgzraw.svg');
+}
+
+.cta-banner {
+  margin-top: 70px;
+  text-align: center;
 }

@@ -21,6 +21,7 @@
   <div class="background-card card-shadow-strong card-tmm-60">
 
     <!-- How it works -->
+    <div class="container">
     <h1>How does it work?</h1>
     <div class="row">
       <div class="col-xs-6 steps-column">
@@ -74,6 +75,14 @@
       </div>
     </div>
 
+    <!-- CTA -->
+    <div class="cta-banner">
+      <h2>Convinced?</h2>
+      <%= link_to new_user_registration_path do  %>
+          <button class="btn-large-solid">Start Collecting Now!</button>
+      <% end %>
+    </div>
+    </div>
     <!-- Partners -->
 
     <div class="partners-wrapper">
@@ -81,8 +90,8 @@
         <h1>Where can you earn coins?</h1>
         <div class="partners-banner">
         <% @partners.each do |partner| %>
-        <div class="partners-element">
-          <%= cl_image_tag partner.logo_image, height: 50, width: 100, crop: :fill %>
+        <div class="partners-logo">
+          <%= cl_image_tag partner.logo_image %>
         </div>
         <% end %>
 
@@ -93,9 +102,32 @@
 
 
     <!-- Games -->
+  <div class="container">
+
+    <h1>Fortnite not your game? Find yours!</h1>
+
+    <!--  Search Form  -->
+    <!-- change root path to Game#Show Path -->
+    <%= form_tag root_path, class:"form-inline",method: :get do %>
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+      placeholder: "Fortnite, Dota2, ..." %>
+      <%= submit_tag "Find Game", class:"btn btn-medium-solid" %>
+      <% end %>
+      <br>
+      <br>
 
 
-    <!-- Closing Card -->
+
+
+  </div>
+
+
+
+
+
+  <!-- Closing Card -->
   </div>
 
   <!-- Footer -->

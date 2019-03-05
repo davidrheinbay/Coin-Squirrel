@@ -32,3 +32,18 @@
 .btn-light:hover {
 
 }
+
+
+.btn-large-solid {
+  padding: 10px 30px;
+  background-color: $yellow;
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 50%;
+  font-size: 30px;
+  color: $dark-grey;
+}
+
+.btn-large-solid:hover {
+  font-weight: bolder;
+}
