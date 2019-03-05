@@ -1,0 +1,59 @@
+
+<h2>Pickaxes</h2>
+<div class="row">
+  <% @items.each do |item| %>
+    <% if item['item']['type'] == 'pickaxe' %>
+      <div class="col-md-4">
+        <p><%= item['name'] %></p>
+        <p><%= item['item']['rarity'] %></p>
+        <%= image_tag "#{item['item']['image']}", alt: "alttext", class: 'store-image' %>
+        <p>cost: <%= item['cost'] %> V-Bucks</p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<h2>Skins</h2>
+<div class="row">
+  <% @items.each do |item| %>
+    <% if item['item']['type'] == 'outfit' %>
+      <div class="col-md-4">
+        <p><%= item['name'] %></p>
+        <p><%= item['item']['rarity'] %></p>
+        <%= image_tag "#{item['item']['image']}", alt: "alttext", class: 'store-image' %>
+        <p>cost: <%= item['cost'] %> V-Bucks</p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<h2>Emotes</h2>
+<div class="row">
+  <% @items.each do |item| %>
+    <% if item['item']['type'] == 'emote' %>
+      <div class="col-md-4">
+        <p><%= item['name'] %></p>
+        <p><%= item['item']['rarity'] %></p>
+        <%= image_tag "#{item['item']['images']['background']}", alt: "alttext", class: 'store-image' %>
+        <p>cost: <%= item['cost'] %> V-Bucks</p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<h2>Glider</h2>
+<div class="row">
+  <% @items.each do |item| %>
+    <% if item['item']['type'] == 'glider' %>
+      <div class="col-md-4">
+        <p><%= item['name'] %></p>
+        <p><%= item['item']['rarity'] %></p>
+        <%= image_tag "#{item['item']['image']}", alt: "alttext", class: 'store-image' %>
+        <p>cost: <%= item['cost'] %> V-Bucks</p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+
+
