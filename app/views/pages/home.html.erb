@@ -1,2 +1,105 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- Banner -->
+<div class="banner">
+  <div class="container">
+    <h1>Coin Squirrel</h1>
+    <p>Earn in-game rewards for your favorite game by shopping online</p>
+    <!--  Search Form  -->
+    <!-- change root path to Game#Show Path -->
+    <%= form_tag root_path, class:"form-inline",method: :get do %>
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+      placeholder: "Fortnite, Dota2, ..."
+      %>
+      <%= submit_tag "Find Game", class:"btn btn-medium-solid" %>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="background-card card-shadow-strong card-tmm-60">
+  <div class="card-content-section">
+    <div class="how-works">
+      <div class="step-cards">
+        <div class="steps-card" id="search">
+          <i class="fas fa-search fa-6x"></i>
+          <div>
+            <p>Search through our fast libary of coaching offers from coaches all over the world</p>
+          </div>
+        </div>
+        <div class="steps-card" id="create">
+          <i class="fas fa-user-plus fa-6x"></i>
+          <div>
+            <p>Create a free acount to have unlimeted access to our services for life</p>
+          </div>
+        </div>
+        <div class="steps-card" id="book">
+          <i class="fas fa-book fa-6x"></i>
+          <div>
+            <p>Make your first booking with your perfect coach at the right time</p>
+          </div>
+        </div>
+        <div class="steps-card" id="check">
+          <i class="fas fa-check-circle fa-6x"></i>
+          <div>
+            <p>Get the confirmation from your coach and start gaming</p>
+          </div>
+        </div>
+        <div class="steps-card" id="teach">
+          <i class="fas fa-chalkboard-teacher fa-6x"></i>
+          <div>
+            <p>Proof yourself become a coach and make your passion to your job.</p>
+          </div>
+        </div>
+      </div>
+      <div class="information-card">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <%= render 'components/footer' %>

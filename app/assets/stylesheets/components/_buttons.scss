@@ -1,0 +1,34 @@
+.btn-medium-solid {
+  padding: 12px 30px;
+  background-color: $yellow;
+  border-radius: 3px;
+  color: white;
+  font-size: 12px;
+  min-width: 120px;
+
+   a {
+    text-decoration: none;
+  }
+}
+
+.btn-medium:hover {
+
+}
+
+.btn-medium-light {
+  background-color: white;
+  color: $yellow;
+  padding: 12px 30px;
+  border-radius: 3px;
+  border: 1px solid $yellow;
+  font-size: 12px;
+  min-width: 120px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.btn-light:hover {
+
+}

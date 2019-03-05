@@ -9,6 +9,7 @@ $headings-font-family:    $headers-font;
 $body-bg:                 $light-gray;
 $font-size-base: 18px;
 
+
 // Colors
 $gray-base:       $gray;
 $brand-primary:   $blue;
@@ -16,6 +17,14 @@ $brand-success:   $green;
 $brand-info:      $yellow;
 $brand-danger:    $red;
 $brand-warning:   $orange;
+
+$yellow: #F6C535;
+$light-yellow: #FADF90;
+$grey: #BABABA;
+$light-grey: rgba(247,247,247, 1);
+$dark-grey: rgba(77,77,77, 1);
+$light-green: #d0fabb;
+$light-red: #ffbfb1;
 
 // Buttons & inputs' radius
 $border-radius-base:  2px;
