@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_04_150847) do
+ActiveRecord::Schema.define(version: 2019_03_05_161113) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 2019_03_04_150847) do
     t.string "currency_short"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "card_image"
+    t.string "logo_image"
   end
 
   create_table "partners", force: :cascade do |t|
@@ -50,10 +52,12 @@ ActiveRecord::Schema.define(version: 2019_03_04_150847) do
   create_table "transactions", force: :cascade do |t|
     t.bigint "user_id"
     t.string "transaction_type"
-    t.integer "gmv_eur"
+    t.integer "gmv_eur_cents", default: 0, null: false
+    t.string "gmv_eur_currency", default: "EUR", null: false
     t.float "commission_perc"
     t.float "user_commission_share_perc"
-    t.float "user_commission_amount"
+    t.integer "user_commission_amount_cents", default: 0, null: false
+    t.string "user_commission_amount_currency", default: "EUR", null: false
     t.float "eur_currency_rate"
     t.string "link_used"
     t.bigint "partner_id"
