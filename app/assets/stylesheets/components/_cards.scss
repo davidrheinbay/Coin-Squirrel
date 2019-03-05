@@ -1,7 +1,3 @@
-.card-undo {
-  margin-top: 80px;
-
-}
 // Card Properties -------------------------------------------------------------
 
 // Box Shadow
@@ -11,7 +7,7 @@
 }
 
 .card-shadow-light {
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  box-shadow: 1px 1px 2px rgba(0,0,0,.1);
 }
 
 // Box Margin-Top
@@ -20,6 +16,12 @@
 }
 
 // Cards -----------------------------------------------------------------------
+
+// Card Container
+
+.cards {
+  margin-top: 30px;
+}
 
 // Background Card
 
@@ -39,49 +41,27 @@
 // Cards
 
 
-// Offer Card
-.undo-offer-head {
+// Partner Card
+.undo-partner-head {
   margin-top: 60px;
 }
 
-.offer-card {
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
+.partner-card {
+  border-radius: 5px;
   background-color: #fff;
 
-  .card-head {
-    // Offset Head
-    margin-top: -60px;
-  }
+    img {
+    width: 100%;
 
-  .card-body {
-    margin: 20px 0px;
-    text-align: left;
-
-    h2 {
-      margin: 5px;
     }
+  .card_head {
+    padding: 0px;
+    border-bottom: 1px solid $grey;
+
   }
 
-  .card-foot {
-
-  }
-
-  img {
-    border-radius: 50%;
-    height: 120px;
-    width: 120px;
-  }
-
-  p {
-    font-size: 15px;
-    color: $grey;
-  }
-
-  a {
-    color: $grey;
-    font-size: 13px;
+  .card_body {
+    padding: 20px;
   }
 }
 

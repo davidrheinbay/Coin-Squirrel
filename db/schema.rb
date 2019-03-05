@@ -50,12 +50,10 @@ ActiveRecord::Schema.define(version: 2019_03_04_150847) do
   create_table "transactions", force: :cascade do |t|
     t.bigint "user_id"
     t.string "transaction_type"
-    t.integer "gmv_eur_cents", default: 0, null: false
-    t.string "gmv_eur_currency", default: "EUR", null: false
+    t.integer "gmv_eur"
     t.float "commission_perc"
     t.float "user_commission_share_perc"
-    t.integer "user_commission_amount_cents", default: 0, null: false
-    t.string "user_commission_amount_currency", default: "EUR", null: false
+    t.float "user_commission_amount"
     t.float "eur_currency_rate"
     t.string "link_used"
     t.bigint "partner_id"
