@@ -1,4 +1,19 @@
 .store-image {
+  height: 175px;
+  width: 175px;
+  border-radius: 15px;
+}
+
+.store-card {
+  display: flex;
+  align-items: center;
   height: 200px;
-  width: 200px;
+  width: 500px;
+  background-color: #E4E4E4;
+  margin-top: 20px;
+  border-radius: 15px;
+
+  img {
+    margin-left: -50px;
+  }
 }
