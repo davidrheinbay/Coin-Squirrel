@@ -1,13 +1,30 @@
 require 'date'
 
 # destroying everything
+
+puts "starting to destroy"
+
+puts " destroying all the exchange rates"
+
 ExchangeRate.destroy_all
+
+puts " destroying all the games"
+
 Game.destroy_all
+
+puts " destroying all the partners"
+
 Partner.destroy_all
+
+puts " destroying all the users"
+
 User.destroy_all
 
+puts "finished destroying / starting to seed"
 
 # seeding new partners, delivery_hero, zalando, asos, xpedia, home24
+
+puts " starting to seed partners"
 
 partners = [
   {
@@ -77,7 +94,6 @@ partners = [
   }
 ]
 
-p "starting to seed partners"
 
 partners.each do |partner|
   partnerDB = Partner.new(partner[:data])
@@ -86,9 +102,11 @@ partners.each do |partner|
   partnerDB.save!
 end
 
-p "finished seeding partners"
+puts " finished seeding partners"
 
 # seeding games, fortnite
+
+puts " starting to seed games"
 
 games = [
   {
@@ -104,7 +122,6 @@ games = [
   }
 ]
 
-p "starting to seed games"
 
 games.each do |game|
   gameDB = Game.new(game[:data])
@@ -113,9 +130,11 @@ games.each do |game|
   gameDB.save!
 end
 
-p "finished seeding games"
+puts " finished seeding games"
 
 # seeding users
+
+puts " starting to seed users"
 
 users = [
   {
@@ -190,7 +209,6 @@ users = [
   }
 ]
 
-p "starting to seed users"
 
 users.each do |user|
   userDB = User.new(user[:data])
@@ -200,9 +218,11 @@ users.each do |user|
   userDB.save!
 end
 
-p "finished seeding users"
+puts " finished seeding users"
 
 # seeding exchange rates
+
+puts " starting to seed exchange rates"
 
 exchange_rates = [
   {
@@ -229,18 +249,18 @@ exchange_rates = [
   }
 ]
 
-p "starting to seed exchange rates"
 
 exchange_rates.each do |exchange_rate|
   exchange_rateDB = ExchangeRate.new(exchange_rate[:data])
   exchange_rateDB.save!
 end
 
-p "finished seeding exchange rates"
+puts " finished seeding exchange rates"
 
 # seeding transactions
 
-p "starting to seed transactions"
+puts " starting to seed transactions"
+puts "   for User:"
 
 User.all.each do |user|
   transactions = [
@@ -345,20 +365,19 @@ User.all.each do |user|
     },
   ]
 
-  p "starting to seed transactions for user: #{user.email}"
 
   transactions.each do |transaction|
     transactionDB = Transaction.new(transaction[:data])
     transactionDB.save!
   end
 
-  p "finished seeding transactions for user: #{user.email}"
+  puts "     #{user.email}"
 
 end
 
-p "finished seeding transactions"
+puts " finished seeding transactions"
 
-
+puts "finished seeding"
 
 
 
