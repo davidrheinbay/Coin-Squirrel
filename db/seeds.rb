@@ -165,7 +165,7 @@ users = [
       balance_currency: "EUR"
     },
     urls: {
-
+      profile_image_url: 'http://fanaru.com/my-neighbor-totoro/image/185574-my-neighbor-totoro-totoro.png'
     }
   },
   {

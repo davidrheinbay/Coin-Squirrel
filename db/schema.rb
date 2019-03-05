@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_04_150847) do
+ActiveRecord::Schema.define(version: 2019_03_05_155717) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(version: 2019_03_04_150847) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "profile_image"
+    t.string "profile_image", default: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1551801247/765-default-avatar.png"
     t.string "first_name"
     t.string "last_name"
     t.bigint "game_id"
