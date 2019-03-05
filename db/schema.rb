@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 2019_03_05_161113) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "profile_image"
+    t.string "profile_image", default: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1551801247/765-default-avatar.png"
     t.string "first_name"
     t.string "last_name"
     t.bigint "game_id"
