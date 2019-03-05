@@ -98,6 +98,8 @@ games = [
       currency_short: "Vindertech Bucks"
     },
     urls: {
+      card_image_url: "https://cdn2.unrealengine.com/Fortnite%2Fbattle-royale%2Fseason6-social-1920x1080-0a72ec2f35dfe5be6cf8a77ec16063cca4db7046.jpg",
+      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/0/0e/FortniteLogo.svg"
     }
   }
 ]
@@ -106,6 +108,8 @@ p "starting to seed games"
 
 games.each do |game|
   gameDB = Game.new(game[:data])
+  gameDB.remote_card_image_url = game[:urls][:card_image_url]
+  gameDB.remote_logo_image_url = game[:urls][:logo_image_url]
   gameDB.save!
 end
 
@@ -167,7 +171,7 @@ users = [
       balance_currency: "EUR"
     },
     urls: {
-
+      profile_image_url: 'http://fanaru.com/my-neighbor-totoro/image/185574-my-neighbor-totoro-totoro.png'
     }
   },
   {

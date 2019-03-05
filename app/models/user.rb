@@ -14,6 +14,6 @@ class User < ApplicationRecord
   # make cents only integers
   monetize :balance_cents
 
-  # includes Profiele Image Uploader in User
+  # includes Profile Image Uploader in User
   mount_uploader :profile_image, ProfileImageUploader
 end

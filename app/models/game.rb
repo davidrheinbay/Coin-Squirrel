@@ -6,4 +6,8 @@ class Game < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :currency_name, presence: true
   validates :currency_short, presence: true
+
+  # includes image uploaders in Partner
+  mount_uploader :logo_image, LogoImageUploader
+  mount_uploader :card_image, CardImageUploader
 end
