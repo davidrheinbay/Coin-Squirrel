@@ -21,7 +21,7 @@ class FortniteItemsLoader
       FortniteItem.new(
         name: item['name'],
         rarity: item['item']['rarity'],
-        image: item['item']['image'],
+        image: item['item']['images']['background'],
         cost: item['cost']
       )
     end
