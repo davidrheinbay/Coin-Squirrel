@@ -1,45 +1,5 @@
 .how-works {
   display: flex;
   align-items: center;
-}
-
-
-// Classes added for animations in java script
-
-
-.add-picture-search {
-  background-color: none;
-  background-image: url("https://res.cloudinary.com/dwpuhi2vo/image/upload/v1551453257/searching.gif");
-  background-size: cover;
-  margin-bottom: 250px;
-}
-
-
-.add-picture-create {
-  background-color: none;
-  background-image: url('https://res.cloudinary.com/dwpuhi2vo/image/upload/v1551453256/create.gif');
-  background-size: cover;
-  margin-top: 0px;
-  height: 600px;
-}
-
-.add-picture-book {
-  background-color: none;
-  background-image: url('https://res.cloudinary.com/dwpuhi2vo/image/upload/v1551453261/book.gif');
-  background-size: cover;
-  margin-bottom: 100px;
-}
-
-.add-picture-check {
-  background-color: none;
-  background-image: url('https://res.cloudinary.com/dwpuhi2vo/image/upload/v1551453256/check.gif');
-  background-size: cover;
-  margin-bottom: 100px;
-}
-
-.add-picture-teach {
-  background-color: none;
-  background-image: url('https://res.cloudinary.com/dwpuhi2vo/image/upload/v1551453257/teaching.gif');
-  background-size: cover;
-  margin-bottom: 100px;
+  justify-content: space-around;
 }

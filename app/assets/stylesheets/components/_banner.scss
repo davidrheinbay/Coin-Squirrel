@@ -26,3 +26,27 @@
 }
 
 
+.partners-wrapper {
+  background-color: $light-grey;
+  height: 400px;
+  margin: 100px -50px;
+
+}
+
+.partners-banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.partners-element {
+  background-size: cover;
+  width: 25%;
+  height: 50px;
+  margin: 10px;
+}
+
+.zalando {
+  background-image: url('https://res.cloudinary.com/dmr1qubzk/image/upload/v1551801638/lsiozdjsyvqmvtbgzraw.svg');
+}

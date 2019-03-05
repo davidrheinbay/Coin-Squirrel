@@ -6,57 +6,98 @@
     <!--  Search Form  -->
     <!-- change root path to Game#Show Path -->
     <%= form_tag root_path, class:"form-inline",method: :get do %>
-      <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Fortnite, Dota2, ..." %>
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+      placeholder: "Fortnite, Dota2, ..." %>
       <%= submit_tag "Find Game", class:"btn btn-medium-solid" %>
-    <% end %>
-    <br>
-    <br>
-  </div>
-</div>
-
-<!-- Content -->
-<div class="background-card card-shadow-strong card-tmm-60">
-  <div class="card-content-section">
-    <div class="how-works">
-      <div class="step-cards">
-        <div class="steps-card" id="search">
-          <i class="fas fa-search fa-6x"></i>
-          <div>
-            <p>Find your favorite game and checkout newest in-game offers</p>
-          </div>
-        </div>
-        <div class="steps-card" id="create">
-          <i class="fas fa-user-plus fa-6x"></i>
-          <div>
-            <p>Create a free acount and have unlimited access to coin squirrel services</p>
-          </div>
-        </div>
-        <div class="steps-card" id="book">
-          <i class="fas fa-shopping-cart fa-6x"></i>
-          <div>
-            <p>Easily access all our partners and shop online</p>
-          </div>
-        </div>
-        <div class="steps-card" id="check">
-          <i class="fas fa-check-circle fa-6x"></i>
-          <div>
-            <p>Earn coins for every purchase you make and save for your favorite item</p>
-          </div>
-        </div>
-        <div class="steps-card" id="teach">
-          <i class="fas fa-coins fa-6x"></i>
-          <div>
-            <p>Pay out your balance and recieve a gift card to buy the item you were saving for</p>
-          </div>
-        </div>
-      </div>
-      <div class="information-card">
-      </div>
+      <% end %>
+      <br>
+      <br>
     </div>
   </div>
-</div>
 
-<%#= render 'components/footer' %>
+  <!-- Content -->
+  <div class="background-card card-shadow-strong card-tmm-60">
+
+    <!-- How it works -->
+    <h1>How does it work?</h1>
+    <div class="row">
+      <div class="col-xs-6 steps-column">
+        <div class="steps-card" id="search">
+          <i>1.</i><i class="fas fa-search fa-6x"></i>
+          <div>
+            <h4>Find your favorite game and checkout newest in-game offers</h4>
+          </div>
+        </div>
+        <div class="steps-card">
+          <%= image_tag "logo.png" %>
+        </div>
+        <div class="steps-card" id="book">
+          <i>3.</i><i class="fas fa-shopping-cart fa-6x"></i>
+          <div>
+            <h4>Easily access all our partners and shop online</h4>
+          </div>
+        </div>
+        <div class="image-card">
+          <%= image_tag "fortnite_v-bucks.png" %>
+        </div>
+        <div class="steps-card" id="teach">
+          <i>5.</i><i class="fas fa-coins fa-6x"></i>
+          <div>
+            <h4>Pay out your balance and recieve a gift card to buy the item you were saving for</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 steps-column">
+        <div class="image-card">
+          <%= image_tag "fortnite_characters.png" %>
+        </div>
+        <div class="steps-card" id="create">
+          <i>2.</i><i class="fas fa-user-plus fa-6x"></i>
+          <div>
+            <h4>Create a free acount and have unlimited access to coin squirrel services</h4>
+          </div>
+        </div>
+        <div class="image-card">
+          <%= image_tag "fortnite_shopping-cart.png" %>
+        </div>
+        <div class="steps-card" id="check">
+          <i>4.</i><i class="fas fa-check-circle fa-6x"></i>
+          <div>
+            <h4>Earn coins for every purchase you make and save for your favorite item</h4>
+          </div>
+        </div>
+        <div class="image-card">
+          <%= image_tag "fortnite_battle_pass.png" %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partners -->
+
+    <div class="partners-wrapper">
+      <div class="container">
+        <h1>Where can you earn coins?</h1>
+        <div class="partners-banner">
+        <% @partners.each do |partner| %>
+        <div class="partners-element">
+          <%= cl_image_tag partner.logo_image, height: 50, width: 100, crop: :fill %>
+        </div>
+        <% end %>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Games -->
+
+
+    <!-- Closing Card -->
+  </div>
+
+  <!-- Footer -->
+
+  <%= render 'components/footer' %>
