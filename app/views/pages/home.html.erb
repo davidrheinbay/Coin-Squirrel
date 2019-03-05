@@ -6,18 +6,19 @@
     <!--  Search Form  -->
     <!-- change root path to Game#Show Path -->
     <%= form_tag root_path, class:"form-inline",method: :get do %>
-    <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-      placeholder: "Fortnite, Dota2, ..."
-      %>
+      <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Fortnite, Dota2, ..." %>
       <%= submit_tag "Find Game", class:"btn btn-medium-solid" %>
-      <% end %>
-    </div>
+    <% end %>
+    <br>
+    <br>
   </div>
+</div>
 
-  <!-- Content -->
-  <div class="background-card card-shadow-strong card-tmm-60">
+<!-- Content -->
+<div class="background-card card-shadow-strong card-tmm-60">
   <div class="card-content-section">
     <div class="how-works">
       <div class="step-cards">
@@ -58,48 +59,4 @@
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <%= render 'components/footer' %>
+<%#= render 'components/footer' %>
