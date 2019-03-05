@@ -12,9 +12,9 @@ partners = [
     data: {
       name: "Zalando",
       company_entity_name: "Zalando SE",
-      commission_perc: nil,
-      user_commission_perc: nil,
-      referral_link: nil
+      commission_perc: 10,
+      user_commission_perc: 5,
+      referral_link: "#"
     },
     urls: {
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Zalando_logo.svg",
@@ -25,9 +25,9 @@ partners = [
     data: {
       name: "Lieferheld",
       company_entity_name: "Delivery Hero Germany GmbH",
-      commission_perc: nil,
-      user_commission_perc: nil,
-      referral_link: nil
+      commission_perc: 10,
+      user_commission_perc: 5,
+      referral_link: "#"
     },
     urls: {
       logo_image_url: "https://www.designtagebuch.de/wp-content/uploads/mediathek//2013/12/lieferheld-logo-700x389.png",
@@ -38,9 +38,9 @@ partners = [
     data: {
       name: "Asos",
       company_entity_name: "Asos PLC",
-      commission_perc: nil,
-      user_commission_perc: nil,
-      referral_link: nil
+      commission_perc: 10,
+      user_commission_perc: 5,
+      referral_link: "#"
     },
     urls: {
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Asos.svg",
@@ -51,9 +51,9 @@ partners = [
     data: {
       name: "Expedia",
       company_entity_name: "Expedia Inc",
-      commission_perc: nil,
-      user_commission_perc: nil,
-      referral_link: nil
+      commission_perc: 10,
+      user_commission_perc: 5,
+      referral_link: "#"
     },
     urls: {
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Expedia_2012_logo.svg",
@@ -64,9 +64,9 @@ partners = [
     data: {
       name: "Home24",
       company_entity_name: "home24 SE",
-      commission_perc: nil,
-      user_commission_perc: nil,
-      referral_link: nil
+      commission_perc: 10,
+      user_commission_perc: 5,
+      referral_link: "#"
     },
     urls: {
       logo_image_url: "https://seeklogo.com/images/H/home24-logo-3F4E4A08A2-seeklogo.com.gif",
@@ -114,6 +114,8 @@ p "finished seeding games"
 users = [
   {
     data: {
+      first_name: "Coin",
+      last_name: "Squirrels",
       email: "devs@coinsquirrel.de",
       password: "Coin2019!",
       game: Game.first,
@@ -126,6 +128,8 @@ users = [
   },
   {
     data: {
+      first_name: "Konrad",
+      last_name: "Baumann",
       email: "konrad@coinsquirrel.de",
       password: "Coin2019!",
       game: Game.first,
@@ -138,6 +142,8 @@ users = [
   },
   {
     data: {
+      first_name: "David",
+      last_name: "Rheinbay",
       email: "david@coinsquirrel.de",
       password: "Coin2019!",
       game: Game.first,
@@ -150,6 +156,8 @@ users = [
   },
   {
     data: {
+      first_name: "Max",
+      last_name: "Wingber",
       email: "max@coinsquirrel.de",
       password: "Coin2019!",
       game: Game.first,
@@ -162,6 +170,8 @@ users = [
   },
   {
     data: {
+      first_name: "Hans",
+      last_name: "Schwarz",
       email: "hans@coinsquirrel.de",
       password: "Coin2019!",
       game: Game.first,

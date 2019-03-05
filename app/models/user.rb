@@ -7,6 +7,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  validates :first_name, :last_name, presence: true
+  validates :email, presence: true, uniqueness: true
+  validates :game, presence: true
+
   # make cents only integers
   monetize :balance_cents
 
