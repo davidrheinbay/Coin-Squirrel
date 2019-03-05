@@ -1,7 +1,7 @@
 <div class="partner-card card-shadow-light">
-  <div class="card_head">
-    <%= image_tag partner.card_image %>
-  </div>
+
+    <%= cl_image_tag partner.card_image_url, class:"card_head"%>
+
   <div class="card_body">
       <p>
         <%= partner.name %>

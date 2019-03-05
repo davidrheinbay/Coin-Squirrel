@@ -49,13 +49,18 @@
 .partner-card {
   border-radius: 5px;
   background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 30px;
 
     img {
     width: 100%;
 
     }
   .card_head {
+    height: 150px;
     padding: 0px;
+    object-fit: cover;
+    overflow: hidden;
     border-bottom: 1px solid $grey;
 
   }
