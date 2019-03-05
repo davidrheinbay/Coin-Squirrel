@@ -118,6 +118,20 @@
       <br>
       <br>
 
+    <div class="games-banner">
+    <% @games.each do |game| %>
+    <div class="col-xs-4">
+      <div class="partner-card card-shadow-light">
+        <div class="card_head">
+          <%= cl_image_tag game.card_image %>
+        </div>
+        <div class="card_body">
+          <h5>Fortnite</h5>
+        </div>
+      </div>
+      </div>
+    <% end %>
+    </div>
 
 
 
