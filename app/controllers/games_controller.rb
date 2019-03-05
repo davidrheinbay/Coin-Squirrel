@@ -7,9 +7,6 @@ class GamesController < ApplicationController
   def show
     @game = Game.find(params[:id])
     authorize @game
-    url = 'https://fortnite-public-api.theapinetwork.com/prod09/store/get'
-
-    shop = JSON.parse(open(url).read)
-    @items = shop['items']
+    @items = FortniteItemsLoader.call
   end
 end
