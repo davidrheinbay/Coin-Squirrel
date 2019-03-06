@@ -228,9 +228,16 @@
   justify-content: space-around;
 }
 
+.steps-block {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .steps-card {
   padding: 10px 25px;
-  width: 85%;
+  width: 70%;
   height: 30vh;
   display: flex;
   align-items: center;
@@ -244,16 +251,16 @@
 }
 
 .image-card {
-  border: 2px solid $light-yellow;
-  width: 30vh;
-  height: 30vh;
+  border: 1px solid $grey;
+  width: 50vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
 
   img {
-    height: 120%;
+    width: 80%;
   }
 }
 

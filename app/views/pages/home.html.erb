@@ -1,7 +1,7 @@
 <!-- Banner -->
 <div class="banner">
   <div class="container">
-    <h1>Coin Squirrel <i class="fas fa-exclamation-triangle"></i>WE ARE UNDER CONSTRUCTION</h1>
+    <h1>Coin Squirrel</h1>
 
     <p>Earn in-game rewards for your favorite game by shopping online</p>
     <!--  Search Form  -->
@@ -19,119 +19,132 @@
   </div>
 
   <!-- Content -->
-  <div class="background-card card-shadow-strong card-tmm-60">
+  <div class="background-card card-shadow-strong card-tmm-60 text-center">
 
     <!-- How it works -->
-    <div class="container">
     <h1>How does it work?</h1>
+    <br>
+    <br>
     <div class="row">
-      <div class="col-xs-6 steps-column">
-        <div class="steps-card" id="search">
-          <i>1.</i><i class="fas fa-search fa-6x"></i>
-          <div>
-            <h4>Find your favorite game and checkout newest in-game offers</h4>
+      <div class="col-xs-12 steps-column">
+
+        <div class="steps-block">
+          <div class="steps-card" id="game">
+            <i class="fas fa-search fa-6x"></i>
+            <div>
+              <h4>Find your favorite game and checkout newest in-game offers</h4>
+            </div>
+          </div>
+          <div class="image-card card-shadow-light">
+            <%= image_tag "fortnite_characters.png" %>
           </div>
         </div>
-        <div class="steps-card">
-          <%= image_tag "logo.png" %>
-        </div>
-        <div class="steps-card" id="book">
-          <i>3.</i><i class="fas fa-shopping-cart fa-6x"></i>
-          <div>
-            <h4>Easily access all our partners and shop online</h4>
+
+        <div class="steps-block">
+            <div class="image-card card-shadow-light">
+              <%= image_tag "logo.png" %>
+            </div>
+          <div class="steps-card" id="create">
+            <i class="fas fa-user-plus fa-6x"></i>
+            <div>
+              <h4>Create a free acount and have unlimited access to coin squirrel services</h4>
+            </div>
           </div>
         </div>
-        <div class="image-card">
-          <%= image_tag "fortnite_v-bucks.png" %>
-        </div>
-        <div class="steps-card" id="teach">
-          <i>5.</i><i class="fas fa-coins fa-6x"></i>
-          <div>
-            <h4>Pay out your balance and recieve a gift card to buy the item you were saving for</h4>
+
+        <div class="steps-block">
+          <div class="steps-card" id="shop">
+            <i class="fas fa-shopping-cart fa-6x"></i>
+            <div>
+              <h4>Easily access all our partners and shop online</h4>
+            </div>
+          </div>
+          <div class="image-card card-shadow-light">
+            <%= image_tag "fortnite_shopping-cart.png" %>
           </div>
         </div>
-      </div>
-      <div class="col-xs-6 steps-column">
-        <div class="image-card">
-          <%= image_tag "fortnite_characters.png" %>
-        </div>
-        <div class="steps-card" id="create">
-          <i>2.</i><i class="fas fa-user-plus fa-6x"></i>
-          <div>
-            <h4>Create a free acount and have unlimited access to coin squirrel services</h4>
+
+        <div class="steps-block">
+          <div class="image-card card-shadow-light">
+            <%= image_tag "fortnite_v-bucks.png" %>
+          </div>
+          <div class="steps-card" id="coins">
+            <i class="fas fa-check-circle fa-6x"></i>
+            <div>
+              <h4>Earn coins for every purchase you make and save for your favorite item</h4>
+            </div>
           </div>
         </div>
-        <div class="image-card">
-          <%= image_tag "fortnite_shopping-cart.png" %>
-        </div>
-        <div class="steps-card" id="check">
-          <i>4.</i><i class="fas fa-check-circle fa-6x"></i>
-          <div>
-            <h4>Earn coins for every purchase you make and save for your favorite item</h4>
+
+        <div class="steps-block">
+          <div class="steps-card" id="rewards">
+            <i class="fas fa-coins fa-6x"></i>
+            <div>
+              <h4>Pay out your balance and receive a gift card to buy the item you were saving for</h4>
+            </div>
           </div>
-        </div>
-        <div class="image-card">
-          <%= image_tag "fortnite_battle_pass.png" %>
+          <div class="image-card card-shadow-light">
+            <%= image_tag "fortnite_battle_pass.png" %>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- CTA -->
-    <div class="cta-banner">
-      <h2>Convinced?</h2>
-      <%= link_to new_user_registration_path do  %>
-          <button class="btn-large-solid">Start Collecting Now!</button>
+<!-- CTA -->
+<div class="cta-banner">
+  <h2>Convinced?</h2>
+  <%= link_to new_user_registration_path do  %>
+  <button class="btn-large-solid">Start Collecting Now!</button>
+  <% end %>
+</div>
+
+<!-- Partners -->
+
+<div class="partners-wrapper">
+  <div class="arrow-down" style="border-top: 60px solid white"></div>
+    <h1>Where can you earn coins?</h1>
+    <div class="partners-banner">
+      <% @partners.each do |partner| %>
+      <div class="partners-logo">
+        <%= cl_image_tag partner.logo_image %>
+      </div>
       <% end %>
     </div>
-    </div>
-    <!-- Partners -->
-
-    <div class="partners-wrapper">
-      <div class="container">
-        <h1>Where can you earn coins?</h1>
-        <div class="partners-banner">
-        <% @partners.each do |partner| %>
-        <div class="partners-logo">
-          <%= cl_image_tag partner.logo_image %>
-        </div>
-        <% end %>
-
-        </div>
-      </div>
-    </div>
+  </div>
 
 
 
-    <!-- Games -->
-  <div class="container">
-
-    <h1>Fortnite not your game? Find yours!</h1>
-
-    <!--  Search Form  -->
-    <!-- change root path to Game#Show Path -->
-    <%= form_tag root_path, class:"form-inline",method: :get do %>
-    <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-      placeholder: "Fortnite, Dota2, ..." %>
-      <%= submit_tag "Find Game", class:"btn btn-medium-solid" %>
-      <% end %>
-      <br>
-      <br>
-
+<!-- Games -->
+<div class="games-wrapper">
+<div class="arrow-down" style="border-top: 60px solid rgba(247,247,247, 1)"></div>
     <div class="games-banner">
-    <% @games.each do |game| %>
-    <div class="col-xs-4">
-      <div class="partner-card card-shadow-light">
-        <div class="card_head">
-          <%= cl_image_tag game.card_image %>
-        </div>
-        <div class="card_body">
-          <h5>Fortnite</h5>
-        </div>
-      </div>
-      </div>
+
+  <h1>Fortnite not your game? Find yours!</h1>
+  <br>
+  <!--  Search Form  -->
+  <!-- change root path to Game#Show Path -->
+  <%= form_tag root_path, class:"form-inline",method: :get do %>
+  <%= text_field_tag :query,
+  params[:query],
+  class: "form-control",
+    placeholder: "Fortnite, Dota2, ..." %>
+    <%= submit_tag "Find Game", class:"btn btn-medium-solid" %>
     <% end %>
+    <br>
+    <br>
+
+      <% @games.each do |game| %>
+      <div class="col-xs-4">
+        <div class="partner-card card-shadow-light">
+          <div class="card_head">
+            <%= cl_image_tag game.card_image %>
+          </div>
+          <div class="card_body">
+            <h5>Fortnite</h5>
+          </div>
+        </div>
+      </div>
+      <% end %>
     </div>
 
 
@@ -143,8 +156,8 @@
 
 
   <!-- Closing Card -->
-  </div>
+</div>
 
-  <!-- Footer -->
+<!-- Footer -->
 
-  <%= render 'components/footer' %>
+<%= render 'components/footer' %>
