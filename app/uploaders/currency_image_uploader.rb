@@ -1,3 +1,3 @@
-class CardImageUploader < CarrierWave::Uploader::Base
+class CurrencyImageUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
 end
