@@ -1,46 +1,63 @@
 .store-image {
-  height: 175px;
-  width: 175px;
-  border-radius: 15px;
+  height: 300px;
+  width: 300px;
+  color: black;
 }
+
+
 
 .store-card {
   display: flex;
   align-items: center;
-  height: 200px;
+  background-color: white;
   width: 500px;
-  background-color: #E4E4E4;
-  margin-top: 20px;
-  border-radius: 15px;
+  border-radius: 5px 5px 0px 0px;
+  text-align: center;
+  background-image:
+    linear-gradient(
+      #D3AE3D, #E4E4E4
+    );
 
-  img {
-    margin-left: -50px;
+  p {
+    color: white;
   }
 }
 
 .store-card-content {
   margin-left: 10px;
+  width: 400px;
 }
+
 
 .store-progression-green {
-  height: 20px;
-  width: 300px;
-  background-color: green;
-  border-radius: 3px;
+  height: 5px;
+  width: 500px;
+  background-color: #18D569;
+
 }
 
+.store-card-rating {
+  margin-bottom: -250px;
+  margin-right: 5px;
+}
+
+
 .store-progression-grey {
-  width: 300px;
-  height: 20px;
+  width: 500px;
+  height: 5px;
   background-color: white;
   display: flex;
   justify-content: right;
-  border-radius: 3px;
+
 }
 .store-progression-red {
-  height: 20px;
-  width: 100px;
+  height: 5px;
+  width: 500px;
   background-color: red;
   margin-left: 0px;
-  border-radius: 3px;
+
+}
+
+.card-progression {
+   margin-bottom: 100px;
 }
