@@ -27,11 +27,17 @@
 }
 
 .form-controll:focus {
-  margin: 0 20px 0 10px;
-  width: 100%;
   border: none;
   border-bottom: 1px solid $yellow;
-  outline: 0;
+}
+
+select {
+  margin: 0 20px 0 10px;
+  width: 100%;
+}
+
+select:focus {
+  outline-color: $yellow;
 }
 
 .form-hide-border {
@@ -48,3 +54,5 @@
   text-decoration: none;
   color: $yellow;
 }
+
+.material-icons.ghost { opacity: 0; }

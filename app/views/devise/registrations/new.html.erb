@@ -1,43 +1,91 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-      <h2>Sign up</h2>
+      <div class="signup-card card-shadow-light">
 
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= f.error_notification %>
-
-        <div class="form-inputs">
-          <%= f.input :first_name,
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "first_name" }%>
-          <%= f.input :last_name,
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "last_name" }%>
-          <%= f.association :game,
-                      collection: Game.all,
-                      required: true,
-                      autofocus: true %>
-          <%= f.input :email,
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "email" }%>
-          <%= f.input :password,
-                      required: true,
-                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                      input_html: { autocomplete: "new-password" } %>
-          <%= f.input :password_confirmation,
-                      required: true,
-                      input_html: { autocomplete: "new-password" } %>
+        <div class="card-head">
+          <h2>Sign up</h2>
         </div>
 
-        <div class="form-actions">
-          <%= f.button :submit, "Sign up", class:"btn btn-medium-solid" %>
-        </div>
-      <% end %>
+        <div class="card-body">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%#= f.error_notification %>
 
-      <%= render "devise/shared/links" %>
+            <div class="form-group row">
+              <div class="input-group-prepend">
+                <i class="material-icons"> face </i>
+              </div>
+              <%= f.text_field :first_name,
+                          class:"form-controll",
+                          placeholder: 'First Name',
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "first_name" }%>
+            </div>
+            <div class="form-group row">
+              <div class="input-group-prepend">
+                <i class="material-icons ghost"> face </i>
+              </div>
+              <%= f.text_field :last_name,
+                          class:"form-controll",
+                          placeholder: 'Last Name',
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "last_name" }%>
+            </div>
+            <div class="form-group row">
+              <div class="input-group-prepend">
+                <i class="fas fa-gamepad"></i>
+              </div>
+              <%= f.select :game_id, Game.all.map { |g| [g.name, g.id] },
+                          required: true,
+                          autofocus: true %>
+            </div>
+
+            <div class="form-group row">
+              <div class="input-group-prepend">
+                <i class="material-icons"> email </i>
+              </div>
+              <%= f.text_field :email,
+                          class:"form-controll",
+                          placeholder: 'Email',
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "email" }%>
+            </div>
+            <div class="form-group row">
+              <div class="input-group-prepend">
+                <i class="material-icons"> lock_open </i>
+              </div>
+              <%= f.password_field :password,
+                          required: true,
+                          class:"form-controll",
+                          placeholder: '******',
+                          hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                          input_html: { autocomplete: "new-password" } %>
+            </div>
+            <div class="form-group row">
+              <div class="input-group-prepend">
+                <i class="material-icons ghost"> lock_open </i>
+              </div>
+              <%= f.password_field :password_confirmation,
+                          required: true,
+                          class:"form-controll",
+                          placeholder: '******',
+                          input_html: { autocomplete: "new-password" } %>
+            </div>
+
+
+            <div class="form-actions">
+              <%= f.submit "Sign up", class:"btn btn-medium-solid" %>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="card-foot">
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
