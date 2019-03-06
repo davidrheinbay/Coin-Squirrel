@@ -49,7 +49,7 @@ partners = [
       referral_link: "#"
     },
     urls: {
-      logo_image_url: "https://www.designtagebuch.de/wp-content/uploads/mediathek//2013/12/lieferheld-logo-700x389.png",
+      logo_image_url: "http://schnitzeria.de/wp-content/themes/Neutrum-Business-Schnitzeria/images/logo-lieferheld.png",
       card_image_url: "https://www.fluxfm.de/wp-content/uploads/2018/02/VALENTINSTAG_66016neu-628x356.jpg",
     }
   },
@@ -117,7 +117,8 @@ games = [
     },
     urls: {
       card_image_url: "https://cdn2.unrealengine.com/Fortnite%2Fbattle-royale%2Fseason6-social-1920x1080-0a72ec2f35dfe5be6cf8a77ec16063cca4db7046.jpg",
-      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/0/0e/FortniteLogo.svg"
+      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/0/0e/FortniteLogo.svg",
+      currency_image_url: 'https://pbs.twimg.com/media/DsImRImU0AASOXf.png:large'
     }
   }
 ]
@@ -127,6 +128,7 @@ games.each do |game|
   gameDB = Game.new(game[:data])
   gameDB.remote_card_image_url = game[:urls][:card_image_url]
   gameDB.remote_logo_image_url = game[:urls][:logo_image_url]
+  gameDB.remote_currency_image_url = game[:urls][:currency_image_url]
   gameDB.save!
 end
 

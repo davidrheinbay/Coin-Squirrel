@@ -10,4 +10,5 @@ class Game < ApplicationRecord
   # includes image uploaders in Partner
   mount_uploader :logo_image, LogoImageUploader
   mount_uploader :card_image, CardImageUploader
+  mount_uploader :currency_image, CurrencyImageUploader
 end
