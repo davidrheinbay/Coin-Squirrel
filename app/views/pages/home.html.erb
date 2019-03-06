@@ -41,9 +41,9 @@
         </div>
 
         <div class="steps-block">
-            <div class="image-card card-shadow-light">
-              <%= image_tag "logo.png" %>
-            </div>
+          <div class="image-card card-shadow-light">
+            <%= image_tag "logo.png" %>
+          </div>
           <div class="steps-card" id="create">
             <i class="fas fa-user-plus fa-6x"></i>
             <div>
@@ -76,6 +76,7 @@
           </div>
         </div>
 
+
         <div class="steps-block">
           <div class="steps-card" id="rewards">
             <i class="fas fa-coins fa-6x"></i>
@@ -87,77 +88,71 @@
             <%= image_tag "fortnite_battle_pass.png" %>
           </div>
         </div>
+
       </div>
     </div>
 
-<!-- CTA -->
-<div class="cta-banner">
-  <h2>Convinced?</h2>
-  <%= link_to new_user_registration_path do  %>
-  <button class="btn-large-solid">Start Collecting Now!</button>
-  <% end %>
-</div>
-
-<!-- Partners -->
-
-<div class="partners-wrapper">
-  <div class="arrow-down" style="border-top: 60px solid white"></div>
-    <h1>Where can you earn coins?</h1>
-    <div class="partners-banner">
-      <% @partners.each do |partner| %>
-      <div class="partners-logo">
-        <%= cl_image_tag partner.logo_image %>
-      </div>
+    <!-- CTA -->
+    <div class="cta-banner">
+      <h2>Convinced?</h2>
+      <%= link_to new_user_registration_path do  %>
+      <button class="btn-large-solid">Start Collecting Now!</button>
       <% end %>
     </div>
-  </div>
 
+    <!-- Partners -->
 
-
-<!-- Games -->
-<div class="games-wrapper">
-<div class="arrow-down" style="border-top: 60px solid rgba(247,247,247, 1)"></div>
-    <div class="games-banner">
-
-  <h1>Fortnite not your game? Find yours!</h1>
-  <br>
-  <!--  Search Form  -->
-  <!-- change root path to Game#Show Path -->
-  <%= form_tag root_path, class:"form-inline",method: :get do %>
-  <%= text_field_tag :query,
-  params[:query],
-  class: "form-control",
-    placeholder: "Fortnite, Dota2, ..." %>
-    <%= submit_tag "Find Game", class:"btn btn-medium-solid" %>
-    <% end %>
-    <br>
-    <br>
-
-      <% @games.each do |game| %>
-      <div class="col-xs-4">
-        <div class="partner-card card-shadow-light">
-          <div class="card_head">
-            <%= cl_image_tag game.card_image %>
-          </div>
-          <div class="card_body">
-            <h5>Fortnite</h5>
-          </div>
+    <div class="partners-wrapper">
+      <div class="arrow-down" style="border-top: 60px solid white"></div>
+      <h1>Where can you earn coins?</h1>
+      <div class="partners-banner">
+        <% @partners.each do |partner| %>
+        <div class="partners-logo">
+          <%= cl_image_tag partner.logo_image %>
         </div>
+        <% end %>
       </div>
-      <% end %>
     </div>
 
 
+    <!-- Games -->
+    <div class="games-wrapper">
+      <div class="arrow-down" style="border-top: 60px solid rgba(247,247,247, 1)"></div>
+      <div class="games-banner">
 
-  </div>
+        <h1>Fortnite not your game? Find yours!</h1>
+        <br>
+        <!--  Search Form  -->
+        <!-- change root path to Game#Show Path -->
+        <%= form_tag root_path, class:"form-inline",method: :get do %>
+        <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+          placeholder: "Fortnite, Dota2, ..." %>
+          <%= submit_tag "Find Game", class:"btn btn-medium-solid" %>
+          <% end %>
+          <br>
+          <br>
 
+          <% @games.each do |game| %>
+          <div class="col-xs-4">
+            <div class="partner-card card-shadow-light">
+              <div class="card_head">
+                <%= cl_image_tag game.card_image %>
+              </div>
+              <div class="card_body">
+                <h5>Fortnite</h5>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </div>
 
+      </div>
 
+      <!-- Closing Card -->
+    </div>
 
+    <!-- Footer -->
 
-  <!-- Closing Card -->
-</div>
-
-<!-- Footer -->
-
-<%= render 'components/footer' %>
+    <%= render 'components/footer' %>

@@ -118,7 +118,12 @@ games = [
     urls: {
       card_image_url: "https://cdn2.unrealengine.com/Fortnite%2Fbattle-royale%2Fseason6-social-1920x1080-0a72ec2f35dfe5be6cf8a77ec16063cca4db7046.jpg",
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/0/0e/FortniteLogo.svg",
-      currency_image_url: 'https://pbs.twimg.com/media/DsImRImU0AASOXf.png:large'
+      currency_image_url: 'https://pbs.twimg.com/media/DsImRImU0AASOXf.png:large',
+      banner_image_url: "http://static.4players.de/premium/Spiele/96/02/29447-teaser1.jpg",
+      game_character_image_url: "https://banner2.kisspng.com/20180705/hgq/kisspng-fortnite-battle-royale-battle-royale-game-video-ga-5b3de3b2911035.7008811615307826425942.jpg",
+      premium_item_image_url: "https://gamepedia.cursecdn.com/fortnite_gamepedia/9/96/Treasure_chest_%28tier_1%29.png",
+      shopping_cart_image_url: "https://gamepedia.cursecdn.com/fortnite_gamepedia/0/08/Shopping_cart_icon.png",
+
     }
   }
 ]
@@ -129,6 +134,10 @@ games.each do |game|
   gameDB.remote_card_image_url = game[:urls][:card_image_url]
   gameDB.remote_logo_image_url = game[:urls][:logo_image_url]
   gameDB.remote_currency_image_url = game[:urls][:currency_image_url]
+  gameDB.remote_banner_image_url = game[:urls][:banner_image_url]
+  gameDB.remote_game_character_image_url = game[:urls][:game_character_image_url]
+  gameDB.remote_premium_item_image_url = game[:urls][:premium_item_image_url]
+  gameDB.remote_shopping_cart_image_url = game[:urls][:shopping_cart_image_url]
   gameDB.save!
 end
 
