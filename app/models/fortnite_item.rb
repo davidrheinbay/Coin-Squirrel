@@ -1,4 +1,4 @@
 class FortniteItem
   include ActiveModel::Model
-  attr_accessor :name, :image, :rarity, :cost
+  attr_accessor :name, :image, :rarity, :cost, :currency, :rating
 end

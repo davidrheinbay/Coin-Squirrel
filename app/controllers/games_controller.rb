@@ -8,5 +8,6 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     authorize @game
     @items = FortniteItemsLoader.call
+
   end
 end
