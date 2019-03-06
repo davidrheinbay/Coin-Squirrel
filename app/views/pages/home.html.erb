@@ -1,5 +1,5 @@
 <!-- Banner -->
-<div class="banner">
+<div class="banner" style="background-image: url('<%= cl_image_path @game.banner_image %>')">
   <div class="container">
     <h1>Coin Squirrel</h1>
 
@@ -36,7 +36,7 @@
             </div>
           </div>
           <div class="image-card card-shadow-light">
-            <%= image_tag "fortnite_characters.png" %>
+            <%= cl_image_tag @game.game_character_image %>
           </div>
         </div>
 
@@ -60,13 +60,13 @@
             </div>
           </div>
           <div class="image-card card-shadow-light">
-            <%= image_tag "fortnite_shopping-cart.png" %>
+            <%= cl_image_tag @game.shopping_cart_image %>
           </div>
         </div>
 
         <div class="steps-block">
           <div class="image-card card-shadow-light">
-            <%= image_tag "fortnite_v-bucks.png" %>
+            <%= cl_image_tag @game.currency_image %>
           </div>
           <div class="steps-card" id="coins">
             <i class="fas fa-check-circle fa-6x"></i>
@@ -85,7 +85,7 @@
             </div>
           </div>
           <div class="image-card card-shadow-light">
-            <%= image_tag "fortnite_battle_pass.png" %>
+            <%= cl_image_tag @game.premium_item_image %>
           </div>
         </div>
 
@@ -135,6 +135,7 @@
           <br>
 
           <% @games.each do |game| %>
+            <%= link_to root_path(game: game.name) do %>
           <div class="col-xs-4">
             <div class="partner-card card-shadow-light">
               <div class="card_head">
@@ -145,6 +146,7 @@
               </div>
             </div>
           </div>
+          <% end %>
           <% end %>
         </div>
 
