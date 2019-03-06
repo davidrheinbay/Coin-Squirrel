@@ -131,92 +131,50 @@
 
 //Form-Card
 
-.form-card {
-  background-color: #fff;
-  border-radius: 10px;
-  text-align: center;
-  text-transform: capitalize;
-  margin-top: 20px;
-  padding: 20px;
-
-}
-
-.card-form-content {
-
-}
-
-.card-form-button {
-  margin-top: 20px;
-  background-color: white;
-  text-transform: uppercase;
-  color: $yellow;
-  font-weight: bold;
-}
 
 // Login-Card
 
-.undo-login-head {
-  margin-top: 40px;
-}
-
 .login-card {
-  border-radius: 10px;
-  padding: 20px;
+  margin-top: 50px;
+  border-radius: 5px;
   background-color: #fff;
-  max-width: 350px;
 
   .card-head {
     display: flex;
-    border-radius: 10px;
+    border-radius: 5px;
     align-items: center;
     justify-content: space-around;
-    margin: -40px auto 20px auto;
-    width: 90%;
-    height: 100px;
-    background: linear-gradient(60deg,rgba(246, 197, 53,1),rgba(158, 120, 15,1));
+  }
 
-    p {
-      color: white;
-      font-size: 24px;
-    }
+  .card-body {
+    padding: 20px;
   }
 
   .card-foot {
-    padding: 0 20px;
-    margin-top: 20px;
+    padding: 0 20px 20px 20px;
   }
 }
 
 // SignUp-Card
 
-.undo-signup-head {
-  margin-top: 40px;
-}
-
 .signup-card {
-  border-radius: 10px;
-  padding: 20px;
+  margin-top: 50px;
+  border-radius: 5px;
   background-color: #fff;
 
   .card-head {
     display: flex;
-    border-radius: 10px;
+    border-radius: 5px;
     align-items: center;
     justify-content: space-around;
-    margin: -40px auto 20px auto;
-    width: 90%;
-    height: 100px;
-    background: linear-gradient(60deg,rgba(246, 197, 53,1),rgba(158, 120, 15,1));
+  }
 
-    p {
-      color: white;
-      font-size: 24px;
-    }
+  .card-body {
+    padding: 20px;
   }
 
   .card-foot {
-    padding: 0 20px;
-    margin-top: 20px;
+    padding: 0 20px 20px 20px;
   }
 }
 
