@@ -49,7 +49,7 @@ partners = [
       referral_link: "#"
     },
     urls: {
-      logo_image_url: "https://www.designtagebuch.de/wp-content/uploads/mediathek//2013/12/lieferheld-logo-700x389.png",
+      logo_image_url: "http://schnitzeria.de/wp-content/themes/Neutrum-Business-Schnitzeria/images/logo-lieferheld.png",
       card_image_url: "https://www.fluxfm.de/wp-content/uploads/2018/02/VALENTINSTAG_66016neu-628x356.jpg",
     }
   },
