@@ -26,6 +26,7 @@
   height: 20px;
   width: 300px;
   background-color: green;
+  border-radius: 3px;
 }
 
 .store-progression-grey {
@@ -34,10 +35,12 @@
   background-color: white;
   display: flex;
   justify-content: right;
+  border-radius: 3px;
 }
 .store-progression-red {
   height: 20px;
   width: 100px;
   background-color: red;
   margin-left: 0px;
+  border-radius: 3px;
 }
