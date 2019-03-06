@@ -3,3 +3,48 @@
     width: 100%
   }
 }
+
+.form-group {
+  display: flex;
+  margin: 0 0 30px 0;
+}
+
+.input-group-prepend {
+  display: flex;
+  align-items: center;
+}
+
+.input-group-text {
+
+}
+
+.form-controll {
+  margin: 0 20px 0 10px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid $grey;
+  outline: 0;
+}
+
+.form-controll:focus {
+  margin: 0 20px 0 10px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid $yellow;
+  outline: 0;
+}
+
+.form-hide-border {
+  border: none;
+  color: #757575;
+}
+
+.form-link {
+  text-decoration: none;
+  color: $grey;
+}
+
+.form-link:hover {
+  text-decoration: none;
+  color: $yellow;
+}
