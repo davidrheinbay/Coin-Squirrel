@@ -11,4 +11,8 @@ class Game < ApplicationRecord
   mount_uploader :logo_image, LogoImageUploader
   mount_uploader :card_image, CardImageUploader
   mount_uploader :currency_image, CurrencyImageUploader
+  mount_uploader :game_character_image, GameCharacterImageUploader
+  mount_uploader :banner_image, BannerImageUploader
+  mount_uploader :premium_item_image, PremiumItemImageUploader
+  mount_uploader :shopping_cart_image, ShoppingCartImageUploader
 end
