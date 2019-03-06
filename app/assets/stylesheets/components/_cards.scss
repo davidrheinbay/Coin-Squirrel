@@ -40,6 +40,59 @@
 
 // Cards
 
+//Transaction Card
+
+.transaction-card {
+  margin: 20px 0px;
+  display: flex;
+  height: 60px;
+
+  .status {
+    height: 100%;
+    width: 5px;
+    margin-right: 20px;
+    background-color: $grey;
+  }
+
+  .card-body {
+    border-radius: 5px;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+    flex: 1 1 auto;
+    align-items: center;
+
+    span {
+      flex: 1 1 auto;
+    }
+
+
+  h2 {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  h3 {
+    font-size: 16px;
+    padding: 0px 0 5px 0;
+    font-weight: bolder;
+    margin: 0px;
+  }
+
+  p {
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  }
+}
+
+.transaction-image {
+  max-width: 100px;
+  margin: 0 20px;
+}
 
 // Partner Card
 .undo-partner-head {
@@ -129,7 +182,7 @@
   }
 }
 
-// Login-Card
+// SignUp-Card
 
 .undo-signup-head {
   margin-top: 40px;

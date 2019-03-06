@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   resources :partners, only: [:index]
   resources :games, only: [:show]
+  resources :transactions, only: [:index]
 end
