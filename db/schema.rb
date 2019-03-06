@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2019_03_05_161113) do
     t.datetime "updated_at", null: false
     t.string "card_image"
     t.string "logo_image"
+    t.string "currency_image"
   end
 
   create_table "partners", force: :cascade do |t|
