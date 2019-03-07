@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2019_03_06_131541) do
     t.datetime "updated_at", null: false
     t.string "card_image"
     t.string "logo_image"
+    t.string "currency_image"
     t.string "banner_image"
     t.string "game_character_image"
     t.string "shopping_cart_image"
