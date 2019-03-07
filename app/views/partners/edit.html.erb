@@ -1,0 +1,99 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 ">
+      <div class="signup-card card-shadow-light">
+
+        <div class="card-head">
+          <h2>Edit Partner</h2>
+        </div>
+
+        <div class="card-body">
+          <%= form_for :partner do |f| %>
+          <%#= f.error_notification %>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <div class="input-group-prepend">
+                    <i class="material-icons"> sms </i>
+                  </div>
+                  <%= f.text_field :name,
+                              class:"form-controll",
+                              placeholder: 'Coin Squirrel DE',
+                              required: true,
+                              autofocus: true,
+                              input_html: { autocomplete: "name" }%>
+                </div>
+
+                <div class="form-group row">
+                  <div class="input-group-prepend">
+                    <i class="material-icons"> business </i>
+                  </div>
+                  <%= f.text_field :company_entity_name,
+                              class:"form-controll",
+                              placeholder: 'Coin Squirrel GmbH',
+                              required: true,
+                              autofocus: true,
+                              input_html: { autocomplete: "company_entity_name" }%>
+                </div>
+
+                <div class="form-group row">
+                  <div class="input-group-prepend">
+                    <i class="material-icons"> local_atm </i>
+                  </div>
+                  <%= f.number_field :commission_perc,
+                              step: 1.0,
+                              class:"form-controll",
+                              placeholder: 'Commission (%): 10.0',
+                              required: true,
+                              autofocus: true,
+                              input_html: { autocomplete: "commission_perc" }%>
+                </div>
+
+                <div class="form-group row">
+                  <div class="input-group-prepend">
+                    <i class="material-icons"> pie_chart </i>
+                  </div>
+                  <%= f.number_field :user_commission_perc,
+                              step: 1.0,
+                              class:"form-controll",
+                              placeholder: 'User Commission (%): 5.0',
+                              required: true,
+                              autofocus: true,
+                              input_html: { autocomplete: "user_commsission_perc" }%>
+                </div>
+
+
+                <div class="form-group row">
+
+                  <div class="input-group-prepend">Logo Image</div>
+                  <%= f.file_field :logo_image,
+                           class:"form-control-file" %>
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group row">
+
+                  <div class="input-group-prepend">Banner Image</div>
+                  <%= f.file_field :banner_image,
+                           class:"form-control-file" %>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="form-actions">
+              <%= f.submit class:"btn btn-medium-solid" %>
+            </div>
+          <% end %>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
