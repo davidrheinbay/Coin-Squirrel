@@ -12,13 +12,15 @@
       <!-- Links when logged in -->
       <%= link_to "Go Shopping",  partners_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Your Game", game_path(current_user.game_id), class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Transactions", transactions_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+      <!-- current balance -->
+      <%= render 'shared/balance_tag' %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
           <%= cl_image_tag current_user.profile_image, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <ul class="dropdown-menu dropdown-menu-right dropdown-list">
             <li>
               <%= link_to "#" do %>
                 <%= t(".profile", default: "Profile") %>

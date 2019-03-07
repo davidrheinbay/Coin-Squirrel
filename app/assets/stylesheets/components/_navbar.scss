@@ -76,3 +76,61 @@
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
+
+.balance-wrapper {
+  height: 40px;
+  border: 1px solid $yellow;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  .balance {
+    margin: 10px 20px;
+    .balance-number {
+      color: $yellow;
+      margin-left: 5px;
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+    .balance-currency {
+      height: 30px;
+    }
+  }
+}
+
+.balance-wrapper:hover {
+  background-color: $yellow;
+  .balance {
+    .balance-number {
+      color: $dark-grey;
+    }
+  }
+}
+
+.dropdown-list {
+  border: 1px solid $yellow;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px $light-grey;
+  background-color: white;
+  li {
+    margin: 0;
+    a {
+      color: $grey;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  li a:hover {
+    background-color: $yellow;
+    color: $dark-grey;
+    font-size: 16px;
+    line-height: 20px;
+
+  }
+}
+
+
+
+
+
