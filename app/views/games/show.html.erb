@@ -1,35 +1,48 @@
 <div class="container">
-  <h1><%= current_user.balance_cents %> V Bucks</h1>
+  <div class="store-control">
+    <%= link_to "Back to games", games_path, class: "btn-medium-solid" %>
+    <h1><%= current_user.balance_cents %> <%= @items.first.currency %></h1>
+  </div>
   <div class="row">
     <% @items.each do |item| %>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div class="store-card">
           <%= image_tag "#{item.image}", alt: "alttext", class: 'store-image' %>
           <div class="store-card-content">
-            <h4><%= item.name %></h4>
-            <p><%= item.rarity %></p>
-            <p><%= "★" * item.rating.to_i  %><%= "☆" * (5 - item.rating.to_i) %></p>
-            <p><%= item.cost %> <%= item.currency %></p>
+            <div class="store-card-header">
+              <p><strong><%= item.name %></strong></p>
+            </div>
+            <div class="store-card-detail">
+              <p class="rating-<%= item.rarity %>"><%= item.rarity.capitalize %></p>
+            </div>
+
+            <div class="store-card-price">
+              <p><%= current_user.balance_cents %> / <%= item.cost %> <%= item.currency %></p>
+              <% if current_user.balance_cents >= item.cost.to_i %>
+                <div class="store-progression-green">
+
+                </div>
+              <% elsif current_user.balance_cents == 0 %>
+                <div class="store-progression-grey">
+                  <div class="store-progression-red" style="width: 3%">
+                  </div>
+                </div>
+              <% else %>
+                <div class="store-progression-grey">
+                  <div class="store-progression-red" style="width: <%=(current_user.balance_cents / item.cost.to_f) * 100 %>% ;">
+                  </div>
+                </div>
+              <% end %>
+            </div>
+
+            <div class="store-card-rating">
+              <p><%= "★" * item.rating.to_i  %><%= "☆" * (5 - item.rating.to_i) %></p>
+              <p id="votes"><%= item.votes %> votes</p>
+            </div>
           </div>
-        </div>
-        <div class="card-progression">
-          <% if current_user.balance_cents >= item.cost.to_i %>
-            <div class="store-progression-green">
-
-            </div>
-          <% else %>
-            <div class="store-progression-grey">
-              <div class="store-progression-red" style="width: <%=(current_user.balance_cents / item.cost.to_f) * 100 %>% ;">
-
-              </div>
-            </div>
-          <% end %>
         </div>
       </div>
     <% end %>
-  </div>
-</div>
-
 
 
 

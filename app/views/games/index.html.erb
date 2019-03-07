@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <% @games.each do |game| %>
+      <div class="col-md-6">
+        <div class="game-card">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <%= image_tag "#{game.card_image}", alt: "alttext" %>
+              </div>
+              <div class="flip-card-back">
+                <%= link_to game_path(game) do %>
+                  <%= image_tag "#{game.shopping_cart_image}", alt: "alttext" %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+
+          <%= image_tag "#{game.logo_image}", alt: "alttext", class: "game-card-logo" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

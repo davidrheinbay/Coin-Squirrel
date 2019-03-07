@@ -10,4 +10,8 @@ class GamesController < ApplicationController
     @items = FortniteItemsLoader.call
 
   end
+
+  def index
+    @games = policy_scope(Game)
+  end
 end

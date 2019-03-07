@@ -24,7 +24,8 @@ class FortniteItemsLoader
         image: item['item']['images']['transparent'],
         cost: item['cost'],
         currency: item['item']['obtained_type'],
-        rating: item['ratings']['avgStars']
+        rating: item['ratings']['avgStars'],
+        votes: item['ratings']['numberVotes']
       )
     end
   end
