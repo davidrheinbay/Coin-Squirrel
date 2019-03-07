@@ -11,7 +11,7 @@ class PagesController < ApplicationController
 
   def find_game
     if params[:game].blank?
-      Game.find_by_name(params["Fortnite"])
+      Game.find_by_name("Fortnite")
     else
       Game.find_by_name(params[:game])
     end
