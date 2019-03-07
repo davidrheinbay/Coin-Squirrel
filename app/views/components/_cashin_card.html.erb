@@ -1,0 +1,13 @@
+<div class="transaction-card">
+
+  <div class="status"></div>
+  <div class="card-body card-shadow-light">
+    <%= cl_image_tag Partner.find_by_id(transaction.partner_id).logo_image, class:"transaction-image" %>
+    <span>
+      <h3> You got Cashback from <%= Partner.find_by_id(transaction.partner_id).name %> </h3>
+      <p> <%= transaction.transaction_confirmed_date.strftime("at %H:%M %d.%m.%Y") %> </p>
+    </span>
+    <h2> <%= transaction.user_commission_amount_cents * ExchangeRate.where(game_id: transaction.game_id)[0].rate.to_i %> </h2>
+    <%= cl_image_tag Game.find_by_id(transaction.game_id).currency_image, class:"transaction-image-currency" %>
+  </div>
+</div>
