@@ -115,9 +115,8 @@
 
     }
   .card_head {
-    height: 150px;
+    max-height: 200px;
     padding: 0px;
-    object-fit: cover;
     overflow: hidden;
     border-bottom: 1px solid $grey;
 
