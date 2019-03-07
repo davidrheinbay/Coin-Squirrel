@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_05_161113) do
+ActiveRecord::Schema.define(version: 2019_03_06_131541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,10 @@ ActiveRecord::Schema.define(version: 2019_03_05_161113) do
     t.string "card_image"
     t.string "logo_image"
     t.string "currency_image"
+    t.string "banner_image"
+    t.string "game_character_image"
+    t.string "shopping_cart_image"
+    t.string "premium_item_image"
   end
 
   create_table "partners", force: :cascade do |t|

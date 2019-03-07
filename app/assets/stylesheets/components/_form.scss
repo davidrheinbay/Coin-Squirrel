@@ -1,5 +1,79 @@
 .form-actions {
   .btn {
-    width: 100%
+    margin: 0 15px;
+    flex: 1 1 auto;
   }
 }
+
+.form-group {
+  display: flex;
+  margin: 0 0 30px 0;
+}
+
+.form-actions {
+  display: flex;
+}
+
+.input-group-prepend {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.input-group-text {
+
+}
+
+.form-controll {
+  margin: 0 20px 0 10px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid $grey;
+  outline: 0;
+}
+
+.form-controll:focus {
+  border: none;
+  border-bottom: 1px solid $yellow;
+}
+
+.form-control-file {
+
+}
+
+input[type="file" i] {
+
+}
+
+.form-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+
+select {
+  margin: 0 20px 0 10px;
+  width: 100%;
+}
+
+select:focus {
+  outline-color: $yellow;
+}
+
+.form-hide-border {
+  border: none;
+  color: #757575;
+}
+
+.form-link {
+  text-decoration: none;
+  color: $grey;
+}
+
+.form-link:hover {
+  text-decoration: none;
+  color: $yellow;
+}
+
+.material-icons.ghost { opacity: 0; }
