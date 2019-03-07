@@ -18,7 +18,7 @@
 .store-progression-red {
   height: 15px;
   width: 100px;
-  background-color: red;
+  background-color: $yellow;
   margin-left: 0px;
   border-radius: 3px;
 }
@@ -98,3 +98,31 @@
 .rating-uncommon {
   color: #3D821C;
 }
+
+.store-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    margin-top: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

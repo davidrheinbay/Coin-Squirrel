@@ -1,5 +1,8 @@
 <div class="container">
-  <h1><%= current_user.balance_cents %> V Bucks</h1>
+  <div class="store-control">
+    <%= link_to "Back to games", games_path, class: "btn-medium-solid" %>
+    <h1><%= current_user.balance_cents %> <%= @items.first.currency %></h1>
+  </div>
   <div class="row">
     <% @items.each do |item| %>
       <div class="col-md-4">
@@ -10,7 +13,7 @@
               <p><strong><%= item.name %></strong></p>
             </div>
             <div class="store-card-detail">
-              <p class="rating-<%= item.rarity %>"><%= item.rarity %></p>
+              <p class="rating-<%= item.rarity %>"><%= item.rarity.capitalize %></p>
             </div>
 
             <div class="store-card-price">
@@ -18,6 +21,11 @@
               <% if current_user.balance_cents >= item.cost.to_i %>
                 <div class="store-progression-green">
 
+                </div>
+              <% elsif current_user.balance_cents == 0 %>
+                <div class="store-progression-grey">
+                  <div class="store-progression-red" style="width: 3%">
+                  </div>
                 </div>
               <% else %>
                 <div class="store-progression-grey">
