@@ -1,7 +1,6 @@
 require 'open-uri'
 
 class FortniteItemsLoader
-
   API_URI = "https://fortnite-public-api.theapinetwork.com/prod09/store/get"
 
   def self.call
@@ -28,5 +27,4 @@ class FortniteItemsLoader
       )
     end
   end
-
 end

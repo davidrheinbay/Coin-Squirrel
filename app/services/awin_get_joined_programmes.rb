@@ -1,10 +1,9 @@
 require 'open-uri'
 
 class AwinGetJoinedProgrammes
-
   api_key = ENV["AWIN_API_KEY"]
-
-  API_URI = "https://api.awin.com/publishers/45628/programmes?relationship=joined&accessToken=#{api_key}"
+  publisher_id = ENV["AWIN_PUBLISHER_ID"]
+  API_URI = "https://api.awin.com/publishers/#{publisher_id}/programmes?relationship=joined&accessToken=#{api_key}"
 
   def self.call
     new.fetch_programmes
@@ -19,7 +18,7 @@ class AwinGetJoinedProgrammes
 
   def parse_payload
     programmes = @payload['programmes']
-    programmes.map do |proramme|
+    programmes.each do |programme|
       AwinGetProgrammeDetails(programme)
     end
   end
