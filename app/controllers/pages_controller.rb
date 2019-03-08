@@ -2,7 +2,8 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
-    @partners = Partner.all
+
+    @partners = Partner.where("name != ?", "CoinSquirrel")
     @games = search_games
 
     if user_signed_in? == true

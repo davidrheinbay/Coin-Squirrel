@@ -1,11 +1,35 @@
-<div class="partner-card card-shadow-light">
+  <div class="partner-card card-shadow-medium">
 
-    <%= cl_image_tag partner.card_image_url, class:"card_head"%>
+    <%= cl_image_tag partner.card_image_url, class: "card_head"%>
 
-  <div class="card_body">
-      <p>
-        <%= partner.name %>
-        <%= partner.user_commission_perc %>
-      </p>
+    <div class="card_body">
+      <div class="part-element-partner-card-no-border">
+        <p>
+          <%= partner.name %>
+        </p>
+      </div>
+      <div class="part-element-partner-card">
+        <p>
+          Your Rate: <%= partner.user_commission_perc %>%
+        </p>
+      </div>
+      <div class="link-to-partner part-element-partner-card">
+        <a href="<%= "#{partner.referral_link}" %>" class="link">Your Referal Link</a>
+      </div>
+      <div class="see-more part-element-partner-card">
+        <button id="my-button-<%= partner.id %>" class="opening-button">
+          <%= link_to partner_path(partner), remote: true, class: 'my-link' do %>
+              <i class="fas fa-plus see-details"></i>
+          <% end %>
+        </button>
+        <button id="close-button-<%= partner.id %>" class="hidden closing-button">
+          <i class="fas fa-plus removing-details"></i>
+        </button>
+      </div>
+    </div>
+    <% if current_user.admin? %>
+      <div class="only-admin">
+        <%= link_to "Edit", edit_partner_path(partner) %>
+      </div>
+    <% end %>
   </div>
-</div>

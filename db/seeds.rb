@@ -29,6 +29,20 @@ puts " starting to seed partners"
 partners = [
   {
     data: {
+      name: "CoinSquirrel",
+      company_entity_name: "CoinSquirrel GmbH",
+      commission_perc: 10,
+      user_commission_perc: 5,
+      referral_link: "#",
+      awin_advertiser_id: "8022"
+    },
+    urls: {
+      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Zalando_logo.svg",
+      card_image_url: "https://www.berliner-zeitung.de/image/32119666/2x1/940/470/74f9505ed7fce15a4b7d71e189e8cfc9/Jd/zalando.jpg",
+    }
+  },
+  {
+    data: {
       name: "Zalando",
       company_entity_name: "Zalando SE",
       commission_perc: 10,
