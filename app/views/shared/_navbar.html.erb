@@ -28,7 +28,9 @@
               <%= t(".profile", default: "Profile") %>
             <% end %>
           </li>
+          <% if current_user.admin? %>
           <li><%= link_to "Add Partner", new_partner_path %></li>
+          <% end %>
           <li>
             <%= link_to destroy_user_session_path, method: :delete do %>
               <%= t(".sign_out", default: "Log out") %>
