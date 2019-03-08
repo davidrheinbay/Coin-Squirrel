@@ -22,75 +22,47 @@
   <div class="background-card card-shadow-strong card-tmm-60 text-center">
 
     <!-- How it works -->
-    <h1>How does it work?</h1>
-    <br>
-    <br>
-    <div class="row">
-      <div class="col-xs-12 steps-column">
+    <h1>How it works</h1>
 
-        <div class="steps-block">
-          <div class="steps-card" id="game">
-            <i class="fas fa-search fa-6x"></i>
-            <div>
-              <h4>Find your favorite game and checkout newest in-game offers</h4>
-            </div>
-          </div>
-          <div class="image-card card-shadow-light">
-            <%= cl_image_tag @game.game_character_image %>
-          </div>
+    <div class="how-works">
+      <div class="how-it-works-card first-card">
+        <div class="how-it-works-number">
+          <h1>1</h1>
         </div>
-
-        <div class="steps-block">
-          <div class="image-card card-shadow-light">
-            <%= image_tag "logo.png" %>
-          </div>
-          <div class="steps-card" id="create">
-            <i class="fas fa-user-plus fa-6x"></i>
-            <div>
-              <h4>Create a free acount and have unlimited access to coin squirrel services</h4>
-            </div>
-          </div>
+        <p><strong>Find your favorite game and checkout newest in-game offers</strong></p>
+        <%= cl_image_tag @game.game_character_image %>
+      </div>
+      <div class="how-it-works-card">
+        <div class="how-it-works-number">
+          <h1>2</h1>
         </div>
-
-        <div class="steps-block">
-          <div class="steps-card" id="shop">
-            <i class="fas fa-shopping-cart fa-6x"></i>
-            <div>
-              <h4>Easily access all our partners and shop online</h4>
-            </div>
-          </div>
-          <div class="image-card card-shadow-light">
-            <%= cl_image_tag @game.shopping_cart_image %>
-          </div>
+        <p><strong>Create a free acount and have unlimited access to coin squirrel</strong></p>
+        <%= image_tag "logo.png", alt: "alttext", id: "coin-logo" %>
+      </div>
+      <div class="how-it-works-card">
+        <div class="how-it-works-number">
+          <h1>3</h1>
         </div>
-
-        <div class="steps-block">
-          <div class="image-card card-shadow-light">
-            <%= cl_image_tag @game.currency_image %>
-          </div>
-          <div class="steps-card" id="coins">
-            <i class="fas fa-check-circle fa-6x"></i>
-            <div>
-              <h4>Earn coins for every purchase you make and save for your favorite item</h4>
-            </div>
-          </div>
+        <p><strong>Easily access all our partners and shop online</strong></p>
+        <%= cl_image_tag @game.shopping_cart_image %>
+      </div>
+      <div class="how-it-works-card">
+        <div class="how-it-works-number">
+          <h1>4</h1>
         </div>
-
-
-        <div class="steps-block">
-          <div class="steps-card" id="rewards">
-            <i class="fas fa-coins fa-6x"></i>
-            <div>
-              <h4>Pay out your balance and receive a gift card to buy the item you were saving for</h4>
-            </div>
-          </div>
-          <div class="image-card card-shadow-light">
-            <%= cl_image_tag @game.premium_item_image %>
-          </div>
+        <p><strong>Earn coins for every purchase you make and save for your favorite item</strong></p>
+        <%= cl_image_tag @game.currency_image %>
+      </div>
+      <div class="how-it-works-card-last">
+        <div class="how-it-works-number-last">
+          <h1>5</h1>
         </div>
-
+        <p><strong>Pay out your coins and start get  ingame items for free</strong></p>
+        <%= cl_image_tag @game.premium_item_image %>
       </div>
     </div>
+
+
 
     <!-- CTA -->
     <div class="cta-banner">
