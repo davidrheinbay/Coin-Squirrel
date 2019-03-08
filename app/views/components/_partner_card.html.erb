@@ -17,11 +17,11 @@
         <a href="<%= "#{partner.referral_link}" %>" class="link">Your Referal Link</a>
       </div>
       <div class="see-more part-element-partner-card">
-        <button id="my-button-<%= partner.id %>" class="opening-button">
           <%= link_to partner_path(partner), remote: true, class: 'my-link' do %>
+        <button id="my-button-<%= partner.id %>" class="opening-button">
               <i class="fas fa-plus see-details"></i>
-          <% end %>
         </button>
+          <% end %>
         <button id="close-button-<%= partner.id %>" class="hidden closing-button">
           <i class="fas fa-plus removing-details"></i>
         </button>
