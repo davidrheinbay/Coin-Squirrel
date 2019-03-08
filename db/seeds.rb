@@ -142,7 +142,7 @@ games = [
   },
   {
     data: {
-      name: "PUBG",
+      name: "Pubg",
       currency_name: "G-Coin",
       currency_short: "GC"
     },
