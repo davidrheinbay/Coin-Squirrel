@@ -47,7 +47,7 @@ partners = [
       company_entity_name: "Zalando SE",
       commission_perc: 10,
       user_commission_perc: 5,
-      referral_link: "#"
+      referral_link: "https://www.zalando.de/"
     },
     urls: {
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Zalando_logo.svg",
@@ -60,7 +60,7 @@ partners = [
       company_entity_name: "Delivery Hero Germany GmbH",
       commission_perc: 10,
       user_commission_perc: 5,
-      referral_link: "#"
+      referral_link: "https://www.lieferheld.de/"
     },
     urls: {
       logo_image_url: "http://schnitzeria.de/wp-content/themes/Neutrum-Business-Schnitzeria/images/logo-lieferheld.png",
@@ -73,7 +73,7 @@ partners = [
       company_entity_name: "Asos PLC",
       commission_perc: 10,
       user_commission_perc: 5,
-      referral_link: "#"
+      referral_link: "https://www.asos.de/"
     },
     urls: {
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Asos.svg",
@@ -86,7 +86,7 @@ partners = [
       company_entity_name: "Expedia Inc",
       commission_perc: 10,
       user_commission_perc: 5,
-      referral_link: "#"
+      referral_link: "https://www.expedia.de/"
     },
     urls: {
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Expedia_2012_logo.svg",
@@ -99,7 +99,7 @@ partners = [
       company_entity_name: "home24 SE",
       commission_perc: 10,
       user_commission_perc: 5,
-      referral_link: "#"
+      referral_link: "https://www.home24.de/"
     },
     urls: {
       logo_image_url: "https://seeklogo.com/images/H/home24-logo-3F4E4A08A2-seeklogo.com.gif",
