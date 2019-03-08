@@ -156,7 +156,8 @@ users = [
       password: "Coin2019!",
       game: Game.first,
       balance_cents: 99999,
-      balance_currency: "EUR"
+      balance_currency: "EUR",
+      admin: true
     },
     urls: {
 
@@ -170,7 +171,8 @@ users = [
       password: "Coin2019!",
       game: Game.first,
       balance_cents: 8080,
-      balance_currency: "EUR"
+      balance_currency: "EUR",
+      admin: false
     },
     urls: {
 
@@ -184,7 +186,8 @@ users = [
       password: "Coin2019!",
       game: Game.first,
       balance_cents: 2525,
-      balance_currency: "EUR"
+      balance_currency: "EUR",
+      admin: false
     },
     urls: {
 
@@ -197,8 +200,10 @@ users = [
       email: "max@coinsquirrel.de",
       password: "Coin2019!",
       game: Game.first,
-      balance_cents: 3020,
-      balance_currency: "EUR"
+      balance_cents: 10000,
+      balance_currency: "EUR",
+      admin: false
+
     },
     urls: {
       profile_image_url: 'http://fanaru.com/my-neighbor-totoro/image/185574-my-neighbor-totoro-totoro.png'
@@ -212,7 +217,8 @@ users = [
       password: "Coin2019!",
       game: Game.first,
       balance_cents: 10001,
-      balance_currency: "EUR"
+      balance_currency: "EUR",
+      admin: false
     },
     urls: {
       profile_image_url: "https://www.expressandstar.com/resizer/kUXSB6x7igtCObjUqp2hrDUUjAk=/1000x0/filters:quality(100)/arc-anglerfish-arc2-prod-expressandstar-mna.s3.amazonaws.com/public/Q36HAOGOV5F4JDBMGP6UPS5HAQ.jpg"
@@ -240,7 +246,7 @@ exchange_rates = [
     data: {
       currency_origin_short: "EUR",
       currency_target_short: "V-Bucks",
-      rate: 100,
+      rate: 90,
       game: Game.first
     },
     urls: {
@@ -251,7 +257,7 @@ exchange_rates = [
     data: {
       currency_origin_short: "V-Bucks",
       currency_target_short: "EUR",
-      rate: 0.01,
+      rate: 0.0111,
       game: Game.first
     },
     urls: {

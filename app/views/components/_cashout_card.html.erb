@@ -12,7 +12,8 @@
     </span>
 
     <h2>
-      <%= transaction.user_commission_amount_cents * ExchangeRate.where(game_id: transaction.game_id)[0].rate.to_i %>
+      <% amount = transaction.user_commission_amount * ExchangeRate.where(game_id: transaction.game_id)[0].rate.to_i %>
+      <%= number_with_precision(amount, precision: 0, delimiter: ',') %>
     </h2>
 
     <%= cl_image_tag Game.find_by_id(transaction.game_id).currency_image, class:"transaction-image-currency" %>
@@ -21,7 +22,7 @@
 
 <div class="collapse" id="<%= transaction.id %>">
   <div class="well">
-    dfghjk
+    <%= transaction.link_used %>
   </div>
 </div>
 
