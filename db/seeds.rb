@@ -197,7 +197,7 @@ users = [
       email: "max@coinsquirrel.de",
       password: "Coin2019!",
       game: Game.first,
-      balance_cents: 3020,
+      balance_cents: 10000,
       balance_currency: "EUR"
     },
     urls: {
@@ -240,7 +240,7 @@ exchange_rates = [
     data: {
       currency_origin_short: "EUR",
       currency_target_short: "V-Bucks",
-      rate: 100,
+      rate: 90,
       game: Game.first
     },
     urls: {
@@ -251,7 +251,7 @@ exchange_rates = [
     data: {
       currency_origin_short: "V-Bucks",
       currency_target_short: "EUR",
-      rate: 0.01,
+      rate: 0.0111,
       game: Game.first
     },
     urls: {
