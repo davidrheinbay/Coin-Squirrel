@@ -11,10 +11,8 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :game, presence: true
 
-  validates :balance_cents, presence: true
-
   # make cents only integers
-  monetize :balance_cents, numericality: { greater_than_or_equal_to: 0 }
+  monetize :balance_cents
 
   # includes Profile Image Uploader in User
   mount_uploader :profile_image, ProfileImageUploader

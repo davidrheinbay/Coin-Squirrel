@@ -13,21 +13,18 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new(transaction_params)
     authorize @transaction
 
-    @transaction = create_cashout_transaction(@transaction)
-
-    if current_user.balance_cents >= @transaction.user_commission_amount_cents
-
-      if @transaction.save
-        current_user.balance_cents -= @transaction.user_commission_amount_cents
+    if @transaction.transaction_type == 'cash_out'
+      transaction = create_cashout_transaction(@transaction)
+      if transaction.save!
+        current_user.balance_cents -= transaction.user_commission_amount_cents
         current_user.save
         redirect_to transactions_path
       else
         render :new
       end
     else
-      render :new
+      puts 'ney'
     end
-
   end
 
   private
@@ -58,3 +55,18 @@ class TransactionsController < ApplicationController
     GiftbitLoader.new.call
   end
 end
+
+    # t.integer "user_commission_amount_cents", default: 0, null: false
+    # t.string "transaction_type"
+
+    # t.bigint "user_id"
+    # t.integer "gmv_eur_cents", default: 0, null: false
+    # t.string "gmv_eur_currency", default: "EUR", null: false
+    # t.float "commission_perc"
+    # t.float "user_commission_share_perc"
+    # t.datetime "transaction_confirmed_date"
+    # t.datetime "transaction_completed_date"
+    # t.string "state"
+    # t.index ["game_id"], name: "index_transactions_on_game_id"
+    # t.index ["partner_id"], name: "index_transactions_on_partner_id"
+    # t.index ["user_id"], name: "index_transactions_on_user_id"
