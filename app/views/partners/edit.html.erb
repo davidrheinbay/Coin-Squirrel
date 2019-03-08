@@ -8,7 +8,7 @@
         </div>
 
         <div class="card-body">
-          <%= form_for :partner do |f| %>
+          <%= form_for @partner do |f| %>
           <%#= f.error_notification %>
 
             <div class="row">
@@ -63,6 +63,17 @@
                               input_html: { autocomplete: "user_commsission_perc" }%>
                 </div>
 
+                <div class="form-group row">
+                  <div class="input-group-prepend">
+                    <i class="material-icons"> link </i>
+                  </div>
+                  <%= f.text_field :referral_link,
+                              class:"form-controll",
+                              placeholder: 'Referral Link: https://...',
+                              required: true,
+                              autofocus: true,
+                              input_html: { autocomplete: "referral_link" }%>
+                </div>
 
                 <div class="form-group row">
 
@@ -77,7 +88,7 @@
                 <div class="form-group row">
 
                   <div class="input-group-prepend">Banner Image</div>
-                  <%= f.file_field :banner_image,
+                  <%= f.file_field :card_image,
                            class:"form-control-file" %>
 
                 </div>

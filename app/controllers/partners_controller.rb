@@ -12,7 +12,7 @@ class PartnersController < ApplicationController
     @partner = Partner.new(partner_params)
     authorize @partner
     if @partner.save
-      redirect_to partners_path(partner: @partner.name)
+      redirect_to partners_path(nil, partner: @partner.name)
     else
       render :new
     end
@@ -26,9 +26,9 @@ class PartnersController < ApplicationController
   def update
     @partner = Partner.find(params[:id])
     authorize @partner
-    @partner.update(partner_parmas)
+    @partner.update(partner_params)
     if @partner.save
-      redirect_to partners_path(partner: @partner.name)
+      redirect_to partners_path(nil, partner: @partner.name)
     else
       render :edit
     end
@@ -38,7 +38,7 @@ class PartnersController < ApplicationController
 
   def partner_params
     params.require(:partner).permit(:name, :company_entity_name,
-                                    :comission_perc, :user_commsission_perc,
+                                    :commission_perc, :user_commission_perc,
                                     :referral_link, :logo_image, :card_image,
                                     :awin_advertiser_id)
   end

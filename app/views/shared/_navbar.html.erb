@@ -55,6 +55,9 @@
         <li><%= link_to "Go Shopping", partners_path %></li>
         <li><%= link_to "Your Game", "#"%></li>
         <li><%= link_to "Transactions", transactions_path %></li>
+        <% if current_user.admin? %>
+        <li><%= link_to "Add Partner", new_partner_path %></li>
+        <% end %>
         <li><%= link_to "Profile", "#"%></li>
         <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       </ul>
