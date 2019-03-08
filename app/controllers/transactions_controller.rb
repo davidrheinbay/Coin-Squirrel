@@ -11,19 +11,21 @@ class TransactionsController < ApplicationController
 
   def create
     @transaction = Transaction.new(transaction_params)
+
+    @transaction = create_cashout_transaction(@transaction)
     authorize @transaction
 
-    if @transaction.transaction_type == 'cash_out'
-      transaction = create_cashout_transaction(@transaction)
-      if transaction.save!
-        current_user.balance_cents -= transaction.user_commission_amount_cents
+    if current_user.balance_cents >= @transaction.user_commission_amount_cents
+
+      if @transaction.save
+        current_user.balance_cents -= @transaction.user_commission_amount_cents
         current_user.save
         redirect_to transactions_path
       else
         render :new
       end
     else
-      puts 'ney'
+      render :new
     end
   end
 
