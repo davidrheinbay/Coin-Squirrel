@@ -3,8 +3,13 @@ class PagesController < ApplicationController
 
   def home
     @partners = Partner.all
-    @game = find_game
     @games = search_games
+
+    if user_signed_in? == true
+      @game = Game.find(current_user.game.id)
+    else
+      @game = Game.find_by_name("Fortnite")
+    end
   end
 
   private
@@ -13,7 +18,7 @@ class PagesController < ApplicationController
     if params[:game].blank?
       Game.find_by_name("Fortnite")
     else
-      Game.find_by_name(params[:game])
+      Game.find(params[:game])
     end
   end
 
