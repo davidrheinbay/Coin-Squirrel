@@ -7,7 +7,7 @@ class GamesController < ApplicationController
   def show
     @game = Game.find(params[:id])
     authorize @game
-    @items = FortniteItemsLoader.call
+    @items = PubgItemsLoader.call
   end
 
   def index
