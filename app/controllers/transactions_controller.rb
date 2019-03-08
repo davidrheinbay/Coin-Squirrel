@@ -46,7 +46,6 @@ class TransactionsController < ApplicationController
     transaction.user_commission_amount_currency = 'EUR'
 
     # would be better if set equal to created_at date right after creation
-    transaction.transaction_confirmed_date = DateTime.now
     transaction.state = "confirmed"
     transaction.link_used = call_giftbit_api['gift_link']
     transaction
