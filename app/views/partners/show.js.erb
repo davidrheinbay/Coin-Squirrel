@@ -20,10 +20,9 @@ lastInLine = (lineLenght, nthElement) => {
 descriptionHTML = () => {
   return "<div class=\"col-xs-12 details\">\
             <div class=\"content\"</div>\
-              <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure harum aspernatur, alias.</h3>\
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, architecto rerum illum hic, odio neque eum unde nemo quia laboriosam maiores vitae voluptatem blanditiis quasi quaerat. Quod assumenda optio cum.</p>\
-              <p>Your Reference Link</p>\
-              <a href=\"<%= "#" %>\">\
+              <h3><%= @partner.name %></h3>\
+              <p>Very nice Shop, just buy something nice and give us your money :D</p>\
+              <a href=\"<%= @partner.referral_link %>\">Your Personal Reference Link</a>\
             </div>\
           </div>"
 };
@@ -122,18 +121,21 @@ loadInRightPlace = () => {
 
 loadInRightPlace();
 
-window.addEventListener('resize', event => {
-  ww = window.innerWidth;
-  loadInRightPlace();
-});
-
 var used = false;
+
+window.addEventListener('resize', event => {
+  if (!used) {
+    ww = window.innerWidth;
+    loadInRightPlace();
+  }
+});
 
 document.querySelector(`#close-button-${currentId}`).addEventListener('click', (event) => {
   if (!used) {
     document.querySelector('.details').remove();
     switchButton(currentId);
   }
+  used = true;
 })
 
 

@@ -4,8 +4,12 @@
 }
 
 // shop background card
-.shop-card {
-
+.partner-card {
+  height: 370px;
+  img {
+    height: 150px;
+    object-fit: cover;
+  }
 }
 
 .details {
@@ -14,9 +18,15 @@
     background-color: $grey;
     margin-bottom: 30px;
     border-radius: 5px;
-    padding: 20px;
-    color: white;
-    height: 400px;
+    padding: 50px 100px;
+    color: $light-grey;
+    height: 250px;
+    a {
+      color: $yellow;
+    }
+    h3 {
+      border-bottom: 1px solid $light-grey;
+    }
   }
 }
 
@@ -47,8 +57,19 @@
   justify-content: center;
   align-items: center;
   .link {
-    height: 20px
+    height: 20px;
+    color: $yellow;
   }
+  .link:hover {
+    color: $grey;
+  }
+}
+
+.part-element-partner-card-no-border {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .partner-stats {
@@ -56,7 +77,20 @@
   justify-content: space-between;
 }
 
-
+.only-admin {
+  height: 30px;
+  width: 50px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: $yellow;
+  border-radius: 15px;
+  text-align: center;
+  a {
+    color: white;
+    margin-bottom: 0;
+  }
+}
 
 
 
