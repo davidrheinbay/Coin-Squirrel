@@ -1,7 +1,7 @@
 require 'rest_client'
 
 class GiftbitLoader
-  def get
+  def call
     values = "{
       'brand_code': 'itunesus',
       'price_in_cents': 2500,
@@ -17,6 +17,6 @@ class GiftbitLoader
                                 values, headers
 
     jason = JSON.parse(response)
-    puts jason["gift_link"]
+    p jason
   end
 end
