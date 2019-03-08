@@ -8,6 +8,9 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     authorize @game
     @items = FortniteItemsLoader.call
+  end
 
+  def index
+    @games = policy_scope(Game)
   end
 end

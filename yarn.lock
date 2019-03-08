@@ -3906,6 +3906,11 @@ mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkd
   dependencies:
     minimist "0.0.8"
 
+mout@^0.9.1, mout@~0.9:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/mout/-/mout-0.9.1.tgz#84f0f3fd6acc7317f63de2affdcc0cee009b0477"
+  integrity sha1-hPDz/WrMcxf2PeKv/cwM7gCbBHc=
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -5124,6 +5129,13 @@ preserve@^0.2.0:
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
   integrity sha1-gV7R9uvGWSb4ZbMQwHE7yzMVzks=
 
+prime@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/prime/-/prime-0.4.2.tgz#2c937c6b11e0a6488fe5cb7020a1f5db1ec59384"
+  integrity sha1-LJN8axHgpkiP5ctwIKH12x7Fk4Q=
+  dependencies:
+    mout "~0.9"
+
 private@^0.1.6, private@^0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
@@ -6280,6 +6292,14 @@ tough-cookie@~2.4.3:
   dependencies:
     psl "^1.1.24"
     punycode "^1.4.1"
+
+transition@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/transition/-/transition-0.1.1.tgz#1e13f83246d10b72a1175b0cdaa8ef120d7fcd05"
+  integrity sha1-HhP4MkbRC3KhF1sM2qjvEg1/zQU=
+  dependencies:
+    mout "^0.9.1"
+    prime "^0.4.2"
 
 trim-newlines@^1.0.0:
   version "1.0.0"

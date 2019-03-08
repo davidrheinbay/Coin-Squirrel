@@ -6,8 +6,8 @@ class Partner < ApplicationRecord
   mount_uploader :card_image, CardImageUploader
 
   validates :name, presence: true
+  validates :name, uniqueness: true
   validates :company_entity_name, presence: true
-  validates :company_entity_name, uniqueness: true
   validates :commission_perc, presence: true
   validates :user_commission_perc, presence: true
   validates :referral_link, presence: true
