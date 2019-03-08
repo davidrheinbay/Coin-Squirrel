@@ -8,11 +8,7 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     authorize @game
 
-    if params[:id] == 2
-      @items = PubgItemsLoader.call
-    else
-      @items = FortniteItemsLoader.call
-    end
+    @items = @game.fetch_items
   end
 
   def index

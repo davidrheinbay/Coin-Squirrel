@@ -15,4 +15,8 @@ class Game < ApplicationRecord
   mount_uploader :banner_image, BannerImageUploader
   mount_uploader :premium_item_image, PremiumItemImageUploader
   mount_uploader :shopping_cart_image, ShoppingCartImageUploader
+
+  def fetch_items
+    "#{name}ItemsLoader".constantize.call
+  end
 end
