@@ -28,35 +28,35 @@
           <h1>1</h1>
         </div>
         <p><strong>Find your favorite game and checkout newest in-game offers</strong></p>
-        <i class="fas fa-search fa-6x"></i>
+        <%= cl_image_tag @game.game_character_image %>
       </div>
       <div class="how-it-works-card">
         <div class="how-it-works-number">
           <h1>2</h1>
         </div>
         <p><strong>Create a free acount and have unlimited access to coin squirrel</strong></p>
-        <i class="fas fa-user-plus fa-6x"></i>
+        <%= image_tag "logo.png", alt: "alttext", id: "coin-logo" %>
       </div>
       <div class="how-it-works-card">
         <div class="how-it-works-number">
           <h1>3</h1>
         </div>
         <p><strong>Easily access all our partners and shop online</strong></p>
-        <i class="fas fa-shopping-cart fa-6x"></i>
+        <%= cl_image_tag @game.shopping_cart_image %>
       </div>
       <div class="how-it-works-card">
         <div class="how-it-works-number">
           <h1>4</h1>
         </div>
         <p><strong>Earn coins for every purchase you make and save for your favorite item</strong></p>
-        <i class="fas fa-check-circle fa-6x"></i>
+        <%= cl_image_tag @game.currency_image %>
       </div>
       <div class="how-it-works-card-last">
         <div class="how-it-works-number-last">
           <h1>5</h1>
         </div>
         <p><strong>Pay out your coins and start get  ingame items for free</strong></p>
-        <i class="fas fa-dollar-sign fa-6x"></i>
+        <%= cl_image_tag @game.premium_item_image %>
       </div>
     </div>
 

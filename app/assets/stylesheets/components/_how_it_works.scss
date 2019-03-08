@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 
 }
 
@@ -22,6 +23,10 @@
   p {
     color: black;
     margin-top: 30px;
+  }
+
+  img {
+    height: 150px;
   }
 }
 
@@ -64,6 +69,10 @@
     color: white;
     margin-top: 30px;
   }
+
+  img {
+    height: 150px;
+  }
 }
 
 .how-it-works-number-last {
@@ -82,9 +91,14 @@
   h1 {
     margin-bottom: 28px;
   }
+
 }
 
-
+#coin-logo {
+  width: 150px;
+  height: 100px;
+  margin-top: 30px;
+}
 
 
 
