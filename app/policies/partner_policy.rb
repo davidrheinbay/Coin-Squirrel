@@ -1,7 +1,7 @@
 class PartnerPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      scope.where("name != ?", "CoinSquirrel")
     end
   end
 
