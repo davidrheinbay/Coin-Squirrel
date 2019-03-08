@@ -1,4 +1,7 @@
 <div class="container">
+  <br>
+<%= link_to 'Payout your Coins', new_transaction_path, class:"btn btn-medium-solid" %>
+
   <% @transactions.each do |transaction| %>
 
     <% if transaction.partner_id.nil? %>
