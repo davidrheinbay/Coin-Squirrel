@@ -1,8 +1,7 @@
 
-
 lastInLine = (lineLenght, nthElement) => {
-  counterLastInLine = nthElement;
-  nthLastInLine = 0;
+  var counterLastInLine = nthElement;
+  var nthLastInLine = 0;
   while (nthLastInLine === 0) {
     if ((counterLastInLine + 1) % lineLenght === 0) {
       nthLastInLine = counterLastInLine;
@@ -10,9 +9,9 @@ lastInLine = (lineLenght, nthElement) => {
     counterLastInLine += 1;
   }
   if (nthLastInLine > (cards.length - 1)) {
-    card = cards[cards.length - 1];
+    var card = cards[cards.length - 1];
   } else {
-    card = cards[nthLastInLine];
+    var card = cards[nthLastInLine];
   }
   return card;
 };
@@ -64,17 +63,17 @@ standardizeButtons = () => {
 
 
 // defines viewport width
-ww = window.innerWidth;
+var ww = window.innerWidth;
 
 // puts all cards in a variable
-cards = document.querySelectorAll('.card-parent');
+var cards = document.querySelectorAll('.card-parent');
 
 // defines the id of the current_object
-currentId = <%= @partner.id %>;
+var currentId = <%= @partner.id %>;
 
 // calculates which number of the elements is the current element
-nthElement = 0;
-count = 0;
+var nthElement = 0;
+var count = 0;
 
 cards.forEach(card => {
   if (card.dataset.id == currentId) {
@@ -86,24 +85,24 @@ cards.forEach(card => {
 loadInRightPlace = () => {
   if (ww < 576) {
     // xs
-    line = 2;
-    lastCard = lastInLine(line, nthElement);
+    var line = 2;
+    var lastCard = lastInLine(line, nthElement);
   } else if (ww < 768) {
     // sm
-    line = 2;
-    lastCard = lastInLine(line, nthElement);
+    var line = 2;
+    var lastCard = lastInLine(line, nthElement);
   } else if (ww < 992) {
     // md
-    line = 3;
-    lastCard = lastInLine(line, nthElement);
+    var line = 3;
+    var lastCard = lastInLine(line, nthElement);
   } else if (ww < 1200) {
     // lg
-    line = 4;
-    lastCard = lastInLine(line, nthElement);
+    var line = 4;
+    var lastCard = lastInLine(line, nthElement);
   } else {
     // xl
-    line = 4;
-    lastCard = lastInLine(line, nthElement);
+    var line = 4;
+    var lastCard = lastInLine(line, nthElement);
   }
   standardizeButtons();
 
