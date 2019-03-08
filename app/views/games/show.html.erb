@@ -1,7 +1,7 @@
 <div class="container">
   <div class="store-control">
     <%= link_to "Back to games", games_path, class: "btn-medium-solid" %>
-    <h1><%= current_user.balance_cents %> <%= @items.first.currency %></h1>
+
   </div>
   <div class="row">
     <% @items.each do |item| %>
