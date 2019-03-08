@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
-    @partners = Partner.all
+    @partners = Partner.where("name != ?", "CoinSquirrel")
     @game = find_game
     @games = search_games
   end
