@@ -139,6 +139,23 @@ games = [
       shopping_cart_image_url: "https://gamepedia.cursecdn.com/fortnite_gamepedia/0/08/Shopping_cart_icon.png",
 
     }
+  },
+  {
+    data: {
+      name: "PUBG",
+      currency_name: "G-Coin",
+      currency_short: "GC"
+    },
+    urls: {
+      card_image_url: "https://wallpapercave.com/wp/wp3276765.jpg",
+      logo_image_url: "https://banner2.kisspng.com/20180707/sil/kisspng-playerunknown-s-battlegrounds-t-shirt-pubg-corpora-pubg-logo-5b415e8fa2db29.0381114715310107036671.jpg",
+      currency_image_url: 'https://res.cloudinary.com/dmr1qubzk/image/upload/v1552054927/769.png',
+      banner_image_url: "https://www.gamebusters.at/wp-content/uploads/2017/12/pubg_new_234.jpg",
+      game_character_image_url: "https://pngimg.com/uploads/pubg/pubg_PNG22.png",
+      premium_item_image_url: "https://gamepedia.cursecdn.com/battlegrounds_gamepedia_en/6/65/Icon_box_preOrder.png",
+      shopping_cart_image_url: "https://gamepedia.cursecdn.com/fortnite_gamepedia/0/08/Shopping_cart_icon.png",
+
+    }
   }
 ]
 
@@ -273,6 +290,28 @@ exchange_rates = [
       currency_target_short: "EUR",
       rate: 0.0111,
       game: Game.first
+    },
+    urls: {
+
+    }
+  },
+  {
+    data: {
+      currency_origin_short: "EUR",
+      currency_target_short: "G-Coin",
+      rate: 50,
+      game: Game.second
+    },
+    urls: {
+
+    }
+  },
+  {
+    data: {
+      currency_origin_short: "G-Coin",
+      currency_target_short: "EUR",
+      rate: 0.5,
+      game: Game.second
     },
     urls: {
 

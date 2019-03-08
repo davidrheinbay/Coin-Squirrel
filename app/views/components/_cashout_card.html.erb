@@ -1,4 +1,3 @@
-
 <div class="transaction-card" role="button" data-toggle="collapse" href="#<%= transaction.id %>" aria-expanded="false" aria-controls="<%= transaction.id %>">
 
   <div class="status"></div>
@@ -11,6 +10,8 @@
       <p> <%= transaction.transaction_confirmed_date.strftime("at %H:%M %d.%m.%Y") %> </p>
     </span>
 
+    <p> REVEAL CODE </p>
+
     <h2>
       <% amount = transaction.user_commission_amount * ExchangeRate.where(game_id: transaction.game_id)[0].rate.to_i %>
       <%= number_with_precision(amount, precision: 0, delimiter: ',') %>
@@ -18,6 +19,8 @@
 
     <%= cl_image_tag Game.find_by_id(transaction.game_id).currency_image, class:"transaction-image-currency" %>
   </div>
+
+
 </div>
 
 <div class="collapse" id="<%= transaction.id %>">
