@@ -8,4 +8,7 @@ Rails.application.routes.draw do
 
   get "/858d1fa2cc7e0388776f1759981a0d06.html", to: "pages#858d1fa2cc7e0388776f1759981a0d06.html"
   resources :transactions, only: [:index, :new, :create]
+
+  get "/imprint", to: "pages#imprint.html"
+  get "/data_protection", to: "pages#data_protection.html"
 end
