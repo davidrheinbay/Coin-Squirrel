@@ -1,0 +1,140 @@
+
+
+lastInLine = (lineLenght, nthElement) => {
+  counterLastInLine = nthElement;
+  nthLastInLine = 0;
+  while (nthLastInLine === 0) {
+    if ((counterLastInLine + 1) % lineLenght === 0) {
+      nthLastInLine = counterLastInLine;
+    }
+    counterLastInLine += 1;
+  }
+  if (nthLastInLine > (cards.length - 1)) {
+    card = cards[cards.length - 1];
+  } else {
+    card = cards[nthLastInLine];
+  }
+  return card;
+};
+
+descriptionHTML = () => {
+  return "<div class=\"col-xs-12 details\">\
+            <div class=\"content\"</div>\
+              <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure harum aspernatur, alias.</h3>\
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, architecto rerum illum hic, odio neque eum unde nemo quia laboriosam maiores vitae voluptatem blanditiis quasi quaerat. Quod assumenda optio cum.</p>\
+              <p>Your Reference Link</p>\
+              <a href=\"<%= "#" %>\">\
+            </div>\
+          </div>"
+};
+
+deleteDetails = () => {
+  details = document.querySelector('.details');
+  if (details !== null) {
+    details.remove();
+  }
+};
+
+detailPresent = () => {
+  if (document.querySelector('.details') !== null) {
+    return true;
+  }
+  return false;
+};
+
+checkIfWWChanged = () => {
+  if (ww === window.innerWidth) {
+    return false;
+  }
+  return false;
+};
+
+switchButton = (id) => {
+  var opening = document.getElementById(`my-button-${id}`)
+  var closing = document.getElementById(`close-button-${id}`)
+  opening.classList.toggle('hidden')
+  closing.classList.toggle('hidden')
+}
+
+standardizeButtons = () => {
+  document.querySelectorAll('.closing-button').forEach((element) => element.classList.add('hidden'));
+  document.querySelectorAll('.opening-button').forEach((element) => element.classList.remove('hidden'))
+}
+
+
+
+
+// defines viewport width
+ww = window.innerWidth;
+
+// puts all cards in a variable
+cards = document.querySelectorAll('.card-parent');
+
+// defines the id of the current_object
+currentId = <%= @partner.id %>;
+
+// calculates which number of the elements is the current element
+nthElement = 0;
+count = 0;
+
+cards.forEach(card => {
+  if (card.dataset.id == currentId) {
+    nthElement = count;
+  }
+  count += 1;
+});
+
+loadInRightPlace = () => {
+  if (ww < 576) {
+    // xs
+    line = 2;
+    lastCard = lastInLine(line, nthElement);
+  } else if (ww < 768) {
+    // sm
+    line = 2;
+    lastCard = lastInLine(line, nthElement);
+  } else if (ww < 992) {
+    // md
+    line = 3;
+    lastCard = lastInLine(line, nthElement);
+  } else if (ww < 1200) {
+    // lg
+    line = 4;
+    lastCard = lastInLine(line, nthElement);
+  } else {
+    // xl
+    line = 4;
+    lastCard = lastInLine(line, nthElement);
+  }
+  standardizeButtons();
+
+  deleteDetails();
+
+  switchButton(currentId);
+
+  lastCard.insertAdjacentHTML('afterend', descriptionHTML());
+
+
+
+}
+
+
+
+loadInRightPlace();
+
+window.addEventListener('resize', event => {
+  ww = window.innerWidth;
+  loadInRightPlace();
+});
+
+var used = false;
+
+document.querySelector(`#close-button-${currentId}`).addEventListener('click', (event) => {
+  if (!used) {
+    document.querySelector('.details').remove();
+    switchButton(currentId);
+  }
+})
+
+
+

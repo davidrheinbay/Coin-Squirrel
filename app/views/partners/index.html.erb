@@ -1,8 +1,11 @@
-<div class="container">
-  <div class="cards">
+<div class="wrapper">
+  <div class="description">
+
+  </div>
+  <div class="background-card card-shadow-strong card-tmm-60 shop-card">
     <div class="row">
       <% @partners.each do |partner| %>
-        <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="col-xs-6 col-sm-4 col-md-3 card-parent" data-id="<%= partner.id %>">
           <%= render 'components/partner_card', partner: partner %>
         </div>
       <% end %>
