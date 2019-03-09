@@ -156,6 +156,22 @@ games = [
       shopping_cart_image_url: "https://gamepedia.cursecdn.com/fortnite_gamepedia/0/08/Shopping_cart_icon.png",
 
     }
+  },
+  {
+    data: {
+      name: 'Dota',
+      currency_name: 'D-Coins',
+      currency_short: 'DC'
+    },
+    urls: {
+      card_image_url: 'https://es.me/wp-content/uploads/2019/01/Dota-2-esports-empire-play.jpg',
+      logo_image_url: 'https://steamuserimages-a.akamaihd.net/ugc/577865573024972042/BE1429F2D32F1ECB9123A3AA9D9FE2AC61BC4F3E/',
+      currency_image_url: 'https://res.cloudinary.com/dmr1qubzk/image/upload/v1552054927/769.png',
+      banner_image_url: 'https://s3.dexerto.com/thumbnails/_thumbnailLarge/dota-2-patch-notes-7.21b-valve-steam.jpg',
+      game_character_image_url: 'https://gamepedia.cursecdn.com/dota2_gamepedia/thumb/3/31/Dota_Heroes.png/300px-Dota_Heroes.png?version=fe57923c5e34e392f524a291e1b94e41',
+      premium_item_image_url: 'https://gamerall.com/84813-large_default/fragger-dota-2-chest.jpg',
+      shopping_cart_image_url: 'https://gamepedia.cursecdn.com/fortnite_gamepedia/0/08/Shopping_cart_icon.png'
+    }
   }
 ]
 

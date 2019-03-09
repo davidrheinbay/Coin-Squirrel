@@ -9,7 +9,7 @@ class DotaItemsLoader
 
   def fetch_items
     @payload = JSON.parse(open(API_URI).read)
-
+    parse_payload
   end
 
   private
