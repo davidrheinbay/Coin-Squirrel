@@ -21,8 +21,8 @@ class PubgItemsLoader
         name: item['name'],
         rarity: 'uncommon',
         image: "https://steamcommunity-a.akamaihd.net/economy/image/#{item['asset_description']['icon_url']}",
-        cost: set_price(item['sell_price_text']),
-        currency: '$',
+        cost: set_price(item['sell_price_text']) * 10,
+        currency: 'G-coins',
         rating: rand(0...5),
         votes: rand(0...500)
       )
