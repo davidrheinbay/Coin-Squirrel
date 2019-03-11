@@ -1,6 +1,30 @@
 <div class="wrapper">
+  <div class="container">
   <div class="description">
-
+    <h2>3 Easy Steps to Earn Coins</h1>
+      <br>
+    <div class="row">
+      <div class="col-xs-4">
+        1. Choose Partner & Click on "Go to Shop"
+      </div>
+      <div class="col-xs-4">
+        2. Purchase something
+      </div>
+      <div class="col-xs-4">
+        3. Earn coins for every € spent
+      </div>
+      <br>
+      <br>
+      <h4>Find Shop</h4>
+       <%= form_tag root_path, class:"form-inline",method: :get do %>
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+      placeholder: "Avira, CarDelMar, ..." %>
+      <%= submit_tag "Find Shop", class:"btn btn-medium-solid" %>
+      <% end %>
+    </div>
+    </div>
   </div>
   <div class="background-card card-shadow-strong card-tmm-60 shop-card">
     <div class="row">
@@ -12,4 +36,3 @@
     </div>
   </div>
 </div>
-<%= render 'components/footer' %>

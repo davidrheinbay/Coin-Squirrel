@@ -6,7 +6,7 @@
   background-position: top right;
   height: 80vh;
   padding: 150px 0;
-  margin: 0px;
+  margin: 0;
 }
 
 .banner h1 {
@@ -24,45 +24,48 @@
   margin: 3px 0px 15px 0px;
 }
 
+// -----------------------------------------------------------------------------
 
 .partners-wrapper {
   background-color: $light-grey;
   margin: 100px -50px 0px -50px;
   padding: 0px 50px 50px 50px;
   display:flex;
-  align-items: center;
   flex-direction: column;
 }
 
-.games-wrapper {
-  background-color: white;
-  margin: 0px -50px 30px -50px;
-  padding: 0px 50px;
-  display:flex;
+.partner-imgs {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
-  flex-direction: column;
 }
-
 
 .partners-banner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: center;
   padding: 30px;
 }
 
 .partners-logo {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   width: 200px;
-  height: 50px;
-  margin: 40px 10px;
+  margin: 20px 30px;
 
   img {
     width: 100%;
+    filter: grayscale(100%);
+  }
+
+  img:hover {
+    filter: none;
+
   }
 }
+
+// -----------------------------------------------------------------------------
 
 .arrow-down {
   width: 0;
@@ -75,7 +78,7 @@
 
 
 .cta-banner {
-  margin-top: 70px;
+  margin-top: 40px;
   text-align: center;
 }
 

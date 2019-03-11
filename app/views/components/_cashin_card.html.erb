@@ -1,6 +1,8 @@
 <div class="transaction-card">
 
-  <div class="status"></div>
+  <div class="status <%= transaction.state %> unclicked" id="status-<%= transaction.id %>" role="button">
+    <h3  class="hidden"><%= transaction.state.capitalize %></h3>
+  </div>
   <div class="card-body card-shadow-light">
     <%= cl_image_tag Partner.find_by_id(transaction.partner_id).logo_image, class:"transaction-image" %>
 
@@ -9,7 +11,11 @@
       <p> <%= transaction.transaction_confirmed_date.strftime("at %H:%M %d.%m.%Y") %> </p>
     </span>
 
-    <h2>
+    <span class="cashin-text">
+      <h3>Cash In</h3>
+    </span>
+
+    <h2 class="transaction-amount">
       <% amount =  transaction.user_commission_amount.to_i  * current_user.game.exchange_rates.where(currency_origin_short: "EUR").first.rate / 100 %>
       <%= number_with_precision(amount, precision: 0, delimiter: ',') %>
     </h2>
