@@ -43,67 +43,67 @@ partners = [
   },
   {
     data: {
-      name: "Zalando",
-      company_entity_name: "Zalando SE",
-      commission_perc: 10,
-      user_commission_perc: 5,
-      referral_link: "https://www.zalando.de/"
+      name: "Avira",
+      company_entity_name: "Avira GmbH & Co. KG",
+      commission_perc: 25,
+      user_commission_perc: 15,
+      referral_link: "http://www.awin1.com/awclick.php?mid=7626&id=575543"
     },
     urls: {
-      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Zalando_logo.svg",
-      card_image_url: "https://www.berliner-zeitung.de/image/32119666/2x1/940/470/74f9505ed7fce15a4b7d71e189e8cfc9/Jd/zalando.jpg",
+      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Avira_logo_2014.svg/250px-Avira_logo_2014.svg",
+      card_image_url: "https://img.netzwelt.de/dw880_dh495_sw0_sh0_sx0_sy0_sr16x9_nu0/picture/original/2015/08/avira-168450.jpeg",
     }
   },
   {
     data: {
-      name: "Lieferheld",
-      company_entity_name: "Delivery Hero Germany GmbH",
-      commission_perc: 10,
-      user_commission_perc: 5,
-      referral_link: "https://www.lieferheld.de/"
+      name: "CarDelMar",
+      company_entity_name: "Ferienautovermietung GmbH",
+      commission_perc: 8,
+      user_commission_perc: 4,
+      referral_link: "http://www.awin1.com/awclick.php?mid=9120&id=575543"
     },
     urls: {
-      logo_image_url: "http://schnitzeria.de/wp-content/themes/Neutrum-Business-Schnitzeria/images/logo-lieferheld.png",
-      card_image_url: "https://www.fluxfm.de/wp-content/uploads/2018/02/VALENTINSTAG_66016neu-628x356.jpg",
+      logo_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552060849/emidoiwlwbuluzjfvxqv.png",
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552060850/jxyygpndhbcnagweqbuu.jpg",
     }
   },
   {
     data: {
-      name: "Asos",
-      company_entity_name: "Asos PLC",
-      commission_perc: 10,
-      user_commission_perc: 5,
-      referral_link: "https://www.asos.de/"
+      name: "Casando",
+      company_entity_name: "Holz-Richter GmbH",
+      commission_perc: 4,
+      user_commission_perc: 2,
+      referral_link: "http://www.awin1.com/awclick.php?mid=10992&id=575543"
     },
     urls: {
-      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Asos.svg",
-      card_image_url: "https://i0.wp.com/digiday.com/wp-content/uploads/2017/10/170810_ASOS_shot_15_507.jpg",
+      logo_image_url: "http://partners.holz-richter.s3.amazonaws.com/casando/logo_casando_120x30.png",
+      card_image_url: "https://www.awin1.com/cshow.php?s=2060042&v=10992&q=324770&r=575543",
     }
   },
   {
     data: {
-      name: "Expedia",
-      company_entity_name: "Expedia Inc",
-      commission_perc: 10,
-      user_commission_perc: 5,
-      referral_link: "https://www.expedia.de/"
+      name: "Yello Strom",
+      company_entity_name: "Yello Strom GmbH",
+      commission_perc: 15,
+      user_commission_perc: 10,
+      referral_link: "http://www.awin1.com/awclick.php?mid=11433&id=575543"
     },
     urls: {
-      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Expedia_2012_logo.svg",
-      card_image_url: "https://viewfromthewing.boardingarea.com/wp-content/uploads/2016/02/Expedia-suitcase.jpg",
+      logo_image_url: "https://assets.kununu.com/images/images_logos/yello-strom-gmbh-d917a.gif",
+      card_image_url: "https://yellobanner.blob.core.windows.net/ecom/affiliate/banner/strom/PS4-1.jpg",
     }
   },
   {
     data: {
-      name: "Home24",
-      company_entity_name: "home24 SE",
-      commission_perc: 10,
-      user_commission_perc: 5,
-      referral_link: "https://www.home24.de/"
+      name: "AutoDoc",
+      company_entity_name: "Autodoc GmbH",
+      commission_perc: 6,
+      user_commission_perc: 2,
+      referral_link: "http://ui.zanox.com/bin/z_in_frm.dll?4008400940080&128025573C765357919&981552299232_151291257_2718917"
     },
     urls: {
-      logo_image_url: "https://seeklogo.com/images/H/home24-logo-3F4E4A08A2-seeklogo.com.gif",
-      card_image_url: "https://cdn1.home24.net/static/media/om/img/cms/block/L1_moebel/visnav_kueche_bar.jpg",
+      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/2/23/Autodoc.png",
+      card_image_url: "http://cdn.pkwteile.de/uploads/zanox/atd/Banneratdde660x348.jpg"
     }
   }
 ]
