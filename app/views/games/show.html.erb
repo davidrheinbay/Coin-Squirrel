@@ -1,5 +1,6 @@
 <% amount = current_user.balance * current_user.game.exchange_rates.where(currency_origin_short: "EUR").first.rate %>
 
+
 <div class="container">
   <div class="store-control">
     <%= link_to "Back to games", games_path, class: "btn-medium-solid" %>

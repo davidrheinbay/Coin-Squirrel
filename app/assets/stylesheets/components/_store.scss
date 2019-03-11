@@ -37,11 +37,15 @@
 .store-card {
   background-color: white;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-  height: 450px;
+  height: 474px;
   width: 300px;
   margin-bottom: 30px;
   margin-top: 50px;
   text-align: center;
+
+  strong {
+    line-height: 23px;
+  }
 }
 
 .store-card-content {
