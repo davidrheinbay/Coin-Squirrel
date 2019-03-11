@@ -105,14 +105,27 @@
 
 .store-control {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
 
   a {
     margin-top: 30px;
     margin-right: 60px;
   }
 }
+
+.pay-out {
+  position: fixed;
+  margin-top: 65.5vh;
+  margin-left: 81.3vw;
+
+  img {
+    width: 150px;
+    height: 200px;
+  }
+}
+
 
 
 
