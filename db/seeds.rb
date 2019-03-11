@@ -43,67 +43,67 @@ partners = [
   },
   {
     data: {
-      name: "Zalando",
-      company_entity_name: "Zalando SE",
-      commission_perc: 10,
-      user_commission_perc: 5,
-      referral_link: "https://www.zalando.de/"
+      name: "Avira",
+      company_entity_name: "Avira GmbH & Co. KG",
+      commission_perc: 25,
+      user_commission_perc: 15,
+      referral_link: "http://www.awin1.com/awclick.php?mid=7626&id=575543"
     },
     urls: {
-      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Zalando_logo.svg",
-      card_image_url: "https://www.berliner-zeitung.de/image/32119666/2x1/940/470/74f9505ed7fce15a4b7d71e189e8cfc9/Jd/zalando.jpg",
+      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Avira_logo_2011.png/800px-Avira_logo_2011.png",
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552302499/iopmvv1s15sr4tni41rx-Sharpened.jpg",
     }
   },
   {
     data: {
-      name: "Lieferheld",
-      company_entity_name: "Delivery Hero Germany GmbH",
-      commission_perc: 10,
-      user_commission_perc: 5,
-      referral_link: "https://www.lieferheld.de/"
+      name: "CarDelMar",
+      company_entity_name: "Ferienautovermietung GmbH",
+      commission_perc: 8,
+      user_commission_perc: 4,
+      referral_link: "http://www.awin1.com/awclick.php?mid=9120&id=575543"
     },
     urls: {
-      logo_image_url: "http://schnitzeria.de/wp-content/themes/Neutrum-Business-Schnitzeria/images/logo-lieferheld.png",
-      card_image_url: "https://www.fluxfm.de/wp-content/uploads/2018/02/VALENTINSTAG_66016neu-628x356.jpg",
+      logo_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552060849/emidoiwlwbuluzjfvxqv.png",
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552302501/jv6etztuo5qzb24lf7kr-Sharpened.jpg",
     }
   },
   {
     data: {
-      name: "Asos",
-      company_entity_name: "Asos PLC",
-      commission_perc: 10,
-      user_commission_perc: 5,
-      referral_link: "https://www.asos.de/"
+      name: "Casando",
+      company_entity_name: "Holz-Richter GmbH",
+      commission_perc: 4,
+      user_commission_perc: 2,
+      referral_link: "http://www.awin1.com/awclick.php?mid=10992&id=575543"
     },
     urls: {
-      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Asos.svg",
-      card_image_url: "https://i0.wp.com/digiday.com/wp-content/uploads/2017/10/170810_ASOS_shot_15_507.jpg",
+      logo_image_url: "http://partners.holz-richter.s3.amazonaws.com/casando/logo_casando_120x30.png",
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552302500/h9kfo7qm24tgq9byzvet-Sharpened.jpg",
     }
   },
   {
     data: {
-      name: "Expedia",
-      company_entity_name: "Expedia Inc",
-      commission_perc: 10,
-      user_commission_perc: 5,
-      referral_link: "https://www.expedia.de/"
+      name: "Yello Strom",
+      company_entity_name: "Yello Strom GmbH",
+      commission_perc: 15,
+      user_commission_perc: 10,
+      referral_link: "http://www.awin1.com/awclick.php?mid=11433&id=575543"
     },
     urls: {
-      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Expedia_2012_logo.svg",
-      card_image_url: "https://viewfromthewing.boardingarea.com/wp-content/uploads/2016/02/Expedia-suitcase.jpg",
+      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Neues_Yello_Logo.png/600px-Neues_Yello_Logo.png",
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552302498/yello-Sharpened.jpg",
     }
   },
   {
     data: {
-      name: "Home24",
-      company_entity_name: "home24 SE",
-      commission_perc: 10,
-      user_commission_perc: 5,
-      referral_link: "https://www.home24.de/"
+      name: "AutoDoc",
+      company_entity_name: "Autodoc GmbH",
+      commission_perc: 6,
+      user_commission_perc: 2,
+      referral_link: "http://ui.zanox.com/bin/z_in_frm.dll?4008400940080&128025573C765357919&981552299232_151291257_2718917"
     },
     urls: {
-      logo_image_url: "https://seeklogo.com/images/H/home24-logo-3F4E4A08A2-seeklogo.com.gif",
-      card_image_url: "https://cdn1.home24.net/static/media/om/img/cms/block/L1_moebel/visnav_kueche_bar.jpg",
+      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/2/23/Autodoc.png",
+      card_image_url: "http://cdn.pkwteile.de/uploads/zanox/atd/Banneratdde660x348.jpg"
     }
   }
 ]
@@ -127,7 +127,7 @@ games = [
     data: {
       name: "Fortnite",
       currency_name: "V-Bucks",
-      currency_short: "Vindertech Bucks"
+      currency_short: "VB"
     },
     urls: {
       card_image_url: "https://cdn2.unrealengine.com/Fortnite%2Fbattle-royale%2Fseason6-social-1920x1080-0a72ec2f35dfe5be6cf8a77ec16063cca4db7046.jpg",
@@ -166,7 +166,7 @@ games = [
     urls: {
       card_image_url: 'https://es.me/wp-content/uploads/2019/01/Dota-2-esports-empire-play.jpg',
       logo_image_url: 'https://steamuserimages-a.akamaihd.net/ugc/577865573024972042/BE1429F2D32F1ECB9123A3AA9D9FE2AC61BC4F3E/',
-      currency_image_url: 'https://res.cloudinary.com/dmr1qubzk/image/upload/v1552054927/769.png',
+      currency_image_url: 'https://res.cloudinary.com/dmr1qubzk/image/upload/v1552305072/dota2.png',
       banner_image_url: 'https://s3.dexerto.com/thumbnails/_thumbnailLarge/dota-2-patch-notes-7.21b-valve-steam.jpg',
       game_character_image_url: 'https://gamepedia.cursecdn.com/dota2_gamepedia/thumb/3/31/Dota_Heroes.png/300px-Dota_Heroes.png?version=fe57923c5e34e392f524a291e1b94e41',
       premium_item_image_url: 'https://gamerall.com/84813-large_default/fragger-dota-2-chest.jpg',
@@ -292,7 +292,7 @@ exchange_rates = [
   {
     data: {
       currency_origin_short: "EUR",
-      currency_target_short: "V-Bucks",
+      currency_target_short: "VB",
       rate: 90,
       game: Game.first
     },
@@ -302,7 +302,7 @@ exchange_rates = [
   },
   {
     data: {
-      currency_origin_short: "V-Bucks",
+      currency_origin_short: "VB",
       currency_target_short: "EUR",
       rate: 0.0111,
       game: Game.first
@@ -314,7 +314,7 @@ exchange_rates = [
   {
     data: {
       currency_origin_short: "EUR",
-      currency_target_short: "G-Coin",
+      currency_target_short: "GC",
       rate: 50,
       game: Game.second
     },
@@ -324,7 +324,7 @@ exchange_rates = [
   },
   {
     data: {
-      currency_origin_short: "G-Coin",
+      currency_origin_short: "GC",
       currency_target_short: "EUR",
       rate: 0.5,
       game: Game.second
@@ -336,8 +336,8 @@ exchange_rates = [
   {
     data: {
       currency_origin_short: "EUR",
-      currency_target_short: "D-Coin",
-      rate: 90,
+      currency_target_short: "DC",
+      rate: 120,
       game: Game.third
     },
     urls: {
@@ -346,9 +346,9 @@ exchange_rates = [
   },
   {
     data: {
-      currency_origin_short: "D-Coin",
+      currency_origin_short: "DC",
       currency_target_short: "EUR",
-      rate: 0.0111,
+      rate: 83.3333,
       game: Game.third
     },
     urls: {
