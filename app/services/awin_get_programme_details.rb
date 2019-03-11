@@ -22,24 +22,30 @@ class AwinGetProgrammeDetails
   # PLEASE UPDATE THIS FUNCTION SO THAT IT USES PARTNER#CREATE AND PARTNER#UPDATE
 
   def parse_detail_payload
-    p @detail_payload
-    # uncomment after creating partner controller
+    @programme_info = @detail_payload["programmeInfo"]
+    @commission_info = @detail_payload["commissionRange"]
+    if Partner.exists?(awin_advertiser_id: @programme_info['id'])
+      update_partner
+    else
+      create_new_partner
+    end
+  end
 
-    # programme_info = @detail_payload["programmeInfo"]
-    # commission_info = @detail_payload["commissionRange"]
-    # if Partner.exists?(awin_advertiser_id: programme_info['id'])
-    #   partner = Partner.find_by_awin_advertiser_id(programme_info['id'])
-    #   partner.commission_perc = commission_info[0]["min"]
-    #   partner.referral_link = programme_info["clickThroughUrl"]
-    #   partner.awin_advertiser_id = programme_info['id']
-    #   partner.save
-    # else
-    #   partner = Partner.new
-    #   partner.name = programme_info['name']
-    #   partner.commission_perc = commission_info[0]["min"]
-    #   partner.referral_link = programme_info["clickThroughUrl"]
-    #   partner.awin_advertiser_id = programme_info['id']
-    #   partner.create
-    # end
+  def update_partner
+    partner = Partner.find_by_awin_advertiser_id(@programme_info['id'])
+    partner.commission_perc = @commission_info[0]["min"]
+    partner.referral_link = @programme_info["clickThroughUrl"]
+    partner.save
+  end
+
+  def create_new_partner
+    partner = Partner.new
+    partner.name = @programme_info['name']
+    partner.company_entity_name = "Company #{@programme_info['id']}"
+    partner.commission_perc = @commission_info[0]["min"]
+    partner.user_commission_perc = partner.commission_perc / 2
+    partner.referral_link = @programme_info["clickThroughUrl"]
+    partner.awin_advertiser_id = @programme_info['id']
+    partner.save
   end
 end
