@@ -6,14 +6,8 @@
 
     <p>Earn in-game rewards for your favorite game by shopping online</p>
     <!--  Search Form  -->
-    <!-- change root path to Game#Show Path -->
-    <%= form_tag root_path, class:"form-inline",method: :get do %>
-      <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-        placeholder: "Fortnite, Dota2, ..." %>
-        <%= submit_tag "Find Game", class:"btn btn-medium-solid" %>
-    <% end %>
+    <%= link_to 'See all games', '#games', class:"btn btn-medium-solid"  %>
+
       <br>
       <br>
     </div>
@@ -100,10 +94,10 @@
     </div>
 
     <!-- Games -->
-    <div class="games-wrapper">
+    <div class="games-wrapper" id="games">
       <!-- <div class="arrow-down" style="border-top: 60px solid rgba(247,247,247, 1)"></div> -->
 
-      <h1>Fortnite not your game? Find yours!</h1>
+      <h1>Fortnite is not your game? Find yours!</h1>
       <br>
       <!--  Search Form  -->
       <!-- change root path to Game#Show Path -->
@@ -119,10 +113,11 @@
 
       <div class="row">
         <% @games.each do |game| %>
-
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <%= render 'components/game-home-card', game: game %>
-          </div>
+          <%= link_to root_path( :game => game.id) do %>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <%= render 'components/game-home-card', game: game %>
+            </div>
+          <% end %>
         <% end %>
       </div>
     </div>

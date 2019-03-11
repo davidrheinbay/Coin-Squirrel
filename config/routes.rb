@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root to: 'pages#home'
+  authenticated do
+    root to: 'transactions#index'
+  end
+
+  root :to => 'pages#home'
 
   resources :partners, only: [:index, :new, :create, :edit, :update, :show]
   resources :games, only: [:index, :show]

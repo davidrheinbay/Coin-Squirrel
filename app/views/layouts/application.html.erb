@@ -24,9 +24,10 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <div style="margin-top: 70px">
-      <%= yield %>
-    </div>
+
+    <%= yield %>
+
+
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

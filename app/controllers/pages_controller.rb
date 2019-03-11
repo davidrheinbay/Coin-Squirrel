@@ -9,7 +9,11 @@ class PagesController < ApplicationController
     if user_signed_in? == true
       @game = Game.find(current_user.game.id)
     else
-      @game = Game.find_by_name("Fortnite")
+      if params[:game].nil?
+        @game = Game.find_by_name('Fortnite')
+      else
+        @game = Game.find(params[:game])
+      end
     end
   end
 
