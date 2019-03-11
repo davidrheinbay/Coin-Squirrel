@@ -3,22 +3,19 @@
     <div class="items">
       <div class="footer-card">
         <p><strong>Coin Squirrel</strong></p>
-        <p>About us</p>
-        <p>Newsletter</p>
-        <p>Jobs</p>
+        <p><%= link_to "About us", "/about" %></p>
       </div>
       <div class="footer-card">
         <p><strong>Legal</strong></p>
         <p><%= link_to "Imprint", "/imprint" %></p>
         <p><%= link_to "Data protection", "/data_protection" %></p>
-        <p>Terms and conditions</p>
+        <p><%= link_to "Terms & Conditions", "/terms" %></p>
       </div>
       <div class="footer-card">
         <p><strong>Help</strong></p>
-        <%= mail_to "me@domain.com" do %>
+        <%= mail_to "info@coinsquirrel.de" do %>
         <p>Contact</p>
         <% end %>
-        <p>FAQ</p>
       </div>
       <div class="footer-card">
         <p><strong>Rheinbay Ventures UG (haftungsbeschraenkt)</strong></p>

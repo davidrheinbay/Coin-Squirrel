@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
   get "/imprint", to: "pages#imprint.html"
   get "/data_protection", to: "pages#data_protection.html"
+  get "/terms", to: "pages#terms.html"
+  get "/about", to: "pages#about.html"
 end
