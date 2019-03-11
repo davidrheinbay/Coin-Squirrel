@@ -13,9 +13,6 @@
 
 .btn-medium-solid:hover {
 
-  a {
-    text-decoration: none;
-  }
 }
 
 .btn-medium-light {
@@ -60,4 +57,12 @@
   justify-content: center;
   align-items: center;
   border-radius: 3px;
+}
+
+.btn-medium-large-solid:hover {
+  background-color: $dark-yellow;
+}
+
+a:hover {
+  text-decoration: none;
 }
