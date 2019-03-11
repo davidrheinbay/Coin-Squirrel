@@ -1,5 +1,6 @@
 <!-- Banner -->
-<div class="banner" style="background-image: url('<%= cl_image_path @game.banner_image %>')">
+<div class="banner" style="background-image:linear-gradient(0deg, rgba(255,255,255,1),rgba(0,0,0,0) 25%), linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= cl_image_path @game.banner_image %>')">
+
   <div class="container">
     <h1>Coin Squirrel</h1>
 
@@ -7,126 +8,126 @@
     <!--  Search Form  -->
     <!-- change root path to Game#Show Path -->
     <%= form_tag root_path, class:"form-inline",method: :get do %>
-    <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-      placeholder: "Fortnite, Dota2, ..." %>
-      <%= submit_tag "Find Game", class:"btn btn-medium-solid" %>
-      <% end %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+        placeholder: "Fortnite, Dota2, ..." %>
+        <%= submit_tag "Find Game", class:"btn btn-medium-solid" %>
+    <% end %>
       <br>
       <br>
     </div>
   </div>
 
   <!-- Content -->
-  <div class="background-card card-shadow-strong card-tmm-60 text-center">
+  <div class="background-card card-shadow-strong card-tmm-60">
 
     <!-- How it works -->
-    <h1>How it works</h1>
+    <div class="section">
+      <h1>How it works</h1>
 
-    <div class="how-works">
-      <div class="how-it-works-card first-card">
-        <div class="how-it-works-number">
-          <h1>1</h1>
+      <div class="how-works">
+        <div class="row">
+
+          <div class="col-md-2 col-md-offset-1 how-it-works-card">
+            <div class="how-it-works-number">
+              <h1>1</h1>
+            </div>
+            <p><strong>Find your favorite game and check out newest in-game offers</strong></p>
+            <%= cl_image_tag @game.game_character_image %>
+          </div>
+
+          <div class="col-md-2 how-it-works-card">
+            <div class="how-it-works-number">
+              <h1>2</h1>
+            </div>
+            <p><strong>Create a free acount and have unlimited access to coin squirrel</strong></p>
+            <%= image_tag "logo.png", alt: "alttext", id: "coin-logo" %>
+          </div>
+
+          <div class="col-md-2 how-it-works-card">
+            <div class="how-it-works-number">
+              <h1>3</h1>
+            </div>
+            <p><strong>Easily access all our partners and shop online</strong></p>
+            <%= cl_image_tag @game.shopping_cart_image %>
+          </div>
+
+          <div class="col-md-2 how-it-works-card">
+            <div class="how-it-works-number">
+              <h1>4</h1>
+            </div>
+            <p><strong>Earn coins for every purchase you make and save for your favorite item</strong></p>
+            <%= cl_image_tag @game.currency_image %>
+          </div>
+
+          <div class="col-md-2 how-it-works-card-last">
+            <div class="how-it-works-number-last">
+              <h1>5</h1>
+            </div>
+            <p><strong>Pay out your coins and start getting in-game items for free</strong></p>
+            <%= cl_image_tag @game.premium_item_image %>
+          </div>
+
         </div>
-        <p><strong>Find your favorite game and check out newest in-game offers</strong></p>
-        <%= cl_image_tag @game.game_character_image %>
       </div>
-      <div class="how-it-works-card">
-        <div class="how-it-works-number">
-          <h1>2</h1>
-        </div>
-        <p><strong>Create a free acount and have unlimited access to coin squirrel</strong></p>
-        <%= image_tag "logo.png", alt: "alttext", id: "coin-logo" %>
-      </div>
-      <div class="how-it-works-card">
-        <div class="how-it-works-number">
-          <h1>3</h1>
-        </div>
-        <p><strong>Easily access all our partners and shop online</strong></p>
-        <%= cl_image_tag @game.shopping_cart_image %>
-      </div>
-      <div class="how-it-works-card">
-        <div class="how-it-works-number">
-          <h1>4</h1>
-        </div>
-        <p><strong>Earn coins for every purchase you make and save for your favorite item</strong></p>
-        <%= cl_image_tag @game.currency_image %>
-      </div>
-      <div class="how-it-works-card-last">
-        <div class="how-it-works-number-last">
-          <h1>5</h1>
-        </div>
-        <p><strong>Pay out your coins and start getting in-game items for free</strong></p>
-        <%= cl_image_tag @game.premium_item_image %>
-      </div>
-    </div>
 
 
 
-    <!-- CTA -->
-    <div class="cta-banner">
-      <h2>Convinced?</h2>
-      <%= link_to new_user_registration_path do  %>
-      <button class="btn-large-solid">Start Collecting Now!</button>
-      <% end %>
+      <!-- CTA -->
+      <div class="cta-banner">
+        <h2>Convinced?</h2>
+        <%= link_to "Start Collecting Now!", new_user_registration_path, class:"btn btn-large-solid"  %>
+      </div>
     </div>
 
     <!-- Partners -->
+    <div class="section">
+      <div class="partners-wrapper">
+        <!-- <div class="arrow-down" style="border-top: 60px solid white"></div> -->
+        <h1>Where can you earn coins?</h1>
 
-    <div class="partners-wrapper">
-      <div class="arrow-down" style="border-top: 60px solid white"></div>
-      <h1>Where can you earn coins?</h1>
-      <div class="partners-banner">
-        <% @partners.each do |partner| %>
-        <div class="partners-logo">
-          <%= cl_image_tag partner.logo_image %>
-        </div>
-        <% end %>
+          <!-- <div class="partners-banner"> -->
+            <div class="partner-imgs">
+            <% @partners.each do |partner| %>
+              <div class="partners-logo">
+                <%= cl_image_tag partner.logo_image %>
+              </div>
+            <% end %>
+         <!--  </div> -->
+           </div>
       </div>
     </div>
 
-
     <!-- Games -->
     <div class="games-wrapper">
-      <div class="arrow-down" style="border-top: 60px solid rgba(247,247,247, 1)"></div>
-      <div class="games-banner">
+      <!-- <div class="arrow-down" style="border-top: 60px solid rgba(247,247,247, 1)"></div> -->
 
-        <h1>Fortnite not your game? Find yours!</h1>
-        <br>
-        <!--  Search Form  -->
-        <!-- change root path to Game#Show Path -->
-        <%= form_tag root_path, class:"form-inline",method: :get do %>
+      <h1>Fortnite not your game? Find yours!</h1>
+      <br>
+      <!--  Search Form  -->
+      <!-- change root path to Game#Show Path -->
+      <%= form_tag root_path, class:"form-inline",method: :get do %>
         <%= text_field_tag :query,
         params[:query],
         class: "form-control",
           placeholder: "Fortnite, Dota2, ..." %>
-          <%= submit_tag "Find Game", class:"btn btn-medium-solid" %>
-          <% end %>
-          <br>
-          <br>
+        <%= submit_tag "Find Game", class:"btn btn-medium-solid" %>
+      <% end %>
+      <br>
+      <br>
 
-          <% @games.each do |game| %>
-            <%= link_to root_path(game: game.name) do %>
-          <div class="col-xs-4">
-            <div class="partner-card card-shadow-light">
-              <div class="card_head">
-                <%= cl_image_tag game.card_image %>
-              </div>
-              <div class="card_body">
-                <h5>Fortnite</h5>
-              </div>
-            </div>
+      <div class="row">
+        <% @games.each do |game| %>
+
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <%= render 'components/game-home-card', game: game %>
           </div>
-          <% end %>
-          <% end %>
-        </div>
-
+        <% end %>
       </div>
-
-      <!-- Closing Card -->
     </div>
+  </div>
 
-    <!-- Footer -->
+<!-- Footer -->
 
-    <%= render 'components/footer' %>
+<%= render 'components/footer' %>

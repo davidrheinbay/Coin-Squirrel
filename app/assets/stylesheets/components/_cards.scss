@@ -7,7 +7,7 @@
 }
 
 .card-shadow-medium {
-  box-shadow: 2px 2px 2px rgba(0,0,0,.22);
+  box-shadow: 1px 1px 10px rgba(0,0,0,.22);
 }
 
 .card-shadow-light {
@@ -179,6 +179,26 @@
   .card-foot {
     padding: 0 20px 20px 20px;
   }
+}
+
+// Game Card
+
+.game-home-card {
+  height: 200px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $light-grey;
+
+ .card-head {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+ }
+
 }
 
 // How to Card------------------------------------------------------------------
