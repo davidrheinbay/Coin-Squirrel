@@ -11,7 +11,7 @@
       <div class="part-element-partner-card">
           Cashback: <%= (partner.user_commission_perc * @exchange_rate / 100).to_i %> <%= cl_image_tag current_user.game.currency_image%>/ 1€
       </div>
-      <div class="part-element-partner-card">
+      <div class="part-element-partner-card-no-border">
         <a href="<%= "#{partner.referral_link}&clickref2=#{current_user.id}" %>" target="_blank"><button class="btn-medium-solid">Go to Shop</button></a>
       </div>
     </div>

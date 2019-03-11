@@ -1,6 +1,10 @@
 class PartnersController < ApplicationController
   def index
-    @partners = policy_scope(Partner).order(commission_perc: :desc)
+    if params[:query].present?
+      @partners = policy_scope(Partner).search_by_name_and_tags(params[:query])
+    else
+      @partners = policy_scope(Partner).order(commission_perc: :desc)
+    end
     @exchange_rate = ExchangeRate.where("game_id = ? AND currency_origin_short = 'EUR'", current_user.game_id).last.rate
     @game_currency = ExchangeRate.where("game_id = ? AND currency_origin_short = 'EUR'", current_user.game_id)
                                  .last

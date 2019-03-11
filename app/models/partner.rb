@@ -13,4 +13,11 @@ class Partner < ApplicationRecord
   validates :referral_link, presence: true
   validates :logo_image, presence: true
   validates :card_image, presence: true
+
+  include PgSearch
+  pg_search_scope :search_by_name_and_tags,
+                  against: %i[name tags],
+                  using: {
+                    tsearch: { prefix: true }
+                  }
 end
