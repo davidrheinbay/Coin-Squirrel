@@ -1,8 +1,10 @@
-<div class="transaction-card" role="button" data-toggle="collapse" href="#<%= transaction.id %>" aria-expanded="false" aria-controls="<%= transaction.id %>">
+<div class="transaction-card">
 
-  <div class="status"></div>
+  <div class="status <%= transaction.state %> unclicked" id="status-<%= transaction.id %>" role="button">
+    <h3 class="hidden"><%= transaction.state.capitalize %></h3>
+  </div>
 
-  <div class="card-body card-shadow-light" >
+  <div class="card-body card-shadow-light cashout-card" role="button" data-toggle="collapse" href="#<%= transaction.id %>" aria-expanded="false" aria-controls="<%= transaction.id %>">
     <%= cl_image_tag Game.find_by_id(transaction.game_id).logo_image, class:"transaction-image" %>
 
     <span>
@@ -10,16 +12,20 @@
       <p> <%= transaction.transaction_confirmed_date.strftime("at %H:%M %d.%m.%Y") %> </p>
     </span>
 
-    <p> REVEAL CODE </p>
+    <span class="more-details"><i class="fas fa-arrow-down turning-arrow"></i><p>REVEAL CODE</p></span>
 
-    <h2>
+    <span class="cashout-text">
+      <h3>Cash Out</h3>
+    </span>
+
+    <h2 class="transaction-amount">
       <% amount = transaction.user_commission_amount * ExchangeRate.where(game_id: transaction.game_id)[0].rate.to_i %>
       <%= number_with_precision(amount, precision: 0, delimiter: ',') %>
     </h2>
 
     <%= cl_image_tag Game.find_by_id(transaction.game_id).currency_image, class:"transaction-image-currency" %>
-  </div>
 
+  </div>
 
 </div>
 

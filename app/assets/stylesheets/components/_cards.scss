@@ -7,7 +7,7 @@
 }
 
 .card-shadow-medium {
-  box-shadow: 2px 2px 2px rgba(0,0,0,.22);
+  box-shadow: 1px 1px 10px rgba(0,0,0,.22);
 }
 
 .card-shadow-light {
@@ -29,6 +29,7 @@
 
 // Background Card
 
+
 .background-card {
   margin-left: 30px;
   margin-right: 30px;
@@ -36,7 +37,13 @@
   padding: 50px;
   border-radius: 10px;
   background-color: #fff;
+
+  @media screen and (max-width: 830px) {
+        margin-left: 10px;
+        margin-right: 10px;
+  }
 }
+
 
 .card-content-section {
   height: 80vh;
@@ -53,9 +60,35 @@
 
   .status {
     height: 100%;
-    width: 5px;
     margin-right: 20px;
-    background-color: $grey;
+  }
+
+  .status.completed {
+    background-color: $green;
+  }
+
+  .status.confirmed {
+    background-color: $yellow;
+  }
+
+  .status.activated {
+    min-width: 120px;
+    border-radius: 5px;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    h3 {
+      font-size: 16px;
+      padding: 0;
+      font-weight: bolder;
+      margin: 0px;
+    }
+  }
+
+  .status.unclicked {
+    width: 5px;
   }
 
   .card-body {
@@ -71,6 +104,41 @@
       flex: 1 1 auto;
     }
 
+    span.cashin-text {
+      flex: 0 0 auto;
+      text-align: right;
+      padding: 20px;
+      h3 {
+        color: green;
+      }
+    }
+
+    span.cashout-text {
+      flex: 0 0 auto;
+      text-align: right;
+      padding: 20px;
+      h3 {
+        color: $yellow;
+      }
+    }
+
+    span.more-details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        margin: 5px;
+      }
+    }
+
+    .turning-arrow.turned {
+      transform: rotate(180deg);
+    }
+
+    .transaction-amount {
+      width: 100px;
+      text-align: right;
+    }
 
   h2 {
     padding: 0 0 0 10px;
@@ -90,6 +158,12 @@
     margin: 0px;
   }
 
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .transaction-card {
+    height: 120px;
   }
 }
 
@@ -240,6 +314,27 @@
   .card-foot {
     padding: 0 20px 20px 20px;
   }
+}
+
+// Game Card
+
+.game-home-card {
+  height: 200px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $light-grey;
+  margin-bottom: 20px;
+
+ .card-head {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+ }
+
 }
 
 // How to Card------------------------------------------------------------------

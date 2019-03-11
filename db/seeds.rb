@@ -134,7 +134,7 @@ games = [
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/0/0e/FortniteLogo.svg",
       currency_image_url: 'https://pbs.twimg.com/media/DsImRImU0AASOXf.png:large',
       banner_image_url: "http://static.4players.de/premium/Spiele/96/02/29447-teaser1.jpg",
-      game_character_image_url: "https://banner2.kisspng.com/20180409/grq/kisspng-fortnite-battle-royale-battle-royale-game-playstat-fortnite-5acb01ccd59cf7.897683871523253708875.jpg",
+      game_character_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552294172/wcllqr9rnwejckucha64.jpg",
       premium_item_image_url: "https://gamepedia.cursecdn.com/fortnite_gamepedia/9/96/Treasure_chest_%28tier_1%29.png",
       shopping_cart_image_url: "https://gamepedia.cursecdn.com/fortnite_gamepedia/0/08/Shopping_cart_icon.png",
 
