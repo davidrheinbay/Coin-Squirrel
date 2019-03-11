@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  resources :partners, only: [:index, :new, :create, :edit, :update, :show]
+  resources :partners, only: [:index, :new, :create, :edit, :update]
   resources :games, only: [:index, :show]
   resources :favgames, only: [:update]
 

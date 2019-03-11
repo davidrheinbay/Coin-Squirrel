@@ -14,16 +14,6 @@
       <div class="part-element-partner-card">
         <a href="<%= "#{partner.referral_link}&clickref2=#{current_user.id}" %>" target="_blank"><button class="btn-medium-solid">Go to Shop</button></a>
       </div>
-      <div class="see-more part-element-partner-card">
-          <%= link_to partner_path(partner), remote: true, class: 'my-link' do %>
-        <button id="my-button-<%= partner.id %>" class="opening-button">
-              <i class="fas fa-plus see-details"></i>
-        </button>
-          <% end %>
-        <button id="close-button-<%= partner.id %>" class="hidden closing-button">
-          <i class="fas fa-plus removing-details"></i>
-        </button>
-      </div>
     </div>
     <% if current_user.admin? %>
       <div class="btn-admin-sm">

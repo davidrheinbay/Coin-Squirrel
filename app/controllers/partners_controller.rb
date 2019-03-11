@@ -7,11 +7,6 @@ class PartnersController < ApplicationController
                                  .currency_target_short
   end
 
-  def show
-    @partner = Partner.find(params[:id])
-    authorize @partner
-  end
-
   def new
     @partner = Partner.new
     authorize @partner
