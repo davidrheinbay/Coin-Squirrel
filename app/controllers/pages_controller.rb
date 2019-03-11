@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
 
-    @partners = Partner.where("name != ?", "CoinSquirrel")
+    @partners = Partner.where("name != ? and card_image IS NOT NULL", "CoinSquirrel")
     @games = search_games
 
     if user_signed_in? == true

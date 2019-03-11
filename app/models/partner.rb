@@ -11,8 +11,6 @@ class Partner < ApplicationRecord
   validates :commission_perc, presence: true
   validates :user_commission_perc, presence: true
   validates :referral_link, presence: true
-  validates :logo_image, presence: true
-  validates :card_image, presence: true
 
   include PgSearch
   pg_search_scope :search_by_name_and_tags,
