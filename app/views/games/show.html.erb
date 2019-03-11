@@ -1,12 +1,11 @@
 <% amount = current_user.balance * current_user.game.exchange_rates.where(currency_origin_short: "EUR").first.rate %>
 
-<%= link_to new_transaction_path  do %>
-  <div class="pay-out">
-    <div class="btn-medium-large-solid">
-      <h4>Pay out now</h4>
+  <div class="store-banner" style="background-image: url('https://a-static.besthdwallpaper.com/fortnite-kampf-royale-tapete-3440x1440-5686_15.jpg');">
+    <div>
+      <h1><%= @game.name %></h1>
+      <p>Fortnite (von englisch fortnight ‚vierzehn Tage‘), ist ein Koop-Survival-Spiel, das von People Can Fly und Epic Games entwickelt wurde und durch einen kostenlosen, auf dem Battle-Royale-Genre basierenden, Standalone-Modus, Fortnite Battle Royale, seine Popularität erlangte.[3] Das Spiel erschien am 25. Juli 2017 weltweit außer in China für PlayStation 4, Xbox One und Windows.</p>
     </div>
   </div>
-<% end %>
 <div class="container">
   <div class="row">
     <% @items.each do |item| %>
