@@ -92,3 +92,24 @@
     width: 30%;
   }
 }
+
+.store-banner {
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  height: 50vh;
+  width: 100vw;
+  padding: 150px 0;
+  margin: 0px;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: left;
+
+  div {
+    width: 500px;
+    margin-left: 40px;
+  }
+}

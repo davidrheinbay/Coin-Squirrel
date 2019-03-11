@@ -1,14 +1,15 @@
 <% amount = current_user.balance * current_user.game.exchange_rates.where(currency_origin_short: "EUR").first.rate %>
 
-
-<div class="container">
-  <div class="store-control">
-    <%= link_to "Back to games", games_path, class: "btn-medium-solid" %>
-
+  <div class="store-banner" style="background-image: url('https://www.desktopbackground.org/download/3440x1440/2012/01/01/321405_6258-dota-2-terrorblade-high-definition-wallpapers-attachment_5000x2815_h.jpg');">
+    <div>
+      <h1><%= @game.name %></h1>
+      <p>Fortnite (von englisch fortnight ‚vierzehn Tage‘), ist ein Koop-Survival-Spiel, das von People Can Fly und Epic Games entwickelt wurde und durch einen kostenlosen, auf dem Battle-Royale-Genre basierenden, Standalone-Modus, Fortnite Battle Royale, seine Popularität erlangte.[3] Das Spiel erschien am 25. Juli 2017 weltweit außer in China für PlayStation 4, Xbox One und Windows.</p>
+    </div>
   </div>
+<div class="background-card card-shadow-strong card-tmm-60 text-center">
   <div class="row">
     <% @items.each do |item| %>
-      <div class="col-md-4">
+      <div class="col-md-3 col-xs-6">
         <div class="store-card">
           <%= image_tag "#{item.image}", alt: "alttext", class: 'store-image' %>
           <div class="store-card-content">
@@ -21,18 +22,18 @@
 
             <div class="store-card-price">
               <p><%= number_with_precision(amount, precision: 0, delimiter: ',') %> / <%= item.cost %> <%= item.currency %></p>
-              <% if current_user.balance_cents >= item.cost.to_i %>
+              <% if number_with_precision(amount, precision: 0, delimiter: ',').to_i  >= item.cost.to_i %>
                 <div class="store-progression-green">
 
                 </div>
-              <% elsif current_user.balance_cents == 0 %>
+              <% elsif number_with_precision(amount, precision: 0, delimiter: ',').to_i == 0 %>
                 <div class="store-progression-grey">
                   <div class="store-progression-red" style="width: 3%">
                   </div>
                 </div>
               <% else %>
                 <div class="store-progression-grey">
-                  <div class="store-progression-red" style="width: <%=(current_user.balance_cents / item.cost.to_f) * 100 %>% ;">
+                  <div class="store-progression-red" style="width: <%=(number_with_precision(amount, precision: 0, delimiter: ',').to_i / item.cost.to_f) * 100 %>% ;">
                   </div>
                 </div>
               <% end %>
