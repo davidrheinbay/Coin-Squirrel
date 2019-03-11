@@ -23,46 +23,65 @@
       <div class="how-works">
         <div class="row">
 
-          <div class="col-md-2 col-md-offset-1 how-it-works-card">
+          <div class="col-sm-4 col-md-2 col-md-offset-1 how-it-works-card">
             <div class="how-it-works-number">
               <h1>1</h1>
             </div>
-            <p><strong>Find your favorite game and check out newest in-game offers</strong></p>
-            <%= cl_image_tag @game.game_character_image %>
+
+            <div class="body">
+              <p><strong>Find your favorite game and check out newest in-game offers</strong></p>
+            </div>
+            <div class="foot">
+              <%= cl_image_tag @game.game_character_image %>
+            </div>
           </div>
 
-          <div class="col-md-2 how-it-works-card">
+          <div class=" col-sm-4 col-md-2 how-it-works-card">
             <div class="how-it-works-number">
               <h1>2</h1>
             </div>
-            <p><strong>Create a free acount and have unlimited access to coin squirrel</strong></p>
-            <%= image_tag "logo.png", alt: "alttext", id: "coin-logo" %>
+
+            <div class="body">
+              <p><strong>Create a free acount and have unlimited access to coin squirrel</strong></p>
+            </div>
+            <div class="foot">
+              <%= image_tag "logo.png" %>
+            </div>
           </div>
 
-          <div class="col-md-2 how-it-works-card">
+          <div class="col-sm-4 col-md-2 how-it-works-card">
             <div class="how-it-works-number">
               <h1>3</h1>
             </div>
-            <p><strong>Easily access all our partners and shop online</strong></p>
-            <%= cl_image_tag @game.shopping_cart_image %>
+            <div class="body">
+              <p><strong>Easily access all our partners and shop online</strong></p>
+            </div>
+            <div class="foot">
+              <%= cl_image_tag @game.shopping_cart_image %>
+            </div>
           </div>
 
-          <div class="col-md-2 how-it-works-card">
+          <div class="col-sm-4 col-md-2 how-it-works-card">
             <div class="how-it-works-number">
               <h1>4</h1>
             </div>
-            <p><strong>Earn coins for every purchase you make and save for your favorite item</strong></p>
-            <%= cl_image_tag @game.currency_image %>
+            <div class="body">
+              <p><strong>Earn coins for every purchase you make and save for your favorite item</strong></p>
+            </div>
+            <div class="foot">
+              <%= cl_image_tag @game.currency_image %>
+            </div>
           </div>
 
-          <div class="col-md-2 how-it-works-card-last">
+          <div class="col-sm-4 col-md-2 how-it-works-card-last">
             <div class="how-it-works-number-last">
               <h1>5</h1>
             </div>
             <p><strong>Pay out your coins and start getting in-game items for free</strong></p>
-            <%= cl_image_tag @game.premium_item_image %>
+            <div class="foot">
+              <%= cl_image_tag @game.premium_item_image %>
+            </div>
           </div>
-
         </div>
       </div>
 
