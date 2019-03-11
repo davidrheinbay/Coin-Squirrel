@@ -21,7 +21,7 @@ class DotaItemsLoader
         name: item['name'],
         rarity: 'uncommon',
         image: "https://steamcommunity-a.akamaihd.net/economy/image/#{item['asset_description']['icon_url']}",
-        cost: set_price(item['sell_price_text']) * 10,
+        cost: (set_price(item['sell_price_text']) * 10) + rand(100..150),
         currency: 'D-coins',
         rating: rand(0...5),
         votes: rand(0...500)

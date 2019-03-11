@@ -8,6 +8,8 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     authorize @game
 
+    @games = policy_scope(Game)
+
     @items = @game.fetch_items
   end
 

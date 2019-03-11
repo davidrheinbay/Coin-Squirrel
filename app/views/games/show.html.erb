@@ -3,12 +3,15 @@
 
 <div class="container">
   <div class="store-control">
-    <%= link_to "Back to games", games_path, class: "btn-medium-solid" %>
-
+    <%= link_to new_transaction_path  do %>
+      <div class="btn-medium-large-solid">
+        <h4>Pay out</h4>
+      </div>
+    <% end %>
   </div>
   <div class="row">
     <% @items.each do |item| %>
-      <div class="col-md-4">
+      <div class="col-md-4 col-xs-6">
         <div class="store-card">
           <%= image_tag "#{item.image}", alt: "alttext", class: 'store-image' %>
           <div class="store-card-content">
@@ -21,18 +24,18 @@
 
             <div class="store-card-price">
               <p><%= number_with_precision(amount, precision: 0, delimiter: ',') %> / <%= item.cost %> <%= item.currency %></p>
-              <% if current_user.balance_cents >= item.cost.to_i %>
+              <% if number_with_precision(amount, precision: 0, delimiter: ',').to_i  >= item.cost.to_i %>
                 <div class="store-progression-green">
 
                 </div>
-              <% elsif current_user.balance_cents == 0 %>
+              <% elsif number_with_precision(amount, precision: 0, delimiter: ',').to_i == 0 %>
                 <div class="store-progression-grey">
                   <div class="store-progression-red" style="width: 3%">
                   </div>
                 </div>
               <% else %>
                 <div class="store-progression-grey">
-                  <div class="store-progression-red" style="width: <%=(current_user.balance_cents / item.cost.to_f) * 100 %>% ;">
+                  <div class="store-progression-red" style="width: <%=(number_with_precision(amount, precision: 0, delimiter: ',').to_i / item.cost.to_f) * 100 %>% ;">
                   </div>
                 </div>
               <% end %>
