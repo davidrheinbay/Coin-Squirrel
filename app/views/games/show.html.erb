@@ -1,3 +1,5 @@
+<% amount = current_user.balance * current_user.game.exchange_rates.where(currency_origin_short: "EUR").first.rate %>
+
 <div class="container">
   <div class="store-control">
     <%= link_to "Back to games", games_path, class: "btn-medium-solid" %>
@@ -17,7 +19,7 @@
             </div>
 
             <div class="store-card-price">
-              <p><%= current_user.balance_cents %> / <%= item.cost %> <%= item.currency %></p>
+              <p><%= number_with_precision(amount, precision: 0, delimiter: ',') %> / <%= item.cost %> <%= item.currency %></p>
               <% if current_user.balance_cents >= item.cost.to_i %>
                 <div class="store-progression-green">
 
