@@ -53,9 +53,35 @@
 
   .status {
     height: 100%;
-    width: 5px;
     margin-right: 20px;
-    background-color: $grey;
+  }
+
+  .status.completed {
+    background-color: $green;
+  }
+
+  .status.confirmed {
+    background-color: $yellow;
+  }
+
+  .status.activated {
+    min-width: 120px;
+    border-radius: 5px;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    h3 {
+      font-size: 16px;
+      padding: 0;
+      font-weight: bolder;
+      margin: 0px;
+    }
+  }
+
+  .status.unclicked {
+    width: 5px;
   }
 
   .card-body {
@@ -71,6 +97,28 @@
       flex: 1 1 auto;
     }
 
+    span.cashin-text {
+      flex: 0 0 auto;
+      text-align: right;
+      padding: 20px;
+      h3 {
+        color: green;
+      }
+    }
+
+    span.cashout-text {
+      flex: 0 0 auto;
+      text-align: right;
+      padding: 20px;
+      h3 {
+        color: $yellow;
+      }
+    }
+
+    .transaction-amount {
+      width: 100px;
+      text-align: right;
+    }
 
   h2 {
     padding: 0 0 0 10px;
@@ -90,6 +138,12 @@
     margin: 0px;
   }
 
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .transaction-card {
+    height: 120px;
   }
 }
 
