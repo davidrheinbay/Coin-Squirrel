@@ -1,22 +1,13 @@
 // description above shops
 .description {
-  height: 60vh;
-}
-
-.only-admin {
-  height: 30px;
-  width: 50px;
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  background-color: $yellow;
-  border-radius: 15px;
+  height: 40vh;
   text-align: center;
-  a {
-    color: white;
-    margin-bottom: 0;
+
+  input[type=text] {
+    width: 33%;
   }
 }
+
 
 
 

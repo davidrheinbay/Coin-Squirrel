@@ -33,7 +33,6 @@
 
 }
 
-
 .btn-large-solid {
   padding: 10px 30px;
   background-color: $yellow;
@@ -46,4 +45,18 @@
 
 .btn-large-solid:hover {
   font-weight: bolder;
+}
+
+.btn-admin-sm {
+  padding: 5px 10px;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  background-color: $yellow;
+  border-radius: 7px;
+  text-align: center;
+  a {
+    color: white;
+    margin-bottom: 0;
+  }
 }

@@ -51,7 +51,7 @@ partners = [
     },
     urls: {
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Avira_logo_2011.png/800px-Avira_logo_2011.png",
-      card_image_url: "https://img.netzwelt.de/dw880_dh495_sw0_sh0_sx0_sy0_sr16x9_nu0/picture/original/2015/08/avira-168450.jpeg",
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552302499/iopmvv1s15sr4tni41rx-Sharpened.jpg",
     }
   },
   {
@@ -64,7 +64,7 @@ partners = [
     },
     urls: {
       logo_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552060849/emidoiwlwbuluzjfvxqv.png",
-      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552060850/jxyygpndhbcnagweqbuu.jpg",
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552302501/jv6etztuo5qzb24lf7kr-Sharpened.jpg",
     }
   },
   {
@@ -77,7 +77,7 @@ partners = [
     },
     urls: {
       logo_image_url: "http://partners.holz-richter.s3.amazonaws.com/casando/logo_casando_120x30.png",
-      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1552299587/uxztsddmxvlnbj1gbbv5.jpg",
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552302500/h9kfo7qm24tgq9byzvet-Sharpened.jpg",
     }
   },
   {
@@ -90,7 +90,7 @@ partners = [
     },
     urls: {
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Neues_Yello_Logo.png/600px-Neues_Yello_Logo.png",
-      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1552299589/ur1xy5dxh8lvifvxid65.jpg",
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552302498/yello-Sharpened.jpg",
     }
   },
   {
@@ -166,7 +166,7 @@ games = [
     urls: {
       card_image_url: 'https://es.me/wp-content/uploads/2019/01/Dota-2-esports-empire-play.jpg',
       logo_image_url: 'https://steamuserimages-a.akamaihd.net/ugc/577865573024972042/BE1429F2D32F1ECB9123A3AA9D9FE2AC61BC4F3E/',
-      currency_image_url: 'https://res.cloudinary.com/dmr1qubzk/image/upload/v1552054927/769.png',
+      currency_image_url: 'https://res.cloudinary.com/dmr1qubzk/image/upload/v1552305072/dota2.png',
       banner_image_url: 'https://s3.dexerto.com/thumbnails/_thumbnailLarge/dota-2-patch-notes-7.21b-valve-steam.jpg',
       game_character_image_url: 'https://gamepedia.cursecdn.com/dota2_gamepedia/thumb/3/31/Dota_Heroes.png/300px-Dota_Heroes.png?version=fe57923c5e34e392f524a291e1b94e41',
       premium_item_image_url: 'https://gamerall.com/84813-large_default/fragger-dota-2-chest.jpg',
@@ -337,7 +337,7 @@ exchange_rates = [
     data: {
       currency_origin_short: "EUR",
       currency_target_short: "DC",
-      rate: 90,
+      rate: 120,
       game: Game.third
     },
     urls: {
@@ -348,7 +348,7 @@ exchange_rates = [
     data: {
       currency_origin_short: "DC",
       currency_target_short: "EUR",
-      rate: 0.0111,
+      rate: 83.3333,
       game: Game.third
     },
     urls: {

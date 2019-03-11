@@ -1,6 +1,10 @@
 class PartnersController < ApplicationController
   def index
-    @partners = policy_scope(Partner).order(created_at: :desc)
+    @partners = policy_scope(Partner).order(commission_perc: :desc)
+    @exchange_rate = ExchangeRate.where("game_id = ? AND currency_origin_short = 'EUR'", current_user.game_id).last.rate
+    @game_currency = ExchangeRate.where("game_id = ? AND currency_origin_short = 'EUR'", current_user.game_id)
+                                 .last
+                                 .currency_target_short
   end
 
   def show
