@@ -50,7 +50,7 @@ partners = [
       referral_link: "http://www.awin1.com/awclick.php?mid=7626&id=575543"
     },
     urls: {
-      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Avira_logo_2014.svg/250px-Avira_logo_2014.svg",
+      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Avira_logo_2011.png/800px-Avira_logo_2011.png",
       card_image_url: "https://img.netzwelt.de/dw880_dh495_sw0_sh0_sx0_sy0_sr16x9_nu0/picture/original/2015/08/avira-168450.jpeg",
     }
   },
@@ -77,7 +77,7 @@ partners = [
     },
     urls: {
       logo_image_url: "http://partners.holz-richter.s3.amazonaws.com/casando/logo_casando_120x30.png",
-      card_image_url: "https://www.awin1.com/cshow.php?s=2060042&v=10992&q=324770&r=575543",
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1552299587/uxztsddmxvlnbj1gbbv5.jpg",
     }
   },
   {
@@ -89,8 +89,8 @@ partners = [
       referral_link: "http://www.awin1.com/awclick.php?mid=11433&id=575543"
     },
     urls: {
-      logo_image_url: "https://assets.kununu.com/images/images_logos/yello-strom-gmbh-d917a.gif",
-      card_image_url: "https://yellobanner.blob.core.windows.net/ecom/affiliate/banner/strom/PS4-1.jpg",
+      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Neues_Yello_Logo.png/600px-Neues_Yello_Logo.png",
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1552299589/ur1xy5dxh8lvifvxid65.jpg",
     }
   },
   {
@@ -127,7 +127,7 @@ games = [
     data: {
       name: "Fortnite",
       currency_name: "V-Bucks",
-      currency_short: "Vindertech Bucks"
+      currency_short: "VB"
     },
     urls: {
       card_image_url: "https://cdn2.unrealengine.com/Fortnite%2Fbattle-royale%2Fseason6-social-1920x1080-0a72ec2f35dfe5be6cf8a77ec16063cca4db7046.jpg",
@@ -292,7 +292,7 @@ exchange_rates = [
   {
     data: {
       currency_origin_short: "EUR",
-      currency_target_short: "V-Bucks",
+      currency_target_short: "VB",
       rate: 90,
       game: Game.first
     },
@@ -302,7 +302,7 @@ exchange_rates = [
   },
   {
     data: {
-      currency_origin_short: "V-Bucks",
+      currency_origin_short: "VB",
       currency_target_short: "EUR",
       rate: 0.0111,
       game: Game.first
@@ -314,7 +314,7 @@ exchange_rates = [
   {
     data: {
       currency_origin_short: "EUR",
-      currency_target_short: "G-Coin",
+      currency_target_short: "GC",
       rate: 50,
       game: Game.second
     },
@@ -324,7 +324,7 @@ exchange_rates = [
   },
   {
     data: {
-      currency_origin_short: "G-Coin",
+      currency_origin_short: "GC",
       currency_target_short: "EUR",
       rate: 0.5,
       game: Game.second
@@ -336,7 +336,7 @@ exchange_rates = [
   {
     data: {
       currency_origin_short: "EUR",
-      currency_target_short: "D-Coin",
+      currency_target_short: "DC",
       rate: 90,
       game: Game.third
     },
@@ -346,7 +346,7 @@ exchange_rates = [
   },
   {
     data: {
-      currency_origin_short: "D-Coin",
+      currency_origin_short: "DC",
       currency_target_short: "EUR",
       rate: 0.0111,
       game: Game.third

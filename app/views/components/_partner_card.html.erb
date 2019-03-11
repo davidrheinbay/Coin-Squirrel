@@ -14,7 +14,7 @@
         </p>
       </div>
       <div class="link-to-partner part-element-partner-card">
-        <a href="<%= "#{partner.referral_link}" %>" target="_blank" class="link">Your Referal Link</a>
+        <a href="<%= "#{partner.referral_link}&clickref2=#{current_user.id}" %>" target="_blank" class="link">Your Referal Link</a>
       </div>
       <div class="see-more part-element-partner-card">
           <%= link_to partner_path(partner), remote: true, class: 'my-link' do %>

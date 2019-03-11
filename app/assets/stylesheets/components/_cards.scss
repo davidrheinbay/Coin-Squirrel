@@ -109,17 +109,20 @@
 }
 
 .partner-card {
+  height: 370px;
   border-radius: 5px;
   background-color: #fff;
   overflow: hidden;
   margin-bottom: 30px;
 
     img {
+    height: 200px;
     width: 100%;
+    object-fit: cover;
 
     }
   .card_head {
-    max-height: 200px;
+    max-height: 300px;
     padding: 0px;
     overflow: hidden;
     border-bottom: 1px solid $grey;
@@ -131,7 +134,67 @@
   }
 }
 
+// shop background card
 
+.details {
+  .content {
+    position: relative;
+    background-color: $grey;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    padding: 50px 100px;
+    color: $light-grey;
+    height: 250px;
+    a {
+      color: $yellow;
+    }
+    h3 {
+      border-bottom: 1px solid $light-grey;
+    }
+  }
+}
+
+.see-more {
+  text-align: center;
+  font-size: 20px;
+  button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+  .see-details {
+    color: $grey;
+  }
+  .removing-details {
+    transform: rotate(45deg);
+  }
+}
+
+.part-element-partner-card {
+  border-top: 1px solid rgba(1,1,1,.1);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .link {
+    height: 20px;
+    color: $yellow;
+  }
+  .link:hover {
+    color: $grey;
+  }
+}
+
+.part-element-partner-card-no-border {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 //Form-Card
 
 
