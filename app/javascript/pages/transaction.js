@@ -39,9 +39,22 @@ const statusToggle = (status) => {
 
 const statusChange = () => {
   const stati = document.querySelectorAll('.status');
-  if (stati) {
-    stati.forEach(statusToggle);
-  }
+  stati.forEach(statusToggle);
 };
 
-export { statusChange };
+const arrowListener = (card) => {
+  card.addEventListener('click', (event) => {
+    event.currentTarget.querySelector('.turning-arrow').classList.toggle('turned')
+  })
+}
+
+
+const turnArrow = () => {
+  const cards = document.querySelectorAll('.cashout-card')
+  cards.forEach((card) => {arrowListener(card)})
+}
+
+
+
+
+export { statusChange, turnArrow };

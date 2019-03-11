@@ -4,7 +4,7 @@
     <h3 class="hidden"><%= transaction.state.capitalize %></h3>
   </div>
 
-  <div class="card-body card-shadow-light" role="button" data-toggle="collapse" href="#<%= transaction.id %>" aria-expanded="false" aria-controls="<%= transaction.id %>">
+  <div class="card-body card-shadow-light cashout-card" role="button" data-toggle="collapse" href="#<%= transaction.id %>" aria-expanded="false" aria-controls="<%= transaction.id %>">
     <%= cl_image_tag Game.find_by_id(transaction.game_id).logo_image, class:"transaction-image" %>
 
     <span>
@@ -12,9 +12,10 @@
       <p> <%= transaction.transaction_confirmed_date.strftime("at %H:%M %d.%m.%Y") %> </p>
     </span>
 
+    <span class="more-details"><i class="fas fa-arrow-down turning-arrow"></i><p>REVEAL CODE</p></span>
+
     <span class="cashout-text">
       <h3>Cash Out</h3>
-      <p>REVEAL CODE</p>
     </span>
 
     <h2 class="transaction-amount">

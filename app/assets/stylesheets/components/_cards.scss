@@ -122,6 +122,19 @@
       }
     }
 
+    span.more-details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        margin: 5px;
+      }
+    }
+
+    .turning-arrow.turned {
+      transform: rotate(180deg);
+    }
+
     .transaction-amount {
       width: 100px;
       text-align: right;
