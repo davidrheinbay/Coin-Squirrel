@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+  skip_before_action :authenticate_user!, only: [:home, :imprint, :terms, :data_protection, :about]
 
   def home
 
@@ -15,6 +15,18 @@ class PagesController < ApplicationController
         @game = Game.find(params[:game])
       end
     end
+  end
+
+  def imprint
+  end
+
+  def data_protection
+  end
+
+  def terms
+  end
+
+  def about
   end
 
   private
