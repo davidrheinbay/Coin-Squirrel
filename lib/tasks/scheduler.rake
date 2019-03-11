@@ -9,7 +9,7 @@ namespace :scheduler do
   desc "Get Awin Transactions"
   task updateawintransaction: :environment do
     puts "-> Getting transactions..."
-    AwinGetJoinedProgrammes.new.call
+    AwinGetTransactions.new.call
     puts "-> All transactions updated!"
   end
 end
