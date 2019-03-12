@@ -7,6 +7,8 @@ class TransactionsController < ApplicationController
   def new
     @transaction = Transaction.new
     authorize @transaction
+
+    @value = params[:value]
   end
 
   def create

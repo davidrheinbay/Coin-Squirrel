@@ -1,25 +1,20 @@
 <div class="transaction-card">
 
-  <div class="status <%= transaction.state %> unclicked" id="status-<%= transaction.id %>" role="button">
+  <div class="status <%= transaction.state %>">
     <h3  class="hidden"><%= transaction.state.capitalize %></h3>
   </div>
   <div class="card-body card-shadow-light">
-    <%= cl_image_tag Partner.find_by_id(transaction.partner_id).logo_image, class:"transaction-image" %>
+    <%#= cl_image_tag Partner.find_by_id(transaction.partner_id).logo_image, class:"transaction-image" %>
 
     <span>
-      <h3> You got Cashback from <%= Partner.find_by_id(transaction.partner_id).name %> </h3>
+      <h3><%= Partner.find_by_id(transaction.partner_id).name %></h3>
       <p> <%= transaction.transaction_confirmed_date.strftime("at %H:%M %d.%m.%Y") %> </p>
     </span>
 
-    <span class="cashin-text">
-      <h3>Cash In</h3>
-    </span>
+    <h3 class="transaction-amount cash-in">
+      <% amount =  transaction.user_commission_amount_cents.to_i  * current_user.game.exchange_rates.where(currency_origin_short: "EUR").first.rate / 100 %>
+      + <%= number_with_precision(amount, precision: 0, delimiter: ',') %> <%= transaction.game.currency_short %>
+    </h3>
 
-    <h2 class="transaction-amount">
-      <% amount =  transaction.user_commission_amount.to_i  * current_user.game.exchange_rates.where(currency_origin_short: "EUR").first.rate / 100 %>
-      <%= number_with_precision(amount, precision: 0, delimiter: ',') %>
-    </h2>
-
-    <%= cl_image_tag Game.find_by_id(transaction.game_id).currency_image, class:"transaction-image-currency" %>
   </div>
 </div>
