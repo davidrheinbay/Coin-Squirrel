@@ -1,12 +1,12 @@
 <!-- Banner -->
-<div class="banner" style="background-image:linear-gradient(0deg, rgba(255,255,255,1),rgba(0,0,0,0) 15%), linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= cl_image_path @game.banner_image %>')">
+<div class="banner" style="background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= cl_image_path @game.banner_image %>')">
 
   <div class="container">
-    <h1>Coin Squirrel</h1>
+    <h1>Get in-game items for free!</h1>
 
     <p>Earn in-game rewards for your favorite game by shopping online</p>
     <!--  Search Form  -->
-    <%= link_to 'See all games', '#games', class:"btn btn-medium-solid"  %>
+    <%= link_to 'See all games', '#games', class:"btn btn-large-solid-home"  %>
 
       <br>
       <br>
@@ -18,7 +18,7 @@
 
     <!-- How it works -->
     <div class="section">
-      <h1>How it works</h1>
+      <h2>How it works</h2>
 
       <div class="how-works">
         <div class="row">
@@ -100,7 +100,7 @@
     <div class="section">
       <div class="partners-wrapper">
         <!-- <div class="arrow-down" style="border-top: 60px solid white"></div> -->
-        <h1>Where can you earn coins?</h1>
+        <h2>Where can you earn coins?</h2>
 
           <!-- <div class="partners-banner"> -->
             <div class="partner-imgs">
@@ -115,10 +115,10 @@
     </div>
 
     <!-- Games -->
-    <div class="games-wrapper" id="games">
+    <div class="section" id="games">
       <!-- <div class="arrow-down" style="border-top: 60px solid rgba(247,247,247, 1)"></div> -->
 
-      <h1>Fortnite is not your game? Find yours!</h1>
+      <h2><%= @game.name %> is not your game? Find yours!</h2>
       <br>
       <!--  Search Form  -->
       <!-- change root path to Game#Show Path -->
