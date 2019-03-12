@@ -1,6 +1,6 @@
+<%= link_to "#{partner.referral_link}&clickref2=#{current_user.id}", target:"_blank" do %>
   <div class="partner-card card-shadow-medium">
-   <a href="<%= "#{partner.referral_link}&clickref2=#{current_user.id}" %>" target="_blank" class="link">
-    <%= cl_image_tag partner.card_image_url, class: "card_head"%></a>
+    <%= cl_image_tag partner.card_image_url, class: "card_head"%>
 
     <div class="card_body">
       <div class="part-element-partner-card-no-border">
@@ -11,13 +11,12 @@
       <div class="part-element-partner-card">
           Cashback: <%= (partner.user_commission_perc * @exchange_rate / 100).to_i %> <%= cl_image_tag current_user.game.currency_image%>/ 1€
       </div>
-      <div class="part-element-partner-card-no-border">
-        <a href="<%= "#{partner.referral_link}&clickref2=#{current_user.id}" %>" target="_blank"><button class="btn-medium-solid">Go to Shop</button></a>
-      </div>
     </div>
+
     <% if current_user.admin? %>
       <div class="btn-admin-sm">
         <%= link_to "Edit", edit_partner_path(partner) %>
       </div>
     <% end %>
   </div>
+<% end %>

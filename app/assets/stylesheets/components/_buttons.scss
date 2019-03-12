@@ -2,17 +2,14 @@
   padding: 12px 30px;
   background-color: $yellow;
   border-radius: 3px;
-  color: $dark-grey;
+  color: white;
   font-size: 12px;
   min-width: 120px;
 
    a {
     text-decoration: none;
+    color: $dark-grey;
   }
-}
-
-.btn-medium-solid:hover {
-
 }
 
 .btn-medium-light {
@@ -30,6 +27,20 @@
 }
 
 .btn-light:hover {
+
+}
+
+.btn-large-solid-home {
+  padding: 10px 25px;
+  background-color: $yellow;
+  border-radius: 3px;
+  color: $dark-grey;
+  font-size: 20px;
+  min-width: 120px;
+
+   a {
+    text-decoration: none;
+  }
 
 }
 
