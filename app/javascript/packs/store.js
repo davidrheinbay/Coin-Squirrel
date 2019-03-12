@@ -6,6 +6,7 @@ const cardUnlocked = () => {
     if (card.querySelector('.store-progression-grey')) {
       card.querySelector('.store-image').classList.add('store-card-locked');
       card.querySelector('.store-card-detail').classList.add('store-card-locked');
+      card.querySelector('.store-card-rating').classList.add('store-card-locked')
       console.log('test')
     }
   })
