@@ -1,11 +1,11 @@
 <div class="wrapper">
   <div class="container">
   <div class="description">
-    <h2>3 Easy Steps to Earn Coins</h1>
+    <h2>Shop at a website below & earn coins</h1>
       <br>
     <div class="row">
       <div class="col-xs-4">
-        1. Choose Partner & Click on "Go to Shop"
+        1. Choose Partner & click on "Go to Shop"
       </div>
       <div class="col-xs-4">
         2. Purchase something
@@ -16,7 +16,7 @@
       <br>
       <br>
       <h4>Find Shop</h4>
-       <%= form_tag root_path, class:"form-inline",method: :get do %>
+       <%= form_tag partners_path, class:"form-inline",method: :get do %>
     <%= text_field_tag :query,
     params[:query],
     class: "form-control",
@@ -27,6 +27,17 @@
     </div>
   </div>
   <div class="background-card card-shadow-strong card-tmm-60 shop-card">
+    <% if current_user.admin? %>
+    <h2>New Partners (please complete)</h2>
+    <div class="row">
+       <% @new_partners.each do |partner| %>
+        <div class="col-xs-6 col-sm-4 col-md-3 card-parent" data-id="<%= partner.id %>">
+          <%= render 'components/partner_card', partner: partner %>
+        </div>
+      <% end %>
+    </div>
+    <% end %>
+    <h2>Existing Partners</h2>
     <div class="row">
       <% @partners.each do |partner| %>
         <div class="col-xs-6 col-sm-4 col-md-3 card-parent" data-id="<%= partner.id %>">
@@ -36,4 +47,3 @@
     </div>
   </div>
 </div>
-<%= render 'components/footer' %>

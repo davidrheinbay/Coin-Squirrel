@@ -18,6 +18,8 @@ class AwinGetTransactions
 #{@publisher_id}/transactions/\
 ?startDate=#{start_date}&endDate=#{end_date}&\
 timezone=UTC&accessToken=#{@api_key}"
+    return if JSON.parse(open(api_uri).read).blank?
+
     @payload = JSON.parse(open(api_uri).read)[0]
     parse_payload
   end
@@ -44,14 +46,15 @@ timezone=UTC&accessToken=#{@api_key}"
     @transaction = Transaction.find_by_awin_transaction_id(@payload["id"])
     if @payload["state"] == "approved"
       approve_transaction
-    elsif @payload["state"] == "pending"
-    else
+    elsif @payload["state"] == "declined" || @payload["state"] == "deleted"
       cancel_transaction
     end
   end
 
   def cancel_transaction
-    reduce_balance if @transaction.state == "completed"
+    return if @transaction != "completed"
+
+    reduce_balance
     @transaction.state = "canceled"
     increase_balance unless @transaction.save
   end
@@ -63,13 +66,13 @@ timezone=UTC&accessToken=#{@api_key}"
   end
 
   def increase_balance
-    current_user.balance_cents += @transaction.user_commission_amount_cents
-    current_user.save
+    @transaction.user.balance_cents += @transaction.user_commission_amount_cents
+    @transaction.user.save
   end
 
   def reduce_balance
-    current_user.balance_cents -= @transaction.user_commission_amount_cents
-    current_user.save
+    @transaction.user.balance_cents -= @transaction.user_commission_amount_cents
+    @transaction.user.save
   end
 
   # CREATE METHODS

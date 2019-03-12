@@ -1,6 +1,11 @@
 class PartnersController < ApplicationController
   def index
-    @partners = policy_scope(Partner).order(commission_perc: :desc)
+    @new_partners = policy_scope(Partner).where('card_image IS NULL')
+    if params[:query].present?
+      @partners = policy_scope(Partner).search_by_name_and_tags(params[:query]).where('card_image IS NOT NULL')
+    else
+      @partners = policy_scope(Partner).order(commission_perc: :desc).where('card_image IS NOT NULL')
+    end
     @exchange_rate = ExchangeRate.where("game_id = ? AND currency_origin_short = 'EUR'", current_user.game_id).last.rate
     @game_currency = ExchangeRate.where("game_id = ? AND currency_origin_short = 'EUR'", current_user.game_id)
                                  .last
@@ -31,6 +36,7 @@ class PartnersController < ApplicationController
     @partner = Partner.find(params[:id])
     authorize @partner
     @partner.update(partner_params)
+    @partner.tags = params[:partner][:tags].split(",")
     if @partner.save
       redirect_to partners_path(nil, partner: @partner.name)
     else
@@ -44,6 +50,6 @@ class PartnersController < ApplicationController
     params.require(:partner).permit(:name, :company_entity_name,
                                     :commission_perc, :user_commission_perc,
                                     :referral_link, :logo_image, :card_image,
-                                    :awin_advertiser_id)
+                                    :awin_advertiser_id, tags: [])
   end
 end

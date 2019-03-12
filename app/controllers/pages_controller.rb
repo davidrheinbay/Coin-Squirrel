@@ -1,16 +1,32 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+  skip_before_action :authenticate_user!, only: [:home, :imprint, :terms, :data_protection, :about]
 
   def home
 
-    @partners = Partner.where("name != ?", "CoinSquirrel")
+    @partners = Partner.where("name != ? and card_image IS NOT NULL", "CoinSquirrel")
     @games = search_games
 
     if user_signed_in? == true
       @game = Game.find(current_user.game.id)
     else
-      @game = Game.find_by_name("Fortnite")
+      if params[:game].nil?
+        @game = Game.find_by_name('Fortnite')
+      else
+        @game = Game.find(params[:game])
+      end
     end
+  end
+
+  def imprint
+  end
+
+  def data_protection
+  end
+
+  def terms
+  end
+
+  def about
   end
 
   private

@@ -1,13 +1,13 @@
 
 .store-progression-green {
   height: 15px;
-  width: 100px;
+  width: 200px;
   background-color: #18D569;
   border-radius: 3px;
 }
 
 .store-progression-grey {
-  width: 100px;
+  width: 200px;
   height: 15px;
   background-color: #EEEEEE;
   display: flex;
@@ -40,8 +40,9 @@
   height: 474px;
   width: 300px;
   margin-bottom: 30px;
-  margin-top: 50px;
+  margin-top: 30px;
   text-align: center;
+
 
   strong {
     line-height: 23px;
@@ -105,17 +106,19 @@
 
 .store-control {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
 
   a {
-    margin-top: 15px;
+    margin-top: 30px;
+    margin-right: 60px;
   }
 }
 
-
-
-
+.store-card-locked {
+  filter: grayscale(100%);
+}
 
 
 

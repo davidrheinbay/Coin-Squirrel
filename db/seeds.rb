@@ -47,7 +47,9 @@ partners = [
       company_entity_name: "Avira GmbH & Co. KG",
       commission_perc: 25,
       user_commission_perc: 15,
-      referral_link: "http://www.awin1.com/awclick.php?mid=7626&id=575543"
+      referral_link: "http://www.awin1.com/awclick.php?mid=7626&id=575543",
+      tags: ['antivirus', 'security', 'software', 'virus', 'protection'],
+      awin_advertiser_id: "7626"
     },
     urls: {
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Avira_logo_2011.png/800px-Avira_logo_2011.png",
@@ -60,7 +62,9 @@ partners = [
       company_entity_name: "Ferienautovermietung GmbH",
       commission_perc: 8,
       user_commission_perc: 4,
-      referral_link: "http://www.awin1.com/awclick.php?mid=9120&id=575543"
+      referral_link: "http://www.awin1.com/awclick.php?mid=9120&id=575543",
+      tags: ['rental', 'auto', 'vermietung', 'mieten', 'Mietwagen'],
+      awin_advertiser_id: "9120"
     },
     urls: {
       logo_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552060849/emidoiwlwbuluzjfvxqv.png",
@@ -73,7 +77,9 @@ partners = [
       company_entity_name: "Holz-Richter GmbH",
       commission_perc: 4,
       user_commission_perc: 2,
-      referral_link: "http://www.awin1.com/awclick.php?mid=10992&id=575543"
+      referral_link: "http://www.awin1.com/awclick.php?mid=10992&id=575543",
+      tags: ['furniture', 'möbel', 'haus', 'deko', 'baumarkt', 'sauna', 'terrasse'],
+      awin_advertiser_id: "10992"
     },
     urls: {
       logo_image_url: "http://partners.holz-richter.s3.amazonaws.com/casando/logo_casando_120x30.png",
@@ -86,7 +92,9 @@ partners = [
       company_entity_name: "Yello Strom GmbH",
       commission_perc: 15,
       user_commission_perc: 10,
-      referral_link: "http://www.awin1.com/awclick.php?mid=11433&id=575543"
+      referral_link: "http://www.awin1.com/awclick.php?mid=11433&id=575543",
+      tags: ['gas', 'strom', 'heizung', 'heating', 'electricity', 'yellow'],
+      awin_advertiser_id: "11433"
     },
     urls: {
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Neues_Yello_Logo.png/600px-Neues_Yello_Logo.png",
@@ -99,7 +107,8 @@ partners = [
       company_entity_name: "Autodoc GmbH",
       commission_perc: 6,
       user_commission_perc: 2,
-      referral_link: "http://ui.zanox.com/bin/z_in_frm.dll?4008400940080&128025573C765357919&981552299232_151291257_2718917"
+      referral_link: "http://ui.zanox.com/bin/z_in_frm.dll?4008400940080&128025573C765357919&981552299232_151291257_2718917",
+      tags:['car', 'parts', 'Autoteile', 'Reparatur', 'repair']
     },
     urls: {
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/2/23/Autodoc.png",

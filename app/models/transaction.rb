@@ -14,7 +14,7 @@ class Transaction < ApplicationRecord
   validates :eur_currency_rate, presence: true, if: proc { |a| a.transaction_type == "cash_in" }
   validates :transaction_confirmed_date, presence: true
   validates :transaction_completed_date, presence: true, if: proc { |a| a.state == "completed" }
-  validates :state, inclusion: { in: ["confirmed", "completed"] }
+  validates :state, inclusion: { in: ["confirmed", "completed", "canceled"] }
 
   monetize :gmv_eur_cents
   monetize :user_commission_amount_cents

@@ -39,6 +39,30 @@
 
                 <div class="form-group row">
                   <div class="input-group-prepend">
+                    ID
+                  </div>
+                  <%= f.text_field :awin_advertiser_id,
+                              class:"form-controll",
+                              placeholder: 'ID: 80..',
+                              required: true,
+                              autofocus: true,
+                              input_html: { autocomplete: "awin_advertiser_id" }%>
+                </div>
+
+                <div class="form-group row">
+                  <div class="input-group-prepend">
+                    <i class="material-icons"> category </i>
+                  </div>
+                  <%= f.text_field :tags,
+                              class:"form-controll",
+                              placeholder: 'Tags: car, rental, holiday..',
+                              required: true,
+                              autofocus: true,
+                              input_html: { autocomplete: "tags" }%>
+                </div>
+
+                <div class="form-group row">
+                  <div class="input-group-prepend">
                     <i class="material-icons"> local_atm </i>
                   </div>
                   <%= f.number_field :commission_perc,
