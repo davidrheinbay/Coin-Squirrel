@@ -21,12 +21,12 @@
             </div>
 
             <div class="store-card-price">
-              <p><%= number_with_precision(amount, precision: 0, delimiter: ',') %> / <%= item.cost %> <%= item.currency %></p>
-              <% if number_with_precision(amount, precision: 0, delimiter: ',').to_i  >= item.cost.to_i %>
+              <p><%= number_with_precision(amount).to_i %> / <%= item.cost.to_i %> <%= item.currency %></p>
+              <% if number_with_precision(amount).to_i  >= item.cost.to_i %>
                 <div class="store-progression-green">
 
                 </div>
-              <% elsif number_with_precision(amount, precision: 0, delimiter: ',').to_i == 0 %>
+              <% elsif number_with_precision(amount).to_i == 0 %>
                 <div class="store-progression-grey">
                   <div class="store-progression-red" style="width: 3%">
                   </div>
