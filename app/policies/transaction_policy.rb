@@ -8,6 +8,10 @@ class TransactionPolicy < ApplicationPolicy
     true
   end
 
+  def show?
+    true
+  end
+
   class Scope < Scope
     def resolve
       scope.where(user_id: user).order(transaction_confirmed_date: :desc)
