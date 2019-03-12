@@ -245,16 +245,18 @@
   margin: 10px;
   height: 235px;
   background-color: #fff;
-  padding: 20px;
-  position: relative;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   .status {
     font-size: 16px;
     color: #fff;
-    position: absolute;
-    top: 15px;
-    right: 15px;
     padding: 3px 13px;
     border-radius: 14px;
+    align-self: flex-end;
+    margin-top: 20px;
 
   }
   .status.green {
@@ -265,13 +267,29 @@
     background-color: $yellow;
   }
 
-  .code {
-    margin-top: 60px;
-    font-size: 16px;
+  a {
+    margin-bottom: 30px;
+    .code {
+      margin: -20px;
+      width: calc(100%);
+      font-size: 16px;
+      background: $yellow;
+      color: #fff;
+      border: none;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+      border-radius: 0 0 5px 5px;
+      padding: 10px;
+      align-self: flex-end;
+    }
+    margin: 10px -20px;
+    width: calc(100% + 40px);
+    align-self: flex-end;
+    text-align: center;
   }
 
   .description {
-    margin-top: 40px;
     font-size: 16px;
   }
 }

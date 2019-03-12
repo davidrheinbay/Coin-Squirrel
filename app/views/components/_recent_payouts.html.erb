@@ -10,7 +10,7 @@
       <p> <%= transaction.transaction_confirmed_date.strftime("at %H:%M %d.%m.%Y") %> </p>
     </span>
     <span class="amount">
-      <% amount = transaction.user_commission_amount * ExchangeRate.where(game_id: transaction.game_id)[0].rate.to_i %>
+      <% amount = (transaction.user_commission_amount * ExchangeRate.where(game_id: transaction.game_id)[0].rate.to_i) %>
       <h3><%='- ' + number_with_precision(amount, precision: 0, delimiter: ',') + " " + transaction.game.currency_short %></h3>
     </span>
   </div>

@@ -23,12 +23,10 @@
         <%= link_to partners_path do %>
           <button class="cta">
             <p>Increase Your Balance</p>
-            <i class="fas fa-info-circle" data-step-1="1. Go with one of our links in the Shop of one of our Partners. 2. Buy a Product you like"
-            data-step-2="2. Buy a Product you like."
-            data-step-3="3. See Your new Coins here."></i>
+            <i class="fas fa-info-circle details-icon"></i>
           </button>
         <% end %>
-        <div class="steps">
+        <div class="steps hidden">
           <div class="first-step">
             <p>1.</p>
             <p>Go with one of our links in the Shop of one of our Partners.</p>
@@ -53,44 +51,50 @@
   <br>
   <div class="row">
 
+    <div class="col-xs-12 space-holder"></div>
+
     <% if @transactions.where(transaction_type: 'cash_out').count > 0 %>
     <div class="col-xs-12">
-      <h3>Recent Gift Cards</h3>
+      <h2 class="transaction-sub-headers">Recent Gift Cards</h2>
     </div>
 
     <div class="recent-payouts-wrapper">
       <div class="col-xs-6">
         <% @transactions.where(transaction_type: 'cash_out').order('transaction_confirmed_date DESC').limit(3).to_a.each do |transaction| %>
-          <%= render 'components/recent_payouts', transaction: transaction %>
+        <%= render 'components/recent_payouts', transaction: transaction %>
         <% end %>
       </div>
       <div class="col-xs-6 recent-payouts-details-wrapper">
         <% first = true %>
         <% @transactions.where(transaction_type: 'cash_out').order('transaction_confirmed_date DESC').limit(3).to_a.each do |transaction| %>
-          <%= render 'components/recent_payouts_details', transaction: transaction, first: first %>
-          <% first = false %>
+        <%= render 'components/recent_payouts_details', transaction: transaction, first: first %>
+        <% first = false %>
         <% end %>
       </div>
     </div>
 
-  <% end %>
+    <% end %>
 
-  <div class="col-xs-12">
-    <h2>Transaction History</h2>
-  </div>
+    <div class="col-xs-12 space-holder"></div>
 
-  <% @transactions.each do |transaction| %>
+    <div class="col-xs-12">
+      <h2 class="transaction-sub-headers">Transaction History</h2>
+    </div>
+
+    <% @transactions.each do |transaction| %>
 
     <div class="col-xs-12">
       <% if transaction.partner_id.nil? %>
-        <!-- Card for Payout -->
-        <%= render 'components/cashout_card', transaction: transaction %>
+      <!-- Card for Payout -->
+      <%= render 'components/cashout_card', transaction: transaction %>
       <% else %>
-        <!-- Card for Cash In -->
-        <%= render 'components/cashin_card', transaction: transaction %>
+      <!-- Card for Cash In -->
+      <%= render 'components/cashin_card', transaction: transaction %>
       <% end %>
     </div>
 
-  <% end %>
+    <% end %>
+    <div class="col-xs-12 space-holder"></div>
+    <div class="col-xs-12 space-holder"></div>
   </div>
 </div>

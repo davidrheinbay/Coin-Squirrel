@@ -5,10 +5,12 @@
   <div class="recent_payout_details button-detail-pair-<%= transaction.id %> hidden">
 <% end %>
   <% if transaction.state == 'completed' %>
-    <p class="status green"><%= transaction.state %></p>
+    <span class="status green"><%= transaction.state %></span>
   <% else %>
-    <p class="status yellow"><%= transaction.state %></p>
+    <span class="status yellow"><%= transaction.state %></span>
   <% end %>
-  <p class="code">Code: <%= transaction.link_used %></p>
   <p class="description">To get Your cashed out Money, please use this Code</p>
+  <a href="<%= transaction.link_used %>">
+    <button class="code">Your Code</button>
+  </a>
 </div>
