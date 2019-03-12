@@ -1,16 +1,51 @@
 <div class="container">
   <br>
-<%= link_to 'Payout your Coins', new_transaction_path, class:"btn btn-medium-solid" %>
+  <div class="row">
+    <div class="col-xs-12">
+      <%= link_to 'Payout your Coins', new_transaction_path, class:"btn btn-medium-solid" %>
+    </div>
+    <div class="col-xs-12">
+      <h2>My Account</h2>
+    </div>
+
+    <% if @transactions.where(transaction_type: 'cash_out').count > 0 %>
+    <div class="col-xs-12">
+      <h3>Recent Gift Cards</h3>
+    </div>
+
+    <div class="recent-payouts-wrapper">
+      <div class="col-xs-6">
+        <% @transactions.where(transaction_type: 'cash_out').order('transaction_confirmed_date DESC').limit(3).to_a.each do |transaction| %>
+          <%= render 'components/recent_payouts', transaction: transaction %>
+        <% end %>
+      </div>
+      <div class="col-xs-6 recent-payouts-details-wrapper">
+        <% first = true %>
+        <% @transactions.where(transaction_type: 'cash_out').order('transaction_confirmed_date DESC').limit(3).to_a.each do |transaction| %>
+          <%= render 'components/recent_payouts_details', transaction: transaction, first: first %>
+          <% first = false %>
+        <% end %>
+      </div>
+    </div>
+
+  <% end %>
+
+  <div class="col-xs-12">
+    <h2>Transaction History</h2>
+  </div>
 
   <% @transactions.each do |transaction| %>
 
-    <% if transaction.partner_id.nil? %>
-      <!-- Card for Payout -->
-      <%= render 'components/cashout_card', transaction: transaction %>
-    <% else %>
-      <!-- Card for Cash In -->
-      <%= render 'components/cashin_card', transaction: transaction %>
-    <% end %>
+    <div class="col-xs-12">
+      <% if transaction.partner_id.nil? %>
+        <!-- Card for Payout -->
+        <%= render 'components/cashout_card', transaction: transaction %>
+      <% else %>
+        <!-- Card for Cash In -->
+        <%= render 'components/cashin_card', transaction: transaction %>
+      <% end %>
+    </div>
 
   <% end %>
+  </div>
 </div>
