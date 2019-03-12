@@ -1,12 +1,13 @@
 <% amount = current_user.balance * current_user.game.exchange_rates.where(currency_origin_short: "EUR").first.rate %>
 
-  <div class="store-banner" style="background-image: url('<%= @game.store_image %>');">
+  <div class="store-banner" style="background-image:linear-gradient(0deg, rgba(255,255,255,1),rgba(0,0,0,0) 15%), linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= @game.store_image %>');">
     <div>
       <h1><%= @game.name %></h1>
-      <p><%= @game.description %></p>
+      <p> Browse the shop of the latest ingame items. Pay out your coins if you found something you like or go shopping to save for an even better one.</p>
     </div>
   </div>
 <div class="background-card card-shadow-strong card-tmm-60 text-center">
+  <h2 style="margin-top: -25px;">Featured items</h2>
   <div class="row">
     <% @items.each do |item| %>
       <div class="col-md-3 col-xs-6">
