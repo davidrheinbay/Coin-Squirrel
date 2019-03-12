@@ -42,7 +42,8 @@
 
             <div class="store-card-rating">
               <% if number_with_precision(amount).to_i  <= item.cost.to_i  %>
-                <i class="fas fa-lock"></i>
+                  <i class="fas fa-lock store-lock fa-2x"></i>
+                  <%= link_to "Go shopping", partners_path, class: "btn btn-medium-light"  %>
               <% else %>
                 <%= link_to "Pay out", new_transaction_path(value: item.cost), class: "btn btn-medium-solid"  %>
               <% end %>

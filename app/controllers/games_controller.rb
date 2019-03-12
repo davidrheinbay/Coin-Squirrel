@@ -5,7 +5,7 @@ class GamesController < ApplicationController
   #skip_before_action :authenticate_user!, only: :show
 
   def show
-    @game = Game.find(params[:id])
+    @game = current_user.game
     authorize @game
 
     @games = policy_scope(Game)
