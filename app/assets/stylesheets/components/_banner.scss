@@ -113,3 +113,107 @@
     margin-left: 40px;
   }
 }
+
+.transactions-banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  height: 45vh;
+  padding: 60px 0;
+  margin: 0;
+  .welcome {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    img {
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    h1 {
+      color: $yellow;
+      font-size: 30px;
+      margin: 0;
+
+    }
+  }
+  .current-balance-description {
+    color: $yellow;
+    margin-top: 20px;
+  }
+  .current-balance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    background-color: $yellow;
+    height: 65px;
+    p {
+      margin-right: 10px;
+      margin-bottom: 0;
+      color: #fff;
+    }
+    img {
+      height: 50px;
+    }
+  }
+  .buttons{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .cta {
+      width: 270px;
+      background-color: $yellow;
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      padding: 10px 20px;
+      margin-right: 10px;
+      color: #fff;
+      border: none;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    .cta:hover {
+      background-color: $dark-yellow;
+      color: $light-grey;
+      box-shadow: 1px 1px 2px rgba(0,0,0,.2);
+    }
+
+    .payout {
+      width: 200px;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $yellow;
+      height: 50px;
+      color: $yellow;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      background: none;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    .payout:hover {
+      background-color: $yellow;
+      color: #fff;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
