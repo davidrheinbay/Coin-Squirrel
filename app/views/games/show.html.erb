@@ -3,10 +3,11 @@
   <div class="store-banner" style="background-image: url('<%= @game.store_image %>');">
     <div>
       <h1><%= @game.name %></h1>
-      <p><%= @game.description %></p>
+      <p>Browse the shop of the latest ingame items </p>
     </div>
   </div>
 <div class="background-card card-shadow-strong card-tmm-60 text-center">
+  <h2 style="margin-top: -25px;">Featured Items</h2>
   <div class="row">
     <% @items.each do |item| %>
       <div class="col-md-3 col-xs-6">
@@ -40,8 +41,11 @@
             </div>
 
             <div class="store-card-rating">
-              <p><%= "★" * item.rating.to_i  %><%= "☆" * (5 - item.rating.to_i) %></p>
-              <p id="votes"><%= item.votes %> votes</p>
+              <% if number_with_precision(amount).to_i  <= item.cost.to_i  %>
+                <i class="fas fa-lock"></i>
+              <% else %>
+                <%= link_to "Pay out", new_transaction_path(value: item.cost), class: "btn-medium-solid"  %>
+              <% end %>
             </div>
           </div>
         </div>
