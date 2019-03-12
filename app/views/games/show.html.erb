@@ -1,9 +1,9 @@
 <% amount = current_user.balance * current_user.game.exchange_rates.where(currency_origin_short: "EUR").first.rate %>
 
-  <div class="store-banner" style="background-image: url('https://www.desktopbackground.org/download/3440x1440/2012/01/01/321405_6258-dota-2-terrorblade-high-definition-wallpapers-attachment_5000x2815_h.jpg');">
+  <div class="store-banner" style="background-image: url('<%= @game.store_image %>');">
     <div>
       <h1><%= @game.name %></h1>
-      <p>Fortnite (von englisch fortnight ‚vierzehn Tage‘), ist ein Koop-Survival-Spiel, das von People Can Fly und Epic Games entwickelt wurde und durch einen kostenlosen, auf dem Battle-Royale-Genre basierenden, Standalone-Modus, Fortnite Battle Royale, seine Popularität erlangte.[3] Das Spiel erschien am 25. Juli 2017 weltweit außer in China für PlayStation 4, Xbox One und Windows.</p>
+      <p><%= @game.description %></p>
     </div>
   </div>
 <div class="background-card card-shadow-strong card-tmm-60 text-center">

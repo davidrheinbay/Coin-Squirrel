@@ -184,7 +184,8 @@ games = [
     data: {
       name: "Fortnite",
       currency_name: "V-Bucks",
-      currency_short: "VB"
+      currency_short: "VB",
+      description: "Battle Royale ist Fortnites kostenloser PvP-Modus mit 100 Spielern. Eine riesige Karte. Ein Schlachtenbus. Begib dich in zerstörbare Welten und stelle dein Können im Bauen und in intensiven PvP-Kämpfen unter Beweis. Wer als letztes übrig ist, gewinnt. Für PC, PlayStation 4, Xbox One, Nintendo Switch, Android, iOS und Mac verfügbar."
     },
     urls: {
       card_image_url: "https://cdn2.unrealengine.com/Fortnite%2Fbattle-royale%2Fseason6-social-1920x1080-0a72ec2f35dfe5be6cf8a77ec16063cca4db7046.jpg",
@@ -194,14 +195,15 @@ games = [
       game_character_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552294172/wcllqr9rnwejckucha64.jpg",
       premium_item_image_url: "https://gamepedia.cursecdn.com/fortnite_gamepedia/9/96/Treasure_chest_%28tier_1%29.png",
       shopping_cart_image_url: "https://gamepedia.cursecdn.com/fortnite_gamepedia/0/08/Shopping_cart_icon.png",
-
+      store_image: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552322437/fortnite-store-header.jpg"
     }
   },
   {
     data: {
       name: "Pubg",
       currency_name: "G-Coin",
-      currency_short: "GC"
+      currency_short: "GC",
+      description: "PLAYERUNKNOWN'S BATTLEGROUNDS is a battle royale shooter that pits 100 players against each other in a struggle for survival. Gather supplies and outwit your opponents to become the last person standing."
     },
     urls: {
       card_image_url: "https://wallpapercave.com/wp/wp3276765.jpg",
@@ -211,14 +213,15 @@ games = [
       game_character_image_url: "https://pngimg.com/uploads/pubg/pubg_PNG22.png",
       premium_item_image_url: "https://gamepedia.cursecdn.com/battlegrounds_gamepedia_en/6/65/Icon_box_preOrder.png",
       shopping_cart_image_url: "https://gamepedia.cursecdn.com/fortnite_gamepedia/0/08/Shopping_cart_icon.png",
-
+      store_image: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552322630/pubg-store-header.jpg"
     }
   },
   {
     data: {
       name: 'Dota',
       currency_name: 'D-Coins',
-      currency_short: 'DC'
+      currency_short: 'DC',
+      description: "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has taken on a life of its own."
     },
     urls: {
       card_image_url: 'https://es.me/wp-content/uploads/2019/01/Dota-2-esports-empire-play.jpg',
@@ -227,7 +230,8 @@ games = [
       banner_image_url: 'https://s3.dexerto.com/thumbnails/_thumbnailLarge/dota-2-patch-notes-7.21b-valve-steam.jpg',
       game_character_image_url: 'https://gamepedia.cursecdn.com/dota2_gamepedia/thumb/3/31/Dota_Heroes.png/300px-Dota_Heroes.png?version=fe57923c5e34e392f524a291e1b94e41',
       premium_item_image_url: 'https://gamerall.com/84813-large_default/fragger-dota-2-chest.jpg',
-      shopping_cart_image_url: 'https://gamepedia.cursecdn.com/fortnite_gamepedia/0/08/Shopping_cart_icon.png'
+      shopping_cart_image_url: 'https://gamepedia.cursecdn.com/fortnite_gamepedia/0/08/Shopping_cart_icon.png',
+      store_image: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552322816/dota-store-header.jpg"
     }
   }
 ]
@@ -242,6 +246,7 @@ games.each do |game|
   gameDB.remote_game_character_image_url = game[:urls][:game_character_image_url]
   gameDB.remote_premium_item_image_url = game[:urls][:premium_item_image_url]
   gameDB.remote_shopping_cart_image_url = game[:urls][:shopping_cart_image_url]
+  gameDB.remote_store_image_url = game[:urls][:store_image]
   gameDB.save!
 end
 
