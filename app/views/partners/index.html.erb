@@ -1,31 +1,73 @@
 <div class="wrapper">
   <div class="container">
-  <div class="description">
-    <h2>Shop at a website below & earn coins</h1>
+    <div class="description">
+
+      <h2>The Next Steps</h1>
       <br>
-    <div class="row">
-      <div class="col-xs-4">
-        1. Choose Partner & click on "Go to Shop"
+
+      <div class="how-works">
+        <div class="row">
+
+          <div class="col-sm-4 col-md-2 col-md-offset-1 how-it-works-card-small first-card">
+            <div class="how-it-works-number-small">
+              <h1>1</h1>
+            </div>
+            <div class="body">
+              <p>Browse our partner shops and buy click on "Go to Shop"</p>
+            </div>
+          </div>
+
+          <div class=" col-sm-4 col-md-2 how-it-works-card-small">
+            <div class="how-it-works-number-small">
+              <h1>2</h1>
+            </div>
+            <div class="body">
+              <p>Buy something online and get ingame currency for every purchase</p>
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-2 how-it-works-card-small">
+            <div class="how-it-works-number-small">
+              <h1>3</h1>
+            </div>
+            <div class="body">
+              <p>Convert your collected coins into a voucher</p>
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-2 how-it-works-card-small">
+            <div class="how-it-works-number-small">
+              <h1>4</h1>
+            </div>
+            <div class="body">
+              <p>Earn coins for every purchase you make and save for your favorite item</p>
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-2 how-it-works-card-last-small">
+            <div class="how-it-works-number-last-small">
+              <h1>5</h1>
+            </div>
+            <div class="body">
+            <p>Pay out your coins and start getting in-game items for free</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-xs-4">
-        2. Purchase something
-      </div>
-      <div class="col-xs-4">
-        3. Earn coins for every € spent
-      </div>
+
       <br>
-      <br>
-      <h4>Find Shop</h4>
-       <%= form_tag partners_path, class:"form-inline",method: :get do %>
-    <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-      placeholder: "Avira, CarDelMar, ..." %>
-      <%= submit_tag "Find Shop", class:"btn btn-medium-solid" %>
+
+      <%= form_tag partners_path, class:"form-inline",method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find Your Shop" %>
+        <%= submit_tag "Search", class:"btn btn-medium-solid" %>
       <% end %>
     </div>
-    </div>
   </div>
+
+
   <div class="background-card card-shadow-strong card-tmm-60 shop-card">
     <% if current_user.admin? %>
     <h2>New Partners (please complete)</h2>
@@ -37,7 +79,7 @@
       <% end %>
     </div>
     <% end %>
-    <h2>Existing Partners</h2>
+    <h2>Our Partners</h2>
     <div class="row">
       <% @partners.each do |partner| %>
         <div class="col-xs-6 col-sm-4 col-md-3 card-parent" data-id="<%= partner.id %>">
