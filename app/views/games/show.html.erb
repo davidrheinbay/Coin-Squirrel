@@ -3,7 +3,7 @@
   <div class="store-banner" style="background-image: url('<%= @game.store_image %>');">
     <div>
       <h1><%= @game.name %></h1>
-      <p>Browse the shop of the latest ingame items</p>
+      <p>Browse the shop of the latest ingame items </p>
     </div>
   </div>
 <div class="background-card card-shadow-strong card-tmm-60 text-center">
@@ -41,7 +41,11 @@
             </div>
 
             <div class="store-card-rating">
-              <%= link_to "Pay out", new_transaction_path(value: item.cost), class: "btn-medium-solid"  %>
+              <% if number_with_precision(amount).to_i  <= item.cost.to_i  %>
+                <i class="fas fa-lock"></i>
+              <% else %>
+                <%= link_to "Pay out", new_transaction_path(value: item.cost), class: "btn-medium-solid"  %>
+              <% end %>
             </div>
           </div>
         </div>
