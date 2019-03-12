@@ -12,15 +12,47 @@
 
     <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
       <li>
+        <p> Your Balance</p>
+      </li>
+      <li>
         <%= link_to transactions_path do %>
         <%= t(".profile", default: "Balance Overview") %>
         <% end %>
+      </li>
+      <li>
+        <%= link_to "Go Shopping", partners_path %>
       </li>
       <li>
         <%= link_to new_transaction_path do %>
         <%= t(".profile", default: "Get Payout") %>
         <% end %>
       </li>
+
+      <li role="separator" class="divider"></li>
+      <li>
+        <p>Your Game</p>
+      </li>
+      <li>
+        <%= link_to "Game Items", game_path(current_user.game_id) %>
+      </li>
+
+      <% if current_user.admin? %>
+        <li>
+          <%= link_to "Add Partner", new_partner_path %>
+        </li>
+      <% end %>
+
+      <li role="separator" class="divider"></li>
+      <li>
+        <p>Profile</p>
+      </li>
+      <li>
+        <%= link_to "Profile", "#" %>
+      </li>
+      <li>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+      </li>
+
     </ul>
   </div>
 </div>
