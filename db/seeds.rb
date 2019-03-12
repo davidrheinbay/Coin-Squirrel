@@ -185,7 +185,7 @@ games = [
       name: "Fortnite",
       currency_name: "V-Bucks",
       currency_short: "VB",
-      description: "Battle Royale ist Fortnites kostenloser PvP-Modus mit 100 Spielern. Eine riesige Karte. Ein Schlachtenbus. Begib dich in zerstörbare Welten und stelle dein Können im Bauen und in intensiven PvP-Kämpfen unter Beweis. Wer als letztes übrig ist, gewinnt. Für PC, PlayStation 4, Xbox One, Nintendo Switch, Android, iOS und Mac verfügbar."
+      description: "Get the newest skins, gliders and emotes."
     },
     urls: {
       card_image_url: "https://cdn2.unrealengine.com/Fortnite%2Fbattle-royale%2Fseason6-social-1920x1080-0a72ec2f35dfe5be6cf8a77ec16063cca4db7046.jpg",
@@ -203,7 +203,7 @@ games = [
       name: "Pubg",
       currency_name: "G-Coin",
       currency_short: "GC",
-      description: "PLAYERUNKNOWN'S BATTLEGROUNDS is a battle royale shooter that pits 100 players against each other in a struggle for survival. Gather supplies and outwit your opponents to become the last person standing."
+      description: "Get the latest skins, outfits and crates."
     },
     urls: {
       card_image_url: "https://wallpapercave.com/wp/wp3276765.jpg",
@@ -221,7 +221,7 @@ games = [
       name: 'Dota',
       currency_name: 'D-Coins',
       currency_short: 'DC',
-      description: "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has taken on a life of its own."
+      description: "Get the newest armaments, cloaks and weapons."
     },
     urls: {
       card_image_url: 'https://es.me/wp-content/uploads/2019/01/Dota-2-esports-empire-play.jpg',
