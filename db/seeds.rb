@@ -114,7 +114,55 @@ partners = [
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/2/23/Autodoc.png",
       card_image_url: "http://cdn.pkwteile.de/uploads/zanox/atd/Banneratdde660x348.jpg"
     }
+  },
+
+  # Fake Partner ---------------------------------------------------------------
+  {
+    data: {
+      name: "Deliveroo",
+      company_entity_name: "Deliveroo Limited",
+      commission_perc: 4,
+      user_commission_perc: 2,
+      referral_link: "https://deliveroo.de/de/",
+      tags:['food', 'delivery']
+    },
+    urls: {
+      logo_image_url: "https://cdn2.downdetector.com/static/uploads/logo/deliveroo.png",
+      card_image_url: "https://assets.fontsinuse.com/static/use-media-items/46/45322/full-2000x1180/581e66cb/610413fa84c0634a2651507bbf994415.jpeg?resolution=0"
+    }
+  },
+
+  {
+    data: {
+      name: "Easyjet",
+      company_entity_name: "easyJet Airline Company PLC",
+      commission_perc: 10,
+      user_commission_perc: 3,
+      referral_link: "https://www.easyjet.com/de",
+      tags:['travel', 'flight']
+    },
+    urls: {
+      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EasyJet_logo.svg/2000px-EasyJet_logo.svg.png",
+      card_image_url: "https://upload.wikimedia.org/wikipedia/commons/c/c6/Easyjet_orange.png"
+    }
+  },
+
+  {
+    data: {
+      name: "Steam",
+      company_entity_name: "Valve Corporation",
+      commission_perc: 5,
+      user_commission_perc: 3,
+      referral_link: "https://store.steampowered.com/?l=german",
+      tags:['game', 'online']
+    },
+    urls: {
+      logo_image_url: "http://old.pcgamer.no/wp-content/uploads/2018/12/steam-logo.png",
+      card_image_url: "https://strats-forum-attachments.s3.amazonaws.com/original/2X/1/1f0619d4ca2cfa02f58cbe0d76debad2772f62f1.jpg"
+    }
   }
+
+
 ]
 
 
