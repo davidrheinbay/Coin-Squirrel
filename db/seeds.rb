@@ -67,7 +67,7 @@ partners = [
       awin_advertiser_id: "9120"
     },
     urls: {
-      logo_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552060849/emidoiwlwbuluzjfvxqv.png",
+      logo_image_url: "https://cr-cms-prod.s3.amazonaws.com/production/cms/assets/cdm-logo-66ddfafc42b7bfb7c26c452eeecbce66d3c92acd053312d81e792109c1ba2dba.jpg",
       card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552389667/cardelmar.jpg",
     }
   },
@@ -82,7 +82,7 @@ partners = [
       awin_advertiser_id: "10992"
     },
     urls: {
-      logo_image_url: "http://partners.holz-richter.s3.amazonaws.com/casando/logo_casando_120x30.png",
+      logo_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552400114/Screenshot_2019-03-12_at_15.13.57.png",
       card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552389776/casando.001.jpg",
     }
   },
@@ -97,7 +97,7 @@ partners = [
       awin_advertiser_id: "11433"
     },
     urls: {
-      logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Neues_Yello_Logo.png/600px-Neues_Yello_Logo.png",
+      logo_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552401372/yello-Logo-gelb.png",
       card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552389622/yello.001.jpg",
     }
   },

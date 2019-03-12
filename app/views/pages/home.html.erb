@@ -99,18 +99,17 @@
     <!-- Partners -->
     <div class="section">
       <div class="partners-wrapper">
+        <div class="container">
         <!-- <div class="arrow-down" style="border-top: 60px solid white"></div> -->
         <h2>Where can you earn coins?</h2>
-
-          <!-- <div class="partners-banner"> -->
-            <div class="partner-imgs">
+          <div class="partner-imgs">
             <% @partners.each do |partner| %>
               <div class="partners-logo">
                 <%= cl_image_tag partner.logo_image %>
               </div>
             <% end %>
-         <!--  </div> -->
-           </div>
+          </div>
+        </div>
       </div>
     </div>
 
