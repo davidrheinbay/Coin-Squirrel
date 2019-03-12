@@ -229,7 +229,7 @@ games = [
       currency_image_url: 'https://res.cloudinary.com/dmr1qubzk/image/upload/v1552305072/dota2.png',
       banner_image_url: 'https://res.cloudinary.com/dmr1qubzk/image/upload/v1552389608/dota_banner_big.jpg',
       game_character_image_url: 'https://gamepedia.cursecdn.com/dota2_gamepedia/thumb/3/31/Dota_Heroes.png/300px-Dota_Heroes.png?version=fe57923c5e34e392f524a291e1b94e41',
-      premium_item_image_url: 'https://gamerall.com/84813-large_default/fragger-dota-2-chest.jpg',
+      premium_item_image_url: 'https://res.cloudinary.com/dmr1qubzk/image/upload/v1552402212/qnjfi9hp0pm2zmtpgtzf.png',
       shopping_cart_image_url: 'https://gamepedia.cursecdn.com/fortnite_gamepedia/0/08/Shopping_cart_icon.png',
       store_image: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552322816/dota-store-header.jpg"
     }
