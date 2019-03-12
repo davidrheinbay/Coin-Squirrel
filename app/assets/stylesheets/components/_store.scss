@@ -85,6 +85,11 @@
   margin-top: 15px;
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  i {
+    margin-right: 10px;
+  }
 }
 
 #votes {
