@@ -23,9 +23,25 @@
         <%= link_to partners_path do %>
           <button class="cta">
             <p>Increase Your Balance</p>
-            <i class="fas fa-info-circle"></i>
+            <i class="fas fa-info-circle" data-step-1="1. Go with one of our links in the Shop of one of our Partners. 2. Buy a Product you like"
+            data-step-2="2. Buy a Product you like."
+            data-step-3="3. See Your new Coins here."></i>
           </button>
         <% end %>
+        <div class="steps">
+          <div class="first-step">
+            <p>1.</p>
+            <p>Go with one of our links in the Shop of one of our Partners.</p>
+          </div>
+          <div class="second-step">
+            <p>2.</p>
+            <p>Buy a Product you like</p>
+          </div>
+          <div class="third-step">
+            <p>3.</p>
+            <p>See Your new Coins here.</p>
+          </div>
+        </div>
         <button class="payout">
           <p>PAYOUT</p>
         </button>
