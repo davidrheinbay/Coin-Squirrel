@@ -3,7 +3,7 @@
   <div class="store-banner" style="background-image:linear-gradient(0deg, rgba(255,255,255,1),rgba(0,0,0,0) 15%), linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('<%= @game.store_image %>');">
     <div>
       <h1><%= @game.name %></h1>
-      <p>Browse the shop of the latest ingame items </p>
+      <p><%= @game.description %></p>
     </div>
   </div>
 <div class="background-card card-shadow-strong card-tmm-60 text-center">
@@ -44,7 +44,7 @@
               <% if number_with_precision(amount).to_i  <= item.cost.to_i  %>
                 <i class="fas fa-lock"></i>
               <% else %>
-                <%= link_to "Pay out", new_transaction_path(value: item.cost), class: "btn-medium-solid"  %>
+                <%= link_to "Pay out", new_transaction_path(value: item.cost), class: "btn btn-medium-solid"  %>
               <% end %>
             </div>
           </div>
