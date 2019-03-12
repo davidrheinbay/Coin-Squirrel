@@ -53,7 +53,7 @@ partners = [
     },
     urls: {
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Avira_logo_2011.png/800px-Avira_logo_2011.png",
-      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552302499/iopmvv1s15sr4tni41rx-Sharpened.jpg",
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552389716/avira.001.jpg",
     }
   },
   {
@@ -68,7 +68,7 @@ partners = [
     },
     urls: {
       logo_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552060849/emidoiwlwbuluzjfvxqv.png",
-      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552302501/jv6etztuo5qzb24lf7kr-Sharpened.jpg",
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552389667/cardelmar.jpg",
     }
   },
   {
@@ -83,7 +83,7 @@ partners = [
     },
     urls: {
       logo_image_url: "http://partners.holz-richter.s3.amazonaws.com/casando/logo_casando_120x30.png",
-      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552302500/h9kfo7qm24tgq9byzvet-Sharpened.jpg",
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552389776/casando.001.jpg",
     }
   },
   {
@@ -98,7 +98,7 @@ partners = [
     },
     urls: {
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Neues_Yello_Logo.png/600px-Neues_Yello_Logo.png",
-      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552302498/yello-Sharpened.jpg",
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552389622/yello.001.jpg",
     }
   },
   {
@@ -112,7 +112,7 @@ partners = [
     },
     urls: {
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/2/23/Autodoc.png",
-      card_image_url: "http://cdn.pkwteile.de/uploads/zanox/atd/Banneratdde660x348.jpg"
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552389732/autodoc.001.jpg"
     }
   },
 
@@ -123,12 +123,12 @@ partners = [
       company_entity_name: "Deliveroo Limited",
       commission_perc: 4,
       user_commission_perc: 2,
-      referral_link: "https://deliveroo.de/de/",
+      referral_link: "https://deliveroo.de",
       tags:['food', 'delivery']
     },
     urls: {
       logo_image_url: "https://cdn2.downdetector.com/static/uploads/logo/deliveroo.png",
-      card_image_url: "https://assets.fontsinuse.com/static/use-media-items/46/45322/full-2000x1180/581e66cb/610413fa84c0634a2651507bbf994415.jpeg?resolution=0"
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552389749/deliveroo.001.jpg"
     }
   },
 
@@ -143,7 +143,7 @@ partners = [
     },
     urls: {
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EasyJet_logo.svg/2000px-EasyJet_logo.svg.png",
-      card_image_url: "https://upload.wikimedia.org/wikipedia/commons/c/c6/Easyjet_orange.png"
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552389764/easyjet.001.jpg"
     }
   },
 
@@ -158,7 +158,7 @@ partners = [
     },
     urls: {
       logo_image_url: "http://old.pcgamer.no/wp-content/uploads/2018/12/steam-logo.png",
-      card_image_url: "https://strats-forum-attachments.s3.amazonaws.com/original/2X/1/1f0619d4ca2cfa02f58cbe0d76debad2772f62f1.jpg"
+      card_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552389698/steam.001.jpg"
     }
   }
 
