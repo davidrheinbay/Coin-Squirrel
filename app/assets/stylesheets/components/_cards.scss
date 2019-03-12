@@ -286,19 +286,23 @@
   background-color: #fff;
   overflow: hidden;
   margin-bottom: 30px;
+  text-decoration: none;
 
-    img {
+  p {
+    color: $dark-grey;
+  }
+
+  img {
     height: 200px;
     width: 100%;
     object-fit: cover;
-
     }
+
   .card_head {
     max-height: 300px;
     padding: 0px;
     overflow: hidden;
     border-bottom: 1px solid $grey;
-
   }
 
   .card_body {
@@ -314,9 +318,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: $dark-grey;
 
   img {
-
     height: 25px;
     width: 25px;
   }

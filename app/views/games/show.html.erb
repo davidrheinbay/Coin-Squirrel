@@ -34,7 +34,7 @@
                 </div>
               <% else %>
                 <div class="store-progression-grey">
-                  <div class="store-progression-red" style="width: <%=(number_with_precision(amount, precision: 0, delimiter: ',').to_i / item.cost.to_f) * 100 %>% ;">
+                  <div class="store-progression-red" style="width: <%=(number_with_precision(amount).to_i / item.cost.to_f) * 100 %>% ;">
                   </div>
                 </div>
               <% end %>
