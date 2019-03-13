@@ -16,26 +16,27 @@ const showPayoutCode = () => {
   })
 }
 const copyLink = () => {
+  if (document.querySelector('.copy-code')) {
+    let copyEmailBtn = document.querySelector('.copy-code');
+    copyEmailBtn.addEventListener('click', function(event) {
 
-  let copyEmailBtn = document.querySelector('.copy-code');
-  copyEmailBtn.addEventListener('click', function(event) {
+      let emailLink = document.querySelector('.full-code-copy');
+      let range = document.createRange();
+      range.selectNode(emailLink);
+      window.getSelection().addRange(range);
 
-    let emailLink = document.querySelector('.full-code-copy');
-    let range = document.createRange();
-    range.selectNode(emailLink);
-    window.getSelection().addRange(range);
-
-    try {
-      let successful = document.execCommand('copy');
-      let msg = successful ? 'successful' : 'unsuccessful';
-      console.log('Copy email command was ' + msg);
-    } catch(err) {
-      console.log('Oops, unable to copy');
-    }
+      try {
+        let successful = document.execCommand('copy');
+        let msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copy email command was ' + msg);
+      } catch(err) {
+        console.log('Oops, unable to copy');
+      }
 
 
-    window.getSelection().removeAllRanges();
-  });
+      window.getSelection().removeAllRanges();
+    });
+  }
 
 }
 

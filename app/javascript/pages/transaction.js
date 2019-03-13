@@ -65,9 +65,11 @@ const hideInfoDetails = (event) => {
 }
 
 const hoverDetails = () => {
-  const detailsIcon = document.querySelector('.details-icon')
-  detailsIcon.addEventListener('mouseover', showInfoDetails)
-  detailsIcon.addEventListener('mouseout', hideInfoDetails)
+  if (document.querySelector('.details-icon')) {
+    const detailsIcon = document.querySelector('.details-icon')
+    detailsIcon.addEventListener('mouseover', showInfoDetails)
+    detailsIcon.addEventListener('mouseout', hideInfoDetails)
+  }
 }
 
 
