@@ -10,10 +10,15 @@
   <p>Make another payout to get another one.</p>
   <% else %>
     <span class="status yellow"><%= transaction.state %></span>
-  <p>Click below to reveal your coupon code</p>
-  <p>Use it in your game store to buy the items you want.</p>
-  <a href="<%= transaction.link_used %>">
-    <button class="btn-medium-light">Show code</button>
   <% end %>
+
+
+  <div class="full-code">
+    <p class="full-code-copy"><%= transaction.game_code %></p>
+    <button class="copy-code"><i class="fas fa-paperclip"></i></button>
+  </div>
+  <a href="#">
+    <button class="btn-medium-light code">Show code</button>
   </a>
+
 </div>
