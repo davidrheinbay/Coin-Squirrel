@@ -310,6 +310,9 @@
 
 
   }
+  .code:focus {
+    outline: 0;
+  }
 }
 
 .full-code {
@@ -329,11 +332,34 @@
   button {
     margin-top: 5px;
     border: none;
-    background-color: rgba(0,0,0,0)
+    background-color: rgba(0,0,0,0);
+    height: 20px;
+    position: relative;
+    text-align: center;
+
+    .my-tooltip-wrapper {
+
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: calc(100% - 30px);
+      .my-tooltip {
+        padding: 5px 10px;
+        background-color: $dark-grey;
+        color: #fff;
+        border-radius: 7px;
+      }
+    }
+  }
+  button:focus {
+    outline: 0;
   }
 
   button:hover {
     color: $yellow;
+    .my-tooltip {
+      color: #fff
+    }
   }
 }
 
