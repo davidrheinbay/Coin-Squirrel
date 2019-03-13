@@ -9,11 +9,11 @@ class PagesController < ApplicationController
     elsif params[:game].nil?
       @game = Game.find_by_name('Fortnite')
     else
-      # POTENTIAL ERROR IN RESPOND TO FORMAT AND POSITION
-      respond_to do |format|
-        format.html
-        format.js
-      end
+      # Respond_to not needed at the moment
+      # respond_to do |format|
+      #   format.html
+      #   format.js
+      # end
       @game = Game.find(params[:game])
     end
   end
