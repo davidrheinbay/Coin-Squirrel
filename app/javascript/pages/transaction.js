@@ -35,6 +35,21 @@ const showTransactionDetails = () => {
   })
 }
 
+const showInfoDetails = (event) => {
+  const steps = document.querySelector('.steps')
+  steps.classList.remove('hidden')
+}
+
+const hideInfoDetails = (event) => {
+  const steps = document.querySelector('.steps')
+  steps.classList.add('hidden')
+}
+
+const hoverDetails = () => {
+  const detailsIcon = document.querySelector('.details-icon')
+  detailsIcon.addEventListener('mouseover', showInfoDetails)
+  detailsIcon.addEventListener('mouseout', hideInfoDetails)
+}
 
 
-export { showTransactionDetails, turnArrow };
+export { showTransactionDetails, turnArrow, hoverDetails };

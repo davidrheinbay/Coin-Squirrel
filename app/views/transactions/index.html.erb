@@ -1,51 +1,100 @@
+<div class="transactions-banner" style="background-image: url('<%= cl_image_path current_user.game.banner_image %>')">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="welcome">
+          <%= cl_image_tag current_user.profile_image%>
+          <h1>Welcome back, <%= current_user.first_name %></h1>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="current-balance-description">
+          <p>Current Balance</p>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="current-balance">
+          <% amount = current_user.balance * current_user.game.exchange_rates.where(currency_origin_short: "EUR").first.rate %>
+          <p><%= number_with_precision(amount, precision: 0, delimiter: ',') %></p>
+          <%= cl_image_tag current_user.game.currency_image %>
+        </div>
+      </div>
+      <div class="col-xs-12 buttons">
+        <%= link_to partners_path do %>
+          <button class="cta">
+            <p>Increase Your Balance</p>
+            <i class="fas fa-info-circle details-icon"></i>
+          </button>
+        <% end %>
+        <div class="steps hidden">
+          <div class="first-step">
+            <p>1.</p>
+            <p>Go with one of our links in the Shop of one of our Partners.</p>
+          </div>
+          <div class="second-step">
+            <p>2.</p>
+            <p>Buy a Product you like</p>
+          </div>
+          <div class="third-step">
+            <p>3.</p>
+            <p>See Your new Coins here.</p>
+          </div>
+        </div>
+        <button class="payout">
+          <p>PAYOUT</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container">
   <br>
   <div class="row">
-    <div class="col-xs-12">
-      <%= link_to 'Payout your Coins', new_transaction_path, class:"btn btn-medium-solid" %>
-    </div>
-    <div class="col-xs-12">
-      <h2>My Account</h2>
-    </div>
+
+    <div class="col-xs-12 space-holder"></div>
 
     <% if @transactions.where(transaction_type: 'cash_out').count > 0 %>
     <div class="col-xs-12">
-      <h3>Recent Gift Cards</h3>
+      <h2 class="transaction-sub-headers">Recent Gift Cards</h2>
     </div>
 
     <div class="recent-payouts-wrapper">
       <div class="col-xs-6">
         <% @transactions.where(transaction_type: 'cash_out').order('transaction_confirmed_date DESC').limit(3).to_a.each do |transaction| %>
-          <%= render 'components/recent_payouts', transaction: transaction %>
+        <%= render 'components/recent_payouts', transaction: transaction %>
         <% end %>
       </div>
       <div class="col-xs-6 recent-payouts-details-wrapper">
         <% first = true %>
         <% @transactions.where(transaction_type: 'cash_out').order('transaction_confirmed_date DESC').limit(3).to_a.each do |transaction| %>
-          <%= render 'components/recent_payouts_details', transaction: transaction, first: first %>
-          <% first = false %>
+        <%= render 'components/recent_payouts_details', transaction: transaction, first: first %>
+        <% first = false %>
         <% end %>
       </div>
     </div>
 
-  <% end %>
+    <% end %>
 
-  <div class="col-xs-12">
-    <h2>Transaction History</h2>
-  </div>
+    <div class="col-xs-12 space-holder"></div>
 
-  <% @transactions.each do |transaction| %>
+    <div class="col-xs-12">
+      <h2 class="transaction-sub-headers">Transaction History</h2>
+    </div>
+
+    <% @transactions.each do |transaction| %>
 
     <div class="col-xs-12">
       <% if transaction.partner_id.nil? %>
-        <!-- Card for Payout -->
-        <%= render 'components/cashout_card', transaction: transaction %>
+      <!-- Card for Payout -->
+      <%= render 'components/cashout_card', transaction: transaction %>
       <% else %>
-        <!-- Card for Cash In -->
-        <%= render 'components/cashin_card', transaction: transaction %>
+      <!-- Card for Cash In -->
+      <%= render 'components/cashin_card', transaction: transaction %>
       <% end %>
     </div>
 
-  <% end %>
+    <% end %>
+    <div class="col-xs-12 space-holder"></div>
+    <div class="col-xs-12 space-holder"></div>
   </div>
 </div>
