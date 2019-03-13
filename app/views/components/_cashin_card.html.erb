@@ -12,7 +12,7 @@
     </span>
 
     <h3 class="transaction-amount cash-in">
-      <% amount =  transaction.user_commission_amount_cents.to_i  * current_user.game.exchange_rates.where(currency_origin_short: "EUR").first.rate / 100 %>
+      <% amount =  transaction.user_commission_amount_cents.to_i  * transaction.eur_currency_rate / 100 %>
       + <%= number_with_precision(amount, precision: 0, delimiter: ',') %> <%= transaction.game.currency_short %>
     </h3>
 

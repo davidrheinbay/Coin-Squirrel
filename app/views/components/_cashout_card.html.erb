@@ -14,7 +14,7 @@
     <span class="more-details"><i class="fas fa-arrow-down turning-arrow"></i><p>REVEAL CODE</p></span>
 
       <h3 class="transaction-amount cash-out">
-        <% amount = transaction.user_commission_amount * ExchangeRate.where(game_id: transaction.game_id)[0].rate.to_i %>
+        <% amount = (transaction.user_commission_amount_cents * transaction.eur_currency_rate / 100).round(0) %>
         <%='- ' + number_with_precision(amount, precision: 0, delimiter: ',') + " " + transaction.game.currency_short %>
       </h3>
   </div>
