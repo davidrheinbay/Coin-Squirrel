@@ -37,7 +37,7 @@
               </div>
             </div>
 
-            <div class=" col-sm-4 col-md-2 how-it-works-card-small">
+            <div class="col-sm-4 col-md-2 how-it-works-card-small">
               <div class="how-it-works-number-small">
                 <h1>2</h1>
               </div>
@@ -72,7 +72,6 @@
               <p>Pay out your coins and start getting in-game items for free</p>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -91,7 +90,7 @@
       <h2>New Partners (please complete)</h2>
       <div class="row">
          <% @new_partners.each do |partner| %>
-          <div class="col-xs-6 col-sm-4 col-md-3 card-parent" data-id="<%= partner.id %>">
+          <div class="col-xs-12 col-sm-4 col-md-3 card-parent" data-id="<%= partner.id %>">
             <%= render 'components/partner_card', partner: partner %>
           </div>
         <% end %>
@@ -100,7 +99,7 @@
       <h2>Our Partners</h2>
       <div class="row">
         <% @partners.each do |partner| %>
-          <div class="col-xs-6 col-sm-4 col-md-3 card-parent" data-id="<%= partner.id %>">
+          <div class="col-xs-12 col-sm-4 col-md-3 card-parent" data-id="<%= partner.id %>">
             <%= render 'components/partner_card', partner: partner %>
           </div>
         <% end %>
