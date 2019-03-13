@@ -1,7 +1,7 @@
 class TransactionsController < ApplicationController
-
   def index
     @transactions = policy_scope(Transaction).order(created_at: :desc)
+    @amount = current_user.balance * current_user.game.exchange_rates.where(currency_origin_short: "EUR").last.rate
   end
 
   def new

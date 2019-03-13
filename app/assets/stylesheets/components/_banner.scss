@@ -132,6 +132,7 @@
   background-repeat: no-repeat;
   background-position: top right;
   height: 45vh;
+  min-height: 350px;
   padding: 60px 0;
   margin: 0;
   .welcome {
@@ -145,30 +146,35 @@
       margin-right: 20px;
     }
     h1 {
-      color: $yellow;
+      color: white;
       font-size: 30px;
       margin: 0;
 
     }
   }
   .current-balance-description {
-    color: $yellow;
+    color: white;
     margin-top: 20px;
   }
   .current-balance {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    background-color: $yellow;
-    height: 65px;
+    background-color: rgba(246, 197, 53, 0.6);
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 30%;
+    margin-bottom: 50px;
+
     p {
-      margin-right: 10px;
+      font-size: 26px;
       margin-bottom: 0;
-      color: #fff;
+      color: white;
+      margin-right: 5px;
+      font-weight: bolder;
     }
     img {
-      height: 50px;
+      height: 40px;
     }
   }
   .buttons{
@@ -176,26 +182,18 @@
     justify-content: flex-start;
     align-items: center;
     position: relative;
+
     .cta {
       width: 270px;
       background-color: $yellow;
-      margin-top: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
-      padding: 10px 20px;
+      padding: 12px 20px;
       margin-right: 10px;
-      color: #fff;
-      border: none;
-      p {
-        margin-bottom: 0;
-      }
-      i {
-        position: relative;
-      }
-
+      color: white;
     }
+
     .cta:hover {
       background-color: $dark-yellow;
       color: $light-grey;
@@ -204,12 +202,11 @@
 
     .steps {
       position: absolute;
-      top: 80px;
-      width: 270px;
+      top: 55px;
+      width: 50%;
       z-index: 99;
       background-color: #fff;
       color: $dark-grey;
-      border: 2px solid $dark-grey;
       padding: 10px;
       border-radius: 5px;
       transition-timing-function: ease-in-out;

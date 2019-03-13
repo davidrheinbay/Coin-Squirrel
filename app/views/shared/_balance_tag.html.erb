@@ -1,11 +1,8 @@
-<% amount = current_user.balance * current_user.game.exchange_rates.where(currency_origin_short: "EUR").first.rate %>
-
-
 <div class="navbar-wagon-item">
   <div class="dropdown">
     <div class="balance-wrapper dropdown-toggle" data-toggle="dropdown">
       <div class="balance">
-        <span class="balance-number"><%= number_with_precision(amount.to_i, precision: 0, delimiter: ',') %></span>
+        <span class="balance-number"><%= number_with_precision(@amount.to_i, precision: 0, delimiter: ',') %></span>
         <%= cl_image_tag current_user.game.currency_image, class: "balance-currency" %>
       </div>
     </div>

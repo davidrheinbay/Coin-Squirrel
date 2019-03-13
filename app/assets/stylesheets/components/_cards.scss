@@ -240,25 +240,27 @@
 }
 
 .recent_payout_details {
-  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
   border-radius: 5px;
-  margin: 10px;
+  margin: 10px 0px 0px 10px;
   height: 235px;
-  background-color: #fff;
+  background-color: white;
   padding: 0px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-align: center;
+  font-size: 16px;
+
+  p {
+    margin-top: 20px;
+  }
 
   .status {
-    font-size: 16px;
-    color: #fff;
+    color: white;
     padding: 3px 13px;
-    border-radius: 14px;
     align-self: flex-end;
-    margin-top: 20px;
-
   }
+
   .status.green {
     background-color: $green;
   }
@@ -269,28 +271,10 @@
 
   a {
     margin-bottom: 30px;
-    .code {
-      margin: -20px;
-      width: calc(100%);
-      font-size: 16px;
-      background: $yellow;
-      color: #fff;
-      border: none;
-      font: inherit;
-      cursor: pointer;
-      outline: inherit;
-      border-radius: 0 0 5px 5px;
-      padding: 10px;
-      align-self: flex-end;
-    }
     margin: 10px -20px;
     width: calc(100% + 40px);
     align-self: flex-end;
     text-align: center;
-  }
-
-  .description {
-    font-size: 16px;
   }
 }
 

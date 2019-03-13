@@ -11,7 +11,7 @@
       <p> <%= transaction.transaction_confirmed_date.strftime("at %H:%M %d.%m.%Y") %> </p>
     </span>
 
-    <span class="more-details"><i class="fas fa-arrow-down turning-arrow"></i><p>REVEAL CODE</p></span>
+    <span class="more-details"><i class="fas fa-arrow-down turning-arrow"></i><p>Reveal Code</p></span>
 
       <h3 class="transaction-amount cash-out">
         <% amount = (transaction.user_commission_amount_cents * transaction.eur_currency_rate / 100).round(0) %>

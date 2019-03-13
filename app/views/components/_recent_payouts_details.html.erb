@@ -1,16 +1,19 @@
 
 <% if first %>
-  <div class="recent_payout_details button-detail-pair-<%= transaction.id %>">
+  <div class="recent_payout_details card-shadow-light button-detail-pair-<%= transaction.id %>">
 <% else %>
-  <div class="recent_payout_details button-detail-pair-<%= transaction.id %> hidden">
+  <div class="recent_payout_details card-shadow-light button-detail-pair-<%= transaction.id %> hidden">
 <% end %>
   <% if transaction.state == 'completed' %>
     <span class="status green"><%= transaction.state %></span>
+  <p>You have used your code already.</p>
+  <p>Make another payout to get another one.</p>
   <% else %>
     <span class="status yellow"><%= transaction.state %></span>
-  <% end %>
-  <p class="description">To get Your cashed out Money, please use this Code</p>
+  <p>Click below to reveal your coupon code</p>
+  <p>Use it in your game store to buy the items you want.</p>
   <a href="<%= transaction.link_used %>">
-    <button class="code">Your Code</button>
+    <button class="btn-medium-light">Show code</button>
+  <% end %>
   </a>
 </div>
