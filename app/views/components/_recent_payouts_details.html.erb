@@ -9,7 +9,10 @@
   <% else %>
     <span class="status yellow"><%= transaction.state %></span>
   <% end %>
-  <p class="description">To get Your cashed out Money, please use this Code</p>
-  <p class="full-code"><%=  %></p>
+  <div class="full-code">
+    <p><%= transaction.game_code %></p>
+    <button class="copy-code"><i class="fas fa-paperclip"></i></button>
+  </div>
+  <p class="full-code"><%= transaction.game_code %></p>
   <button class="code">Your Code</button>
 </div>

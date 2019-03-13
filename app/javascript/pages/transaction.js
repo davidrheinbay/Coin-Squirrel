@@ -14,6 +14,7 @@ const ensureDefault = () => {
   const details = document.querySelectorAll('.recent_payout_details')
   details.forEach((detail) => {
     detail.classList.add('hidden')
+    detail.querySelector('.full-code').classList.remove('full-code-uncover')
   })
 }
 

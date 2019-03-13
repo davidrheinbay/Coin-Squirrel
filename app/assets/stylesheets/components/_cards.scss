@@ -303,9 +303,31 @@
 }
 
 .full-code {
-  margin-top: -40px;
+  margin-top: -60px;
   width: 500px;
   height: 50px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    margin-right: 20px;
+  }
+
+  button {
+    margin-top: -30px;
+    border-radius: 50%;
+  }
+
+  button:hover {
+    text-decoration: none;
+    border: 1px solid $yellow;
+    color: $yellow;
+  }
+}
+
+.full-code-uncover {
+  display: flex;
 }
 
 // Partner Card
