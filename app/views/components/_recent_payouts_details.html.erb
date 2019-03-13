@@ -15,9 +15,10 @@
 
 
   <div class="full-code">
-    <p class="full-code-copy"><%= transaction.game_code %></p>
-    <button class="copy-code"><i class="far fa-copy"></i></button>
+    <p class="full-code-copy"><strong><%= transaction.game_code %></strong></p>
+    <button type= "button" class="copy-code" data-toggle="tooltip" data-placement="right" title="copy"><i class="far fa-copy"></i></button>
   </div>
+
   <a href="#">
     <button class="btn-medium-light code">Show code</button>
   </a>
