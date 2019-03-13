@@ -2,6 +2,8 @@ require_relative 'boot'
 
 require 'rails/all'
 
+
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -14,6 +16,8 @@ module CoinSquirrel
           generate.test_framework  :test_unit, fixture: false
         end
     # Initialize configuration defaults for originally generated Rails version.
+    require Rails.root.join("lib/custom_public_exceptions")
+    config.exceptions_app = CustomPublicExceptions.new(Rails.public_path)
     config.load_defaults 5.2
     config.action_view.embed_authenticity_token_in_remote_forms = true
     # Settings in config/environments/* take precedence over those specified here.

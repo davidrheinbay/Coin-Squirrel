@@ -255,6 +255,7 @@
   }
 }
 
+
 // Help Banner -----------------------------------------------------------------
 
 .help-banner {
@@ -273,6 +274,30 @@
   }
 }
 
+// error banner
+
+.error-banner {
+  height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center right;
+  padding: 50px;
+  filter: grayscale(100%);
+
+}
+  .error-content {
+    position: absolute;
+    top: 30vh;
+    left: 10vh;
+    width: 300px;
+    h1 {
+      color: $yellow;
+    }
+
+    h2 {
+      color: $yellow;
+    }
+  }
 
 
 
