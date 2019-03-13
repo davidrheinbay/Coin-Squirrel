@@ -5,6 +5,7 @@ import { showTransactionDetails, turnArrow, hoverDetails } from 'pages/transacti
 import { cardUnlocked } from 'packs/store';
 import { showPayoutCode } from 'packs/recent_payouts'
 import { copyLink } from 'packs/recent_payouts'
+import { payoutHover } from 'components/navbar'
 
 
 previewImageOnFileSelect();
@@ -14,3 +15,4 @@ showTransactionDetails();
 hoverDetails();
 showPayoutCode();
 copyLink();
+payoutHover();

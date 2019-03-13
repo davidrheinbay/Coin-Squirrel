@@ -2,24 +2,16 @@
 
 <div class="navbar-wagon-item">
   <div class="dropdown">
-    <div class="balance-wrapper dropdown-toggle" data-toggle="dropdown">
-      <div class="balance">
+    <%= link_to new_transaction_path do %>
+    <div class="balance-wrapper">
+      <div class="balance pure-balance">
         <span class="balance-number"><%= number_with_precision(amount.to_i, precision: 0, delimiter: ',') %></span>
         <%= cl_image_tag current_user.game.currency_image, class: "balance-currency" %>
       </div>
+      <div class="balance payouts-link hidden">
+        <span class="balance-number">PAY OUT</span>
+      </div>
     </div>
-
-    <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-      <li>
-        <%= link_to transactions_path do %>
-          <%= t(".profile", default: "Account overview") %>
-        <% end %>
-      </li>
-      <li>
-        <%= link_to new_transaction_path do %>
-          <%= t(".profile", default: "Pay out your coins") %>
-        <% end %>
-      </li>
-    </ul>
+    <% end %>
   </div>
 </div>
