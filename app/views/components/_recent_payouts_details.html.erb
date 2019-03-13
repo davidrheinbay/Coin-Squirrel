@@ -10,7 +10,6 @@
     <span class="status yellow"><%= transaction.state %></span>
   <% end %>
   <p class="description">To get Your cashed out Money, please use this Code</p>
-  <a href="<%= transaction.link_used %>">
-    <button class="code">Your Code</button>
-  </a>
+  <p class="full-code"><%=  %></p>
+  <button class="code">Your Code</button>
 </div>

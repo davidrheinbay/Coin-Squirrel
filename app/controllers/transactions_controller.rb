@@ -2,6 +2,8 @@ class TransactionsController < ApplicationController
 
   def index
     @transactions = policy_scope(Transaction).order(created_at: :desc)
+
+
   end
 
   def new
@@ -57,5 +59,9 @@ class TransactionsController < ApplicationController
 
   def call_giftbit_api
     GiftbitLoader.new.call
+  end
+
+  def code_faker
+
   end
 end
