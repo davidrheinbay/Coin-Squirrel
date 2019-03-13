@@ -1,3 +1,7 @@
+#query {
+        height: 48px;
+  }
+
 .form-actions {
   .btn {
     margin: 0 15px;
@@ -30,6 +34,7 @@
   border: none;
   border-bottom: 1px solid $grey;
   outline: 0;
+
 }
 
 .form-controll:focus {
