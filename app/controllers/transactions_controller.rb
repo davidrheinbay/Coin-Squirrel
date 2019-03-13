@@ -54,12 +54,12 @@ class TransactionsController < ApplicationController
 
     # would be better if set equal to created_at date right after creation
     transaction.state = "confirmed"
-    transaction.link_used = call_giftbit_api(transaction.id)['gift_link']
+    transaction.link_used = call_giftbit_api(Transaction.last.id)['gift_link']
     transaction
   end
 
-  def call_giftbit_api(transaction_id)
-    GiftbitLoader.new.call(transaction_id)
+  def call_giftbit_api(id)
+    GiftbitLoader.new.call(id)
   end
 
   def code_faker
