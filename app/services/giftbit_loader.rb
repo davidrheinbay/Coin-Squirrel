@@ -1,11 +1,11 @@
 require 'rest_client'
 
 class GiftbitLoader
-  def call(transaction_id)
+  def call(id)
     values = "{
       'brand_code': 'itunesus',
       'price_in_cents': 2500,
-      'id': tid#{transaction_id}
+      'id': #{id + 1}#{rand(1..999)}
     }"
 
     headers = {
