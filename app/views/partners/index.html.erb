@@ -1,9 +1,29 @@
-<div class="wrapper">
-  <div class="container">
-    <div class="section">
+
+
+<div class="section">
+  <div class="help-banner">
+
+    <%= form_tag partners_path, class:"form-inline",method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find Your Shop" %>
+      <%= submit_tag "Search", class:"btn btn-medium-solid" %>
+    <% end %>
+
+    <button class="btn btn-medium-light" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Help?
+    </button>
+
+  </div>
+
+
+
+  <div class="collapse" id="collapseExample">
+    <div class="well">
       <div class="description">
 
-        <h2>The Next Steps</h1>
+        <h2>The Next Steps</h2>
 
         <div class="how-works">
           <div class="row">
@@ -17,7 +37,7 @@
               </div>
             </div>
 
-            <div class=" col-sm-4 col-md-2 how-it-works-card-small">
+            <div class="col-sm-4 col-md-2 how-it-works-card-small">
               <div class="how-it-works-number-small">
                 <h1>2</h1>
               </div>
@@ -54,19 +74,14 @@
             </div>
           </div>
         </div>
-
-        <br>
-
-        <%= form_tag partners_path, class:"form-inline",method: :get do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Find Your Shop" %>
-          <%= submit_tag "Search", class:"btn btn-medium-solid" %>
-        <% end %>
       </div>
     </div>
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
 
 
   <div class="background-card card-shadow-strong card-tmm-60 shop-card">
@@ -75,7 +90,7 @@
       <h2>New Partners (please complete)</h2>
       <div class="row">
          <% @new_partners.each do |partner| %>
-          <div class="col-xs-6 col-sm-4 col-md-3 card-parent" data-id="<%= partner.id %>">
+          <div class="col-xs-12 col-sm-4 col-md-3 card-parent" data-id="<%= partner.id %>">
             <%= render 'components/partner_card', partner: partner %>
           </div>
         <% end %>
@@ -84,11 +99,11 @@
       <h2>Our Partners</h2>
       <div class="row">
         <% @partners.each do |partner| %>
-          <div class="col-xs-6 col-sm-4 col-md-3 card-parent" data-id="<%= partner.id %>">
+          <div class="col-xs-12 col-sm-4 col-md-3 card-parent" data-id="<%= partner.id %>">
             <%= render 'components/partner_card', partner: partner %>
           </div>
         <% end %>
       </div>
     </div>
   </div>
-</div>
+

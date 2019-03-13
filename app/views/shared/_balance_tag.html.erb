@@ -1,5 +1,4 @@
-<% amount = current_user.balance * current_user.game.exchange_rates.where(currency_origin_short: "EUR").first.rate %>
-
+<% amount = current_user.balance * current_user.game.exchange_rates.where(currency_origin_short: "EUR").last.rate %>
 
 <div class="navbar-wagon-item">
   <div class="dropdown">
@@ -18,7 +17,7 @@
       </li>
       <li>
         <%= link_to new_transaction_path do %>
-          <%= t(".profile", default: "Payout your coins") %>
+          <%= t(".profile", default: "Pay out your coins") %>
         <% end %>
       </li>
     </ul>

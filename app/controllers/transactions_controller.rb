@@ -1,7 +1,9 @@
 class TransactionsController < ApplicationController
-
   def index
     @transactions = policy_scope(Transaction).order(created_at: :desc)
+
+    @amount = current_user.balance * current_user.game.exchange_rates.where(currency_origin_short: "EUR").last.rate
+
   end
 
   def new
@@ -13,6 +15,7 @@ class TransactionsController < ApplicationController
 
   def create
     @transaction = Transaction.new(transaction_params)
+    @transaction.game_code = code_faker
 
     @transaction = create_cashout_transaction(@transaction)
     authorize @transaction
@@ -34,7 +37,7 @@ class TransactionsController < ApplicationController
   private
 
   def transaction_params
-    params.require(:transaction).permit(:user_commission_amount_cents, :transaction_type)
+    params.require(:transaction).permit(:user_commission_amount_cents, :transaction_type, :game_code)
   end
 
   def create_cashout_transaction(transaction)
@@ -51,11 +54,21 @@ class TransactionsController < ApplicationController
 
     # would be better if set equal to created_at date right after creation
     transaction.state = "confirmed"
-    transaction.link_used = call_giftbit_api['gift_link']
+    transaction.link_used = call_giftbit_api(transaction.id)['gift_link']
     transaction
   end
 
-  def call_giftbit_api
-    GiftbitLoader.new.call
+  def call_giftbit_api(transaction_id)
+    GiftbitLoader.new.call(transaction_id)
+  end
+
+  def code_faker
+    ary = [('0'..'9').to_a, ('A'..'Z').to_a]
+    code = ''
+
+    16.times do
+      code << (ary[rand(0..1)].join(""))[rand(0..9)]
+    end
+    code
   end
 end
