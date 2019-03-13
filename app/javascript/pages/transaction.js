@@ -72,6 +72,45 @@ const hoverDetails = () => {
   }
 }
 
+// Tooltips
+const removeHidden = (target) => {
+  target.classList.remove('hidden')
+}
 
+const addHidden = (target) => {
+  target.classList.add('hidden')
+}
 
-export { showTransactionDetails, turnArrow, hoverDetails };
+const addTooltipListeners = (segment) => {
+  const code = segment.querySelector('.copyable')
+  const hoverTooltip = segment.querySelector('.tooltip-hover')
+  const clickTooltip = segment.querySelector('.tooltip-click')
+  code.addEventListener('mouseover', (event) => {
+    if (clickTooltip.classList.contains('hidden')) {
+      removeHidden(hoverTooltip)
+    }
+  })
+
+  code.addEventListener('mouseout', (event) => {
+    addHidden(hoverTooltip)
+  })
+
+  code.addEventListener('click', (event) => {
+    addHidden(hoverTooltip)
+    removeHidden(clickTooltip)
+    setTimeout(() => { addHidden(clickTooltip) }, 1500)
+  })
+
+}
+
+const copyTooltips = () => {
+  if (document.querySelector('.my-tooltip-wrapper')) {
+    const segments = document.querySelectorAll('.tooltip-wrapper')
+    segments.forEach((segment) => {
+
+      addTooltipListeners(segment)
+    })
+  }
+}
+
+export { copyTooltips, showTransactionDetails, turnArrow, hoverDetails };

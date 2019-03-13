@@ -28,9 +28,7 @@ const copyLink = () => {
       try {
         let successful = document.execCommand('copy');
         let msg = successful ? 'successful' : 'unsuccessful';
-        console.log('Copy email command was ' + msg);
       } catch(err) {
-        console.log('Oops, unable to copy');
       }
 
 
