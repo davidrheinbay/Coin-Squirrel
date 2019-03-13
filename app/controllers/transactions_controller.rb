@@ -15,7 +15,6 @@ class TransactionsController < ApplicationController
 
   def create
     @transaction = Transaction.new(transaction_params)
-
     if @transaction.transaction_type == "cash_out"
       @transaction.game_code = code_faker
 
@@ -37,9 +36,9 @@ class TransactionsController < ApplicationController
     else
       authorize @transaction
       create_fake_cash_in
+      redirect_to params[:link].to_s
       current_user.balance_cents += @transaction.user_commission_amount_cents
       current_user.save
-      redirect_to params[:link].to_s
     end
   end
 
@@ -95,5 +94,6 @@ class TransactionsController < ApplicationController
     @transaction.state = "confirmed"
     @transaction.link_used = "#"
     @transaction.partner = Partner.find_by_name("CarDelMar")
+    @transaction.save
   end
 end
