@@ -346,13 +346,18 @@
   margin-top: 60px;
 }
 
+.card-parent a {
+    text-decoration: none;
+    color: $dark-grey;
+}
+
 .partner-card {
   border-radius: 5px;
   background-color: #fff;
   overflow: hidden;
   margin-bottom: 30px;
   text-decoration: none;
-
+  position: relative;
   p {
     color: $dark-grey;
   }
@@ -380,6 +385,17 @@
   box-shadow: 1px 1px 10px rgba(0,0,0,.66);
 }
 
+.offer-tag {
+  position: absolute;
+  z-index: 10;
+  border-radius: 7px 0px 0px 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: $dark-grey;
+  padding: 5px 10px;
+  color: $yellow;
+}
+
 
 // shop background card
 
@@ -402,6 +418,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 20px;
+  font-weight: bold;
 }
 //Form-Card
 

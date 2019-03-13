@@ -15,22 +15,30 @@ class TransactionsController < ApplicationController
 
   def create
     @transaction = Transaction.new(transaction_params)
-    @transaction.game_code = code_faker
+    if @transaction.transaction_type == "cash_out"
+      @transaction.game_code = code_faker
 
-    @transaction = create_cashout_transaction(@transaction)
-    authorize @transaction
+      @transaction = create_cashout_transaction(@transaction)
+      authorize @transaction
 
-    if current_user.balance_cents >= @transaction.user_commission_amount_cents
+      if current_user.balance_cents >= @transaction.user_commission_amount_cents
 
-      if @transaction.save
-        current_user.balance_cents -= @transaction.user_commission_amount_cents
-        current_user.save
-        redirect_to transactions_path
+        if @transaction.save
+          current_user.balance_cents -= @transaction.user_commission_amount_cents
+          current_user.save
+          redirect_to transactions_path
+        else
+          render :new
+        end
       else
         render :new
       end
     else
-      render :new
+      authorize @transaction
+      create_fake_cash_in
+      redirect_to params[:link].to_s
+      current_user.balance_cents += @transaction.user_commission_amount_cents
+      current_user.save
     end
   end
 
@@ -70,5 +78,22 @@ class TransactionsController < ApplicationController
       code << (ary[rand(0..1)].join(""))[rand(0..9)]
     end
     code
+  end
+
+  def create_fake_cash_in
+    @transaction.user = current_user
+    @transaction.transaction_type = "cash_in"
+    @transaction.game = current_user.game
+    @transaction.gmv_eur_cents = 10_000
+    @transaction.commission_perc = 10
+    @transaction.user_commission_share_perc = 5
+    @transaction.user_commission_amount_cents = 500
+    @transaction.eur_currency_rate = 90
+    @transaction.transaction_confirmed_date = DateTime.now
+    @transaction.transaction_completed_date = DateTime.now
+    @transaction.state = "confirmed"
+    @transaction.link_used = "#"
+    @transaction.partner = Partner.find_by_name("CarDelMar")
+    @transaction.save
   end
 end
