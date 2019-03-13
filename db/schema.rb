@@ -79,10 +79,7 @@ ActiveRecord::Schema.define(version: 2019_03_13_095408) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "awin_transaction_id"
-<<<<<<< HEAD
     t.string "game_code", default: "WGSH56768HGJFDSGW"
-=======
->>>>>>> 3f094db635606c97933e8cb2fec9dad00aeb78b1
     t.boolean "is_new", default: true
     t.index ["game_id"], name: "index_transactions_on_game_id"
     t.index ["partner_id"], name: "index_transactions_on_partner_id"
