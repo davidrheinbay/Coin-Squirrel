@@ -11,7 +11,7 @@
 
           <div class="card-body">
             <% amount =  current_user.balance * current_user.game.exchange_rates.where(currency_origin_short: "EUR").first.rate %>
-            <p> Max. Payout: <%= number_with_precision(amount, precision: 0, delimiter: ',') %></p>
+            <p> Max. Payout: <%= number_with_precision(amount.to_i, precision: 0, delimiter: ',') %></p>
 
             <%= form_for(@transaction) do |f| %>
 
