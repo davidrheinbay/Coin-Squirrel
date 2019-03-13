@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   def home
     @partners = Partner.where("name != ? and card_image IS NOT NULL", "CoinSquirrel")
     @games = search_games
+
     if user_signed_in? == true
       @game = Game.find(current_user.game.id)
     elsif params[:game].nil?
