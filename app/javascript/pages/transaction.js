@@ -1,3 +1,15 @@
+// removing new mechanic
+
+const removingNew = (id) => {
+  const relevantClass = `new-${id}`
+  const newTags = document.querySelectorAll(`.${relevantClass}`)
+  console.log(newTags)
+  newTags.forEach((newTag) => {
+    newTag.classList.add('hidden')
+  })
+}
+// turn arrow mechanic
+
 const arrowListener = (card) => {
   card.addEventListener('click', (event) => {
     event.currentTarget.querySelector('.turning-arrow').classList.toggle('turned')
@@ -9,6 +21,7 @@ const turnArrow = () => {
   const cards = document.querySelectorAll('.cashout-card')
   cards.forEach((card) => {arrowListener(card)})
 }
+// Show details mechanic
 
 const ensureDefault = () => {
   const details = document.querySelectorAll('.recent_payout_details')
@@ -26,6 +39,9 @@ const showDetails = (event) => {
       detail.classList.remove('hidden')
     }
   })
+  const pureIdString = id.split('-')[3]
+  const pureIdInt = parseInt(pureIdString)
+  removingNew(pureIdInt)
 }
 
 const showTransactionDetails = () => {
@@ -34,6 +50,8 @@ const showTransactionDetails = () => {
     button.addEventListener('click', showDetails)
   })
 }
+
+// show Info details when hovering
 
 const showInfoDetails = (event) => {
   const steps = document.querySelector('.steps')
@@ -50,6 +68,7 @@ const hoverDetails = () => {
   detailsIcon.addEventListener('mouseover', showInfoDetails)
   detailsIcon.addEventListener('mouseout', hideInfoDetails)
 }
+
 
 
 export { showTransactionDetails, turnArrow, hoverDetails };

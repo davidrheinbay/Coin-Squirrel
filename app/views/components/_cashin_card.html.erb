@@ -1,10 +1,16 @@
 <div class="transaction-card">
 
+  <% if transaction.is_new %>
+    <span class="new-tag">New</span>
+    <% transaction.is_new = false %>
+    <% transaction.save %>
+  <% end %>
+
+
   <div class="status <%= transaction.state %>">
     <h3  class="hidden"><%= transaction.state.capitalize %></h3>
   </div>
   <div class="card-body card-shadow-light">
-    <%#= cl_image_tag Partner.find_by_id(transaction.partner_id).logo_image, class:"transaction-image" %>
 
     <span>
       <h3><%= Partner.find_by_id(transaction.partner_id).name %></h3>
