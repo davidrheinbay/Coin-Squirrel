@@ -5,7 +5,7 @@ class GiftbitLoader
     values = "{
       'brand_code': 'itunesus',
       'price_in_cents': 2500,
-      'id': tid#{transaction_id}
+      'id': tid#{transaction_id}#{rand(1..999)}
     }"
 
     headers = {
