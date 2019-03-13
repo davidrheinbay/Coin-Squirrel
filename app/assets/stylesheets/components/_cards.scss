@@ -55,7 +55,7 @@
 
 .transaction-card {
   display: flex;
-  height: 50px;
+  height: 55px;
 
   .status {
     height: 100%;
@@ -83,6 +83,7 @@
     }
 
   .card-body {
+    padding-top: 5px;
     background-color: #fff;
     overflow: hidden;
     display: flex;
