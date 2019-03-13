@@ -1,18 +1,40 @@
-<h2>Forgot your password?</h2>
+<div class="page-background">
+  <div class="container">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <div class="login-card card-shadow-light">
+        <div class="card-head">
+          <h2>Forgot your password?</h2>
+        </div>
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
+        <div class="card-body">
+          <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%#= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
+          <div class="form-group row">
+            <div class="input-group-prepend">
+              <i class="material-icons"> email </i>
+            </div>
+            <%= f.text_field :email,
+            class:"form-controll",
+              required: true,
+              autofocus: true,
+              placeholder: "Please insert valid email",
+              input_html: { autocomplete: "email" } %>
+            </div>
+
+            <div class="form-actions">
+              <%= f.submit "Send me password reset instructions", class:"btn btn-medium-solid"%>
+            </div>
+
+            <% end %>
+
+          </div>
+
+        <div class="card-foot">
+         <%= link_to "Back to login", new_session_path(resource_name), class:"form-link" %>
+        </div>
+
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
