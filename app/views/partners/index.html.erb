@@ -1,9 +1,29 @@
-<div class="wrapper">
-  <div class="container">
-    <div class="section">
+
+
+<div class="section">
+  <div class="help-banner">
+
+    <%= form_tag partners_path, class:"form-inline",method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find Your Shop" %>
+      <%= submit_tag "Search", class:"btn btn-medium-solid" %>
+    <% end %>
+
+    <button class="btn btn-medium-light" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Help?
+    </button>
+
+  </div>
+
+
+
+  <div class="collapse" id="collapseExample">
+    <div class="well">
       <div class="description">
 
-        <h2>The Next Steps</h1>
+        <h2>The Next Steps</h2>
 
         <div class="how-works">
           <div class="row">
@@ -52,21 +72,17 @@
               <p>Pay out your coins and start getting in-game items for free</p>
               </div>
             </div>
+
           </div>
         </div>
-
-        <br>
-
-        <%= form_tag partners_path, class:"form-inline",method: :get do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Find Your Shop" %>
-          <%= submit_tag "Search", class:"btn btn-medium-solid" %>
-        <% end %>
       </div>
     </div>
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
 
 
   <div class="background-card card-shadow-strong card-tmm-60 shop-card">
@@ -91,4 +107,4 @@
       </div>
     </div>
   </div>
-</div>
+

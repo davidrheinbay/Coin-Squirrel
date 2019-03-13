@@ -30,7 +30,7 @@
 
 .partners-wrapper {
   background-color: $light-grey;
-  margin: 100px -50px 0px -50px;
+  margin: 0px -50px 0px -50px;
   padding: 50px;
   display:flex;
   flex-direction: column;
@@ -252,6 +252,22 @@
   }
 }
 
+// Help Banner -----------------------------------------------------------------
+
+.help-banner {
+  display: flex;
+  margin-left: 70px;
+
+  #query {
+    width: 300px;
+  }
+
+  .btn {
+    min-width: 0px;
+    margin: 0 2px;
+    width: 140px;
+  }
+}
 
 
 
