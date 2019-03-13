@@ -356,15 +356,19 @@
 // Login-Card
 
 .login-card {
-  margin-top: 50px;
   border-radius: 5px;
   background-color: #fff;
+  margin: 0px -30px;
 
   .card-head {
     display: flex;
     border-radius: 5px;
     align-items: center;
     justify-content: space-around;
+
+    h2 {
+      font-size: 30px;
+    }
   }
 
   .card-body {
@@ -373,13 +377,18 @@
 
   .card-foot {
     padding: 0 20px 20px 20px;
+    text-align: center;
+
+    p {
+      font-size: 14px;
+      color: #BABABA;
+    }
   }
 }
 
 // SignUp-Card
 
 .signup-card {
-  margin-top: 50px;
   border-radius: 5px;
   background-color: #fff;
 
@@ -388,6 +397,10 @@
     border-radius: 5px;
     align-items: center;
     justify-content: space-around;
+
+    h2 {
+      font-size: 30px;
+    }
   }
 
   .card-body {
@@ -396,6 +409,12 @@
 
   .card-foot {
     padding: 0 20px 20px 20px;
+    text-align: center;
+
+    p {
+      font-size: 14px;
+      color: #BABABA;
+    }
   }
 }
 

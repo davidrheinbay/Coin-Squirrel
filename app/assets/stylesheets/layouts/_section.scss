@@ -21,6 +21,15 @@ body {
   width: 100%;
   height: 100vh;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-size: 32px;
+    color: rgb(145, 145, 145);
+    margin-bottom: 30px;
+  }
 }
 
 // .center-page-innen {
