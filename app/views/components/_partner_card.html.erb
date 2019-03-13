@@ -9,7 +9,7 @@
         </p>
       </div>
       <div class="part-element-partner-card">
-          Cashback: <%= (partner.user_commission_perc * @exchange_rate / 100).to_i %> <%= cl_image_tag current_user.game.currency_image%>/ 1€
+          Cashback: <%= (partner.user_commission_perc * @exchange_rate / 100).to_i %>  <%=  current_user.game.currency_short %> / 1€
       </div>
     </div>
 

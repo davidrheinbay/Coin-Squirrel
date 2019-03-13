@@ -314,6 +314,7 @@
     height: 200px;
     width: 100%;
     object-fit: cover;
+    object-position: top;
     }
 
   .card_head {
@@ -327,6 +328,11 @@
     padding: 20px;
   }
 }
+
+.partner-card:hover {
+  box-shadow: 1px 1px 10px rgba(0,0,0,.66);
+}
+
 
 // shop background card
 
