@@ -18,4 +18,9 @@ Rails.application.routes.draw do
   get "/data_protection", to: "pages#data_protection"
   get "/terms", to: "pages#terms"
   get "/about", to: "pages#about"
+
+  # error routes
+  match "/404" => "errors#error404", via: [ :get, :post, :patch, :delete ]
+  match "/500" => "errors#error500", via: [ :get, :post, :patch, :delete ]
+
 end
