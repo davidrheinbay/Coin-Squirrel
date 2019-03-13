@@ -261,7 +261,8 @@
 .help-banner {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 0px 80px;
 
   #query {
     width: 300px;
@@ -270,7 +271,6 @@
   .btn {
     min-width: 0px;
     margin: 0 2px;
-    width: 140px;
   }
 }
 

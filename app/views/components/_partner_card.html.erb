@@ -1,3 +1,34 @@
+<% if partner.name == "CarDelMar"%>
+
+<%= link_to transactions_path(transaction: {user: current_user}, link: partner.referral_link.to_s), method:"post", target:"_blank" do %>
+  <div class="partner-card card-shadow-medium">
+    <%= cl_image_tag partner.card_image_url, class: "card_head"%>
+
+    <div class="card_body">
+      <div class="part-element-partner-card-no-border">
+        <p>
+          <%= partner.name %>
+        </p>
+      </div>
+      <div class="part-element-partner-card">
+          Offer: <%= (partner.user_commission_perc * @exchange_rate / 100).to_i %>  <%= cl_image_tag (current_user.game.currency_image) %>  per 1 €
+      </div>
+    </div>
+
+    <% if current_user.admin? %>
+      <div class="btn-admin-sm">
+        <%= link_to "Edit", edit_partner_path(partner) %>
+      </div>
+      <% elsif partner.user_commission_perc > 5.0 %>
+      <div class="offer-tag">
+        Top Offer
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<% else %>
+
 <%= link_to "#{partner.referral_link}&clickref2=#{current_user.id}", target:"_blank" do %>
   <div class="partner-card card-shadow-medium">
     <%= cl_image_tag partner.card_image_url, class: "card_head"%>
@@ -9,7 +40,7 @@
         </p>
       </div>
       <div class="part-element-partner-card">
-          Cashback: <%= (partner.user_commission_perc * @exchange_rate / 100).to_i %>  <%=  current_user.game.currency_short %> / 1€
+          Offer: <%= (partner.user_commission_perc * @exchange_rate / 100).to_i %>  <%= cl_image_tag (current_user.game.currency_image) %>  per 1 €
       </div>
     </div>
 
@@ -17,6 +48,11 @@
       <div class="btn-admin-sm">
         <%= link_to "Edit", edit_partner_path(partner) %>
       </div>
+      <% elsif partner.user_commission_perc > 5.0 %>
+      <div class="offer-tag">
+        Top Offer
+      </div>
     <% end %>
   </div>
+<% end %>
 <% end %>
