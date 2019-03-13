@@ -1,17 +1,22 @@
 <div class="transaction-card">
 
+  <% if transaction.is_new %>
+    <span class="new-tag new-<%= transaction.id %>">New</span>
+    <% transaction.is_new = false %>
+    <% transaction.save %>
+  <% end %>
+
   <div class="status <%= transaction.state %>">
   </div>
 
   <div class="card-body card-shadow-light cashout-card" role="button" data-toggle="collapse" href="#<%= transaction.id %>" aria-expanded="false" aria-controls="<%= transaction.id %>">
-    <%#= cl_image_tag Game.find_by_id(transaction.game_id).logo_image, class:"transaction-image" %>
 
     <span>
       <h3><%= Game.find_by_id(transaction.game_id).name %></h3>
       <p> <%= transaction.transaction_confirmed_date.strftime("at %H:%M %d.%m.%Y") %> </p>
     </span>
 
-    <span class="more-details"><i class="fas fa-arrow-down turning-arrow"></i><p>REVEAL CODE</p></span>
+    <span class="more-details"><i class="fas fa-arrow-down turning-arrow"></i><p>Reveal Code</p></span>
 
       <h3 class="transaction-amount cash-out">
         <% amount = (transaction.user_commission_amount_cents * transaction.eur_currency_rate / 100).round(0) %>

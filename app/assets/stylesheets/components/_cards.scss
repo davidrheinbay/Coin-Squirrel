@@ -71,6 +71,17 @@
     background-color: $yellow;
   }
 
+    .new-tag {
+      position: absolute;
+      right: 20px;
+      top: -10px;
+      font-size: 10px;
+      padding: 3px 15px;
+      background-color: $green;
+      border-radius: 20px;
+      color: #fff;
+    }
+
   .card-body {
     background-color: #fff;
     overflow: hidden;
@@ -79,6 +90,7 @@
     flex: 1 1 auto;
     align-items: center;
     border-bottom: 1px solid rgba(0,0,0,.1);
+
 
     span {
       flex: 1 1 auto;
@@ -179,9 +191,19 @@
     border-radius: 5px;
     padding: 10px 15px;
     background-color: #fff;
-    overflow: hidden;
     border-bottom: 1px solid rgba(0,0,0,.1);
     position: relative;
+
+    .new-tag {
+      position: absolute;
+      right: 10px;
+      top: -10px;
+      font-size: 10px;
+      padding: 3px 15px;
+      background-color: $green;
+      border-radius: 20px;
+      color: #fff;
+    }
 
     .status {
       height: 100%;
