@@ -121,7 +121,7 @@
       <br>
       <!--  Search Form  -->
       <!-- change root path to Game#Show Path -->
-      <%= form_tag root_path, class:"form-inline",method: :get do %>
+      <%= form_tag "/#games", class:"form-inline",method: :get, id:"game-search" do %>
         <%= text_field_tag :query,
         params[:query],
         class: "form-control",
