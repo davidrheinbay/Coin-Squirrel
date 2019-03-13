@@ -10,12 +10,13 @@
   <p>Make another payout to get another one.</p>
   <% else %>
     <span class="status yellow"><%= transaction.state %></span>
+    <p>Click below to reveal your code</p>
   <% end %>
 
 
   <div class="full-code">
     <p class="full-code-copy"><%= transaction.game_code %></p>
-    <button class="copy-code"><i class="fas fa-paperclip"></i></button>
+    <button class="copy-code"><i class="far fa-copy"></i></button>
   </div>
   <a href="#">
     <button class="btn-medium-light code">Show code</button>
