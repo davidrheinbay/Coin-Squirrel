@@ -44,7 +44,7 @@
             <div class="store-card-rating">
               <% if number_with_precision(amount).to_i  <= item.cost.to_i  %>
                   <%= link_to partners_path do %>
-                  <button class="btn btn-medium-light"><i class="fas fa-lock store-lock fa"></i> Go shopping</button>
+                  <button class="btn btn-medium-light"><i class="fas fa-lock store-lock fa"></i> Get more coins</button>
                   <% end %>
               <% else %>
                 <%= link_to "Pay out", new_transaction_path(value: item.cost), class: "btn btn-medium-light"  %>
