@@ -191,7 +191,7 @@ games = [
       card_image_url: "https://cdn2.unrealengine.com/Fortnite%2Fbattle-royale%2Fseason6-social-1920x1080-0a72ec2f35dfe5be6cf8a77ec16063cca4db7046.jpg",
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/0/0e/FortniteLogo.svg",
       currency_image_url: 'https://pbs.twimg.com/media/DsImRImU0AASOXf.png:large',
-      banner_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552389607/fortnite_banner_big2.jpg",
+      banner_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552488532/fortnite_banner_big2_nologo.jpg",
       game_character_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552059687/gemjcanrjsjlk3mvrg7y.png",
       premium_item_image_url: "https://gamepedia.cursecdn.com/fortnite_gamepedia/9/96/Treasure_chest_%28tier_1%29.png",
       shopping_cart_image_url: "https://gamepedia.cursecdn.com/fortnite_gamepedia/0/08/Shopping_cart_icon.png",
@@ -299,7 +299,7 @@ users = [
       admin: false
     },
     urls: {
-
+      profile_image_url: 'https://www.shareicon.net/data/128x128/2016/08/05/807310_gaming_512x512.png'
     }
   },
   {
@@ -444,8 +444,8 @@ User.all.each do |user|
         user_commission_share_perc: 0,
         user_commission_amount_cents: 150,
         eur_currency_rate: 100,
-        transaction_confirmed_date: Date.strptime('03-12-2018', '%d-%m-%Y'),
-        transaction_completed_date: Date.strptime('04-12-2018', '%d-%m-%Y'),
+        transaction_confirmed_date: DateTime.strptime('03-12-2018T04:05:06+01:00', '%d-%m-%YT%H%M:%S%z'),
+        transaction_completed_date: DateTime.strptime('04-12-2018T08:05:06+01:00', '%d-%m-%YT%H%M:%S%z'),
         state: "completed",
         link_used: "#"
       }
@@ -460,8 +460,8 @@ User.all.each do |user|
         user_commission_share_perc: 0,
         user_commission_amount_cents: 200,
         eur_currency_rate: 100,
-        transaction_confirmed_date: Date.strptime('02-01-2019', '%d-%m-%Y'),
-        transaction_completed_date: Date.strptime('15-01-2019', '%d-%m-%Y'),
+        transaction_confirmed_date: Date.strptime('02-01-2019T12:35:07+01:00', '%d-%m-%YT%H%M:%S%z'),
+        transaction_completed_date: Date.strptime('15-01-2019T14:26:06+01:00', '%d-%m-%YT%H%M:%S%z'),
         state: "completed",
         link_used: "#"
       }
@@ -492,8 +492,8 @@ User.all.each do |user|
         user_commission_share_perc: 5,
         user_commission_amount_cents: 1000,
         eur_currency_rate: 100,
-        transaction_confirmed_date: Date.strptime('01-01-2019', '%d-%m-%Y'),
-        transaction_completed_date: Date.strptime('01-01-2019', '%d-%m-%Y'),
+        transaction_confirmed_date: Date.strptime('01-01-2019T10:23:06+01:00', '%d-%m-%YT%H%M:%S%z'),
+        transaction_completed_date: Date.strptime('01-01-2019T11:48:06+01:00', '%d-%m-%YT%H%M:%S%z'),
         state: "completed",
         link_used: "#",
         partner: Partner.first
@@ -509,8 +509,8 @@ User.all.each do |user|
         user_commission_share_perc: 5,
         user_commission_amount_cents: 200,
         eur_currency_rate: 100,
-        transaction_confirmed_date: Date.strptime('12-02-2019', '%d-%m-%Y'),
-        transaction_completed_date: Date.strptime('15-02-2019', '%d-%m-%Y'),
+        transaction_confirmed_date: Date.strptime('12-02-2019T18:09:06+01:00', '%d-%m-%YT%H%M:%S%z'),
+        transaction_completed_date: Date.strptime('15-02-2019T22:07:06+01:00', '%d-%m-%YT%H%M:%S%z'),
         state: "completed",
         link_used: "#",
         partner: Partner.second
