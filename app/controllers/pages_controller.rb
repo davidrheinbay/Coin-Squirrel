@@ -2,18 +2,19 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :imprint, :terms, :data_protection, :about]
 
   def home
-
     @partners = Partner.where("name != ? and card_image IS NOT NULL", "CoinSquirrel")
     @games = search_games
-
     if user_signed_in? == true
       @game = Game.find(current_user.game.id)
+    elsif params[:game].nil?
+      @game = Game.find_by_name('Fortnite')
     else
-      if params[:game].nil?
-        @game = Game.find_by_name('Fortnite')
-      else
-        @game = Game.find(params[:game])
+      # POTENTIAL ERROR IN RESPOND TO FORMAT AND POSITION
+      respond_to do |format|
+        format.html
+        format.js
       end
+      @game = Game.find(params[:game])
     end
   end
 
