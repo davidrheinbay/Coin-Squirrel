@@ -444,8 +444,8 @@ User.all.each do |user|
         user_commission_share_perc: 0,
         user_commission_amount_cents: 150,
         eur_currency_rate: 100,
-        transaction_confirmed_date: DateTime.strptime('03-12-2018T04:05:06+01:00', '%d-%m-%YT%H%M:%S%z'),
-        transaction_completed_date: DateTime.strptime('04-12-2018T08:05:06+01:00', '%d-%m-%YT%H%M:%S%z'),
+        transaction_confirmed_date: DateTime.strptime('03-12-2018T04:05:06+01:00', '%d-%m-%YT%H:%M:%S%z'),
+        transaction_completed_date: DateTime.strptime('04-12-2018T08:05:06+01:00', '%d-%m-%YT%H:%M:%S%z'),
         state: "completed",
         link_used: "#"
       }
@@ -460,8 +460,8 @@ User.all.each do |user|
         user_commission_share_perc: 0,
         user_commission_amount_cents: 200,
         eur_currency_rate: 100,
-        transaction_confirmed_date: Date.strptime('02-01-2019T12:35:07+01:00', '%d-%m-%YT%H%M:%S%z'),
-        transaction_completed_date: Date.strptime('15-01-2019T14:26:06+01:00', '%d-%m-%YT%H%M:%S%z'),
+        transaction_confirmed_date: Date.strptime('02-01-2019T12:35:07+01:00', '%d-%m-%YT%H:%M:%S%z'),
+        transaction_completed_date: Date.strptime('15-01-2019T14:26:06+01:00', '%d-%m-%YT%H:%M:%S%z'),
         state: "completed",
         link_used: "#"
       }
@@ -492,8 +492,8 @@ User.all.each do |user|
         user_commission_share_perc: 5,
         user_commission_amount_cents: 1000,
         eur_currency_rate: 100,
-        transaction_confirmed_date: Date.strptime('01-01-2019T10:23:06+01:00', '%d-%m-%YT%H%M:%S%z'),
-        transaction_completed_date: Date.strptime('01-01-2019T11:48:06+01:00', '%d-%m-%YT%H%M:%S%z'),
+        transaction_confirmed_date: Date.strptime('01-01-2019T10:23:06+01:00', '%d-%m-%YT%H:%M:%S%z'),
+        transaction_completed_date: Date.strptime('01-01-2019T11:48:06+01:00', '%d-%m-%YT%H:%M:%S%z'),
         state: "completed",
         link_used: "#",
         partner: Partner.first
@@ -509,8 +509,8 @@ User.all.each do |user|
         user_commission_share_perc: 5,
         user_commission_amount_cents: 200,
         eur_currency_rate: 100,
-        transaction_confirmed_date: Date.strptime('12-02-2019T18:09:06+01:00', '%d-%m-%YT%H%M:%S%z'),
-        transaction_completed_date: Date.strptime('15-02-2019T22:07:06+01:00', '%d-%m-%YT%H%M:%S%z'),
+        transaction_confirmed_date: Date.strptime('12-02-2019T18:09:06+01:00', '%d-%m-%YT%H:%M:%S%z'),
+        transaction_completed_date: Date.strptime('15-02-2019T22:07:06+01:00', '%d-%m-%YT%H:%M:%S%z'),
         state: "completed",
         link_used: "#",
         partner: Partner.second
