@@ -1,10 +1,16 @@
 <div class="transaction-card">
 
+  <% if transaction.is_new %>
+    <span class="new-tag">New</span>
+    <% transaction.is_new = false %>
+    <% transaction.save %>
+  <% end %>
+
+
   <div class="status <%= transaction.state %>">
     <h3  class="hidden"><%= transaction.state.capitalize %></h3>
   </div>
   <div class="card-body card-shadow-light">
-    <%#= cl_image_tag Partner.find_by_id(transaction.partner_id).logo_image, class:"transaction-image" %>
 
     <span>
       <h3><%= Partner.find_by_id(transaction.partner_id).name %></h3>
@@ -12,7 +18,7 @@
     </span>
 
     <h3 class="transaction-amount cash-in">
-      <% amount =  transaction.user_commission_amount_cents.to_i  * current_user.game.exchange_rates.where(currency_origin_short: "EUR").first.rate / 100 %>
+      <% amount =  transaction.user_commission_amount_cents.to_i  * transaction.eur_currency_rate / 100 %>
       + <%= number_with_precision(amount, precision: 0, delimiter: ',') %> <%= transaction.game.currency_short %>
     </h3>
 

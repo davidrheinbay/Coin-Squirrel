@@ -5,6 +5,9 @@
     <% else %>
       <div class="status yellow"></div>
     <% end %>
+    <% if transaction.is_new %>
+      <span class="new-tag new-<%= transaction.id %>">New</span>
+    <% end %>
     <span class="details">
       <h3><%= transaction.game.name %></h3>
       <p> <%= transaction.transaction_confirmed_date.strftime("at %H:%M %d.%m.%Y") %> </p>

@@ -1,18 +1,24 @@
 
 <% if first %>
-  <div class="recent_payout_details button-detail-pair-<%= transaction.id %>">
+  <div class="recent_payout_details card-shadow-light button-detail-pair-<%= transaction.id %>">
 <% else %>
-  <div class="recent_payout_details button-detail-pair-<%= transaction.id %> hidden">
+  <div class="recent_payout_details card-shadow-light button-detail-pair-<%= transaction.id %> hidden">
 <% end %>
   <% if transaction.state == 'completed' %>
     <span class="status green"><%= transaction.state %></span>
+  <p>You have used your code already.</p>
+  <p>Make another payout to get another one.</p>
   <% else %>
     <span class="status yellow"><%= transaction.state %></span>
   <% end %>
+
+
   <div class="full-code">
-    <p><%= transaction.game_code %></p>
+    <p class="full-code-copy"><%= transaction.game_code %></p>
     <button class="copy-code"><i class="fas fa-paperclip"></i></button>
   </div>
-  <p class="full-code"><%= transaction.game_code %></p>
-  <button class="code">Your Code</button>
+  <a href="#">
+    <button class="btn-medium-light code">Show code</button>
+  </a>
+
 </div>

@@ -181,7 +181,7 @@
   min-height: 50px;
   margin-top: -20px;
   color: white;
-  box-shadow: 0 1px 1px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.33);
 
 
   h1 {
@@ -233,8 +233,7 @@
   min-height: 50px;
   margin-top: -20px;
   color: $yellow;
-  box-shadow: 0 1px 1px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.33);
 
   h1 {
     font-size: 20px;

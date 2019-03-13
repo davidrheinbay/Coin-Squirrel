@@ -1,91 +1,94 @@
 <div class="wrapper">
   <div class="container">
-    <div class="description">
+    <div class="section">
+      <div class="description">
 
-      <h2>The Next Steps</h1>
-      <br>
+        <h2>The Next Steps</h1>
 
-      <div class="how-works">
-        <div class="row">
+        <div class="how-works">
+          <div class="row">
 
-          <div class="col-sm-4 col-md-2 col-md-offset-1 how-it-works-card-small first-card">
-            <div class="how-it-works-number-small">
-              <h1>1</h1>
+            <div class="col-sm-4 col-md-2 col-md-offset-1 how-it-works-card-small first-card">
+              <div class="how-it-works-number-small">
+                <h1>1</h1>
+              </div>
+              <div class="body">
+                <p>Browse our partner shops and buy click on "Go to Shop"</p>
+              </div>
             </div>
-            <div class="body">
-              <p>Browse our partner shops and buy click on "Go to Shop"</p>
-            </div>
-          </div>
 
-          <div class=" col-sm-4 col-md-2 how-it-works-card-small">
-            <div class="how-it-works-number-small">
-              <h1>2</h1>
+            <div class=" col-sm-4 col-md-2 how-it-works-card-small">
+              <div class="how-it-works-number-small">
+                <h1>2</h1>
+              </div>
+              <div class="body">
+                <p>Buy something online and get ingame currency for every purchase</p>
+              </div>
             </div>
-            <div class="body">
-              <p>Buy something online and get ingame currency for every purchase</p>
-            </div>
-          </div>
 
-          <div class="col-sm-4 col-md-2 how-it-works-card-small">
-            <div class="how-it-works-number-small">
-              <h1>3</h1>
+            <div class="col-sm-4 col-md-2 how-it-works-card-small">
+              <div class="how-it-works-number-small">
+                <h1>3</h1>
+              </div>
+              <div class="body">
+                <p>Convert your collected coins into a voucher</p>
+              </div>
             </div>
-            <div class="body">
-              <p>Convert your collected coins into a voucher</p>
-            </div>
-          </div>
 
-          <div class="col-sm-4 col-md-2 how-it-works-card-small">
-            <div class="how-it-works-number-small">
-              <h1>4</h1>
+            <div class="col-sm-4 col-md-2 how-it-works-card-small">
+              <div class="how-it-works-number-small">
+                <h1>4</h1>
+              </div>
+              <div class="body">
+                <p>Earn coins for every purchase you make and save for your favorite item</p>
+              </div>
             </div>
-            <div class="body">
-              <p>Earn coins for every purchase you make and save for your favorite item</p>
-            </div>
-          </div>
 
-          <div class="col-sm-4 col-md-2 how-it-works-card-last-small">
-            <div class="how-it-works-number-last-small">
-              <h1>5</h1>
-            </div>
-            <div class="body">
-            <p>Pay out your coins and start getting in-game items for free</p>
+            <div class="col-sm-4 col-md-2 how-it-works-card-last-small">
+              <div class="how-it-works-number-last-small">
+                <h1>5</h1>
+              </div>
+              <div class="body">
+              <p>Pay out your coins and start getting in-game items for free</p>
+              </div>
             </div>
           </div>
         </div>
+
+        <br>
+
+        <%= form_tag partners_path, class:"form-inline",method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find Your Shop" %>
+          <%= submit_tag "Search", class:"btn btn-medium-solid" %>
+        <% end %>
       </div>
-
-      <br>
-
-      <%= form_tag partners_path, class:"form-inline",method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find Your Shop" %>
-        <%= submit_tag "Search", class:"btn btn-medium-solid" %>
-      <% end %>
     </div>
   </div>
 
 
   <div class="background-card card-shadow-strong card-tmm-60 shop-card">
-    <% if current_user.admin? %>
-    <h2>New Partners (please complete)</h2>
-    <div class="row">
-       <% @new_partners.each do |partner| %>
-        <div class="col-xs-6 col-sm-4 col-md-3 card-parent" data-id="<%= partner.id %>">
-          <%= render 'components/partner_card', partner: partner %>
-        </div>
+    <div class="section">
+      <% if current_user.admin? %>
+      <h2>New Partners (please complete)</h2>
+      <div class="row">
+         <% @new_partners.each do |partner| %>
+          <div class="col-xs-6 col-sm-4 col-md-3 card-parent" data-id="<%= partner.id %>">
+            <%= render 'components/partner_card', partner: partner %>
+          </div>
+        <% end %>
+      </div>
       <% end %>
-    </div>
-    <% end %>
-    <h2>Our Partners</h2>
-    <div class="row">
-      <% @partners.each do |partner| %>
-        <div class="col-xs-6 col-sm-4 col-md-3 card-parent" data-id="<%= partner.id %>">
-          <%= render 'components/partner_card', partner: partner %>
-        </div>
-      <% end %>
+      <h2>Our Partners</h2>
+      <div class="row">
+        <% @partners.each do |partner| %>
+          <div class="col-xs-6 col-sm-4 col-md-3 card-parent" data-id="<%= partner.id %>">
+            <%= render 'components/partner_card', partner: partner %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

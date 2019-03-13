@@ -19,7 +19,7 @@ const copyLink = () => {
   let copyEmailBtn = document.querySelector('.copy-code');
   copyEmailBtn.addEventListener('click', function(event) {
     // Select the email link anchor text
-    let emailLink = document.querySelector('.full-code');
+    let emailLink = document.querySelector('.full-code-copy');
     let range = document.createRange();
     range.selectNode(emailLink);
     window.getSelection().addRange(range);
