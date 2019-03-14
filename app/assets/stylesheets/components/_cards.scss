@@ -414,6 +414,7 @@ button:focus {
   margin-bottom: 30px;
   text-decoration: none;
   position: relative;
+
   p {
     color: $dark-grey;
   }
@@ -442,6 +443,7 @@ button:focus {
 }
 
 .offer-tag {
+  font-size: 14px;
   position: absolute;
   z-index: 10;
   border-radius: 7px 0px 0px 0px;
@@ -497,6 +499,56 @@ button:focus {
     border-radius: 5px;
     align-items: center;
     justify-content: space-around;
+
+    h2 {
+      font-size: 30px;
+    }
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .card-foot {
+    padding: 0 20px 20px 20px;
+    text-align: center;
+
+    p {
+      font-size: 14px;
+      color: #BABABA;
+    }
+  }
+}
+
+// Payout card
+
+.payout-card {
+  margin: 20px 0;
+  border-radius: 5px;
+  background-color: #fff;
+
+  p {
+    margin-left: 65px;
+  }
+
+  .input-group-text {
+    font-size: 40px;
+  }
+
+  .form-controll {
+    font-size: 40px;
+  }
+
+  .form-group {
+    margin: 0 0 5px 0;
+  }
+
+  .card-head {
+    text-align: center;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 5px;
 
     h2 {
       font-size: 30px;
