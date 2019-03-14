@@ -1,0 +1,10 @@
+
+var changeImage = () => {
+  const checkmark = '<%= j render "checkmark" %>'
+  const payoutCard = document.querySelector('.payout-card')
+  payoutCard.innerHTML = checkmark
+}
+
+changeImage()
+window.location.href = "/"
+// window.setTimeout(() => { window.location.href = "/" }, 500)
