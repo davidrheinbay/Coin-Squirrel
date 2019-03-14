@@ -384,6 +384,7 @@
   margin-bottom: 30px;
   text-decoration: none;
   position: relative;
+
   p {
     color: $dark-grey;
   }
@@ -412,6 +413,7 @@
 }
 
 .offer-tag {
+  font-size: 14px;
   position: absolute;
   z-index: 10;
   border-radius: 7px 0px 0px 0px;
