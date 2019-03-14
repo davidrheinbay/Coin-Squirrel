@@ -294,7 +294,7 @@ users = [
       email: "david@coinsquirrel.de",
       password: "Coin2019!",
       game: Game.first,
-      balance_cents: 2525,
+      balance_cents: 800,
       balance_currency: "EUR",
       admin: false
     },
