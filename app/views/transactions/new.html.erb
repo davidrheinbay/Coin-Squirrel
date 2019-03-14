@@ -13,7 +13,7 @@
           <div class="card-body">
             <% amount =  current_user.balance * current_user.game.exchange_rates.where(currency_origin_short: "EUR").first.rate %>
 
-            <%= form_for(@transaction) do |f| %>
+            <%= form_for @transaction, remote: true do |f| %>
 
              <div class="form-group row">
                 <div class="input-group-prepend">

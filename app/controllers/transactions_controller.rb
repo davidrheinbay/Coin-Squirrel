@@ -26,7 +26,7 @@ class TransactionsController < ApplicationController
         if @transaction.save
           current_user.balance_cents -= @transaction.user_commission_amount_cents
           current_user.save
-          redirect_to transactions_path
+          # redirect_to transactions_path
         else
           render :new
         end
