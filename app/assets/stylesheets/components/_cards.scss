@@ -136,7 +136,6 @@ button:focus {
     }
 
     .transaction-amount {
-      width: 70px;
       text-align: right;
       margin-right: 30px;
     }
@@ -341,12 +340,13 @@ button:focus {
   }
 
   button {
-    margin-top: 5px;
+    margin-top: -15px;
     border: none;
     background-color: rgba(0,0,0,0);
     height: 20px;
     position: relative;
     text-align: center;
+    font-size: 25px;
 
     .my-tooltip-wrapper {
 
