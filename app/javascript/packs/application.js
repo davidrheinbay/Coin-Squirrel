@@ -4,7 +4,7 @@ import { previewImageOnFileSelect } from 'photo-upload-preview/photo_upload_prev
 import { copyTooltips, showTransactionDetails, turnArrow, hoverDetails } from 'pages/transaction';
 import { cardUnlocked } from 'packs/store';
 import { showPayoutCode } from 'packs/recent_payouts'
-import { copyLink } from 'packs/recent_payouts'
+import { copyLink, selector } from 'packs/recent_payouts'
 import { payoutHover } from 'components/navbar'
 
 
@@ -17,3 +17,4 @@ showPayoutCode();
 copyLink();
 payoutHover();
 copyTooltips();
+selector();
