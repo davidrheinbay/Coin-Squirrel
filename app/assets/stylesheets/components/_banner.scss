@@ -190,14 +190,15 @@
     position: relative;
 
     .cta {
-      width: 270px;
-      background-color: $yellow;
+      min-width: 200px;
+      background-color: #F6C535;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       padding: 12px 20px;
       margin-right: 10px;
       color: white;
+      text-align: center;
+      justify-content: space-around;
     }
 
     .cta:hover {
