@@ -191,7 +191,7 @@ games = [
       card_image_url: "https://cdn2.unrealengine.com/Fortnite%2Fbattle-royale%2Fseason6-social-1920x1080-0a72ec2f35dfe5be6cf8a77ec16063cca4db7046.jpg",
       logo_image_url: "https://upload.wikimedia.org/wikipedia/commons/0/0e/FortniteLogo.svg",
       currency_image_url: 'https://pbs.twimg.com/media/DsImRImU0AASOXf.png:large',
-      banner_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552575015/p6qc8uzywvpdufxkvyjy.jpg",
+      banner_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552582980/uqm5b1mc21ppvch6crq8.jpg",
       game_character_image_url: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552059687/gemjcanrjsjlk3mvrg7y.png",
       premium_item_image_url: "https://gamepedia.cursecdn.com/fortnite_gamepedia/9/96/Treasure_chest_%28tier_1%29.png",
       shopping_cart_image_url: "https://gamepedia.cursecdn.com/fortnite_gamepedia/0/08/Shopping_cart_icon.png",
