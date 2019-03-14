@@ -28,15 +28,15 @@
         <% end %>
         <div class="steps hidden card-shadow-medium">
           <div class="first-step">
-            <p>1.</p>
-            <p>Choose one of our partner shops from the overview</p>
+            <div class="circle-sm card-shadow-light">1</div>
+            <p style="width: 255px;" >Choose a partner shop from the overview</p>
           </div>
           <div class="second-step">
-            <p>2.</p>
+            <div class="circle-sm card-shadow-light">2</div>
             <p>Buy a product you like</p>
           </div>
           <div class="third-step">
-            <p>3.</p>
+            <div class="circle-sm card-shadow-light">3</div>
             <p>Earn coins for every euro spent</p>
           </div>
         </div>
@@ -59,8 +59,10 @@
 
     <div class="recent-payouts-wrapper">
       <div class="col-xs-6">
+        <% first = true %>
         <% @transactions.where(transaction_type: 'cash_out').order('transaction_confirmed_date DESC').limit(3).to_a.each do |transaction| %>
-        <%= render 'components/recent_payouts', transaction: transaction %>
+        <%= render 'components/recent_payouts', transaction: transaction, first: first  %>
+        <% first =false %>
         <% end %>
       </div>
       <div class="col-xs-6 recent-payouts-details-wrapper">
