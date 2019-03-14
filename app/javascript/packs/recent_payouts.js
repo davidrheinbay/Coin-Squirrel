@@ -2,8 +2,16 @@
 const listener = (card) => {
   const button = card.querySelector('.code')
   const fullCode = card.querySelector('.full-code')
+  const text = card.querySelector(".click-below")
   button.addEventListener('click', (event) => {
     fullCode.classList.toggle('full-code-uncover')
+    if (text != null) {
+      if (text.innerText.includes('reveal')) {
+        text.innerText = "Use this code in your game"
+      } else {
+        text.innerText = "Click below to reveal your code"
+      }
+    }
     event.preventDefault()
   })
 }
@@ -38,5 +46,20 @@ const copyLink = () => {
 
 }
 
+
+const selector = () => {
+  const buttons = document.querySelectorAll('.recent-payouts')
+  buttons.forEach(function (button) {
+    button.addEventListener('click', (event) => {
+    const selected = document.querySelector('.selected')
+    if (selected != null) {
+    selected.classList.remove('selected')
+    }
+    event.currentTarget.classList.toggle('selected')
+  });
+  })
+}
+
 export { showPayoutCode };
 export { copyLink };
+export { selector };

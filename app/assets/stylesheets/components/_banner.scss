@@ -190,20 +190,24 @@
     position: relative;
 
     .cta {
-      width: 270px;
-      background-color: $yellow;
+      min-width: 200px;
+      background-color: #F6C535;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       padding: 12px 20px;
       margin-right: 10px;
       color: white;
+      text-align: center;
+      justify-content: space-around;
     }
 
     .cta:hover {
       background-color: $dark-yellow;
       color: $light-grey;
       box-shadow: 1px 1px 2px rgba(0,0,0,.2);
+    }
+    .cta:focus {
+      outline: none;
     }
 
     .steps {
@@ -213,10 +217,11 @@
       z-index: 99;
       background-color: #fff;
       color: $dark-grey;
-      padding: 10px;
+      padding: 30px 25px 18px 30px;
       border-radius: 5px;
       transition-timing-function: ease-in-out;
       transition-duration: 0.5s;
+      border: 1px solid $yellow;
       .first-step {
         display: flex;
       }
@@ -229,6 +234,16 @@
       p {
         padding-right: 10px;
       }
+    }
+
+    .circle-sm {
+      text-align: center;
+      height: 25px;
+      width: 25px;
+      margin-right: 10px;
+      border-radius: 50%;
+      background-color: $yellow;
+      font-weight: bold;
     }
 
     .payout {
@@ -285,19 +300,19 @@
   filter: grayscale(100%);
 
 }
-  .error-content {
-    position: absolute;
-    top: 30vh;
-    left: 10vh;
-    width: 300px;
-    h1 {
-      color: $yellow;
-    }
-
-    h2 {
-      color: $yellow;
-    }
+.error-content {
+  position: absolute;
+  top: 30vh;
+  left: 10vh;
+  width: 300px;
+  h1 {
+    color: $yellow;
   }
+
+  h2 {
+    color: $yellow;
+  }
+}
 
 
 
