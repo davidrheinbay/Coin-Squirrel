@@ -16,7 +16,7 @@
       </li>
       <li>
         <%= link_to transactions_path do %>
-        <%= t(".profile", default: "Account Overview") %>
+        <%= t(".profile", default: "Dashboard") %>
         <% end %>
       </li>
       <li>
@@ -45,9 +45,6 @@
       <li role="separator" class="divider"></li>
       <li>
         <p>Profile</p>
-      </li>
-      <li>
-        <%= link_to "Profile", "#" %>
       </li>
       <li>
         <%= link_to "Log out", destroy_user_session_path, method: :delete %>
