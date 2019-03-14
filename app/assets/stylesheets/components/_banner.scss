@@ -205,6 +205,9 @@
       color: $light-grey;
       box-shadow: 1px 1px 2px rgba(0,0,0,.2);
     }
+    .cta:focus {
+      outline: none;
+    }
 
     .steps {
       position: absolute;
@@ -285,19 +288,19 @@
   filter: grayscale(100%);
 
 }
-  .error-content {
-    position: absolute;
-    top: 30vh;
-    left: 10vh;
-    width: 300px;
-    h1 {
-      color: $yellow;
-    }
-
-    h2 {
-      color: $yellow;
-    }
+.error-content {
+  position: absolute;
+  top: 30vh;
+  left: 10vh;
+  width: 300px;
+  h1 {
+    color: $yellow;
   }
+
+  h2 {
+    color: $yellow;
+  }
+}
 
 
 
