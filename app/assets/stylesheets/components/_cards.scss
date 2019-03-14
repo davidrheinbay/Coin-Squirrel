@@ -351,10 +351,10 @@ button:focus {
 
     .my-tooltip-wrapper {
 
-      width: 100%;
+      width: 70%;
       position: absolute;
       top: 0;
-      left: calc(100% - 30px);
+      left: calc(100% + 20px);
       .my-tooltip {
         padding: 5px 10px;
         background-color: $dark-grey;
