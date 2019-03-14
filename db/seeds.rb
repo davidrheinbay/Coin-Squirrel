@@ -61,7 +61,7 @@ partners = [
       name: "CarDelMar",
       company_entity_name: "Ferienautovermietung GmbH",
       commission_perc: 8,
-      user_commission_perc: 4,
+      user_commission_perc: 8,
       referral_link: "http://www.awin1.com/awclick.php?mid=9120&id=575543",
       tags: ['rental', 'auto', 'vermietung', 'mieten', 'Mietwagen'],
       awin_advertiser_id: "9120"
