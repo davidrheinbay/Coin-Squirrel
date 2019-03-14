@@ -1,4 +1,8 @@
 // Card Properties -------------------------------------------------------------
+// removes the blue border around focused buttons
+button:focus {
+  outline: none;
+}
 
 // Box Shadow
 .card-shadow-strong {
@@ -351,6 +355,7 @@
       }
     }
   }
+
   button:focus {
     outline: 0;
   }
@@ -365,6 +370,24 @@
 
 .full-code-uncover {
   display: flex;
+}
+
+// code in the transactionshistory
+.full-code.full-code-body {
+  height: 20px;
+  margin: 0 auto 0 0;
+  justify-content: flex-start;
+
+  .your-code-description {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    background-color: rgba(0,0,0,0);
+    height: 20px;
+    span {
+      padding-top: 5px;
+    }
+  }
 }
 
 // Partner Card

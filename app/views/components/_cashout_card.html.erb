@@ -28,7 +28,19 @@
 
 <div class="collapse" id="<%= transaction.id %>">
   <div class="well">
-    <%= link_to "Your Code" ,transaction.link_used  %>
+    <div class="full-code full-code-uncover full-code-body">
+      <span class="your-code-description">
+        <span>Code: </span>
+      </span>
+      <button type= "button" class="copy-code tooltip-wrapper" title="copy">
+        <span class="copyable">
+          <span class="full-code-copy"><strong><%= transaction.game_code %></strong></span>
+          <i class="far fa-copy"></i>
+        </span>
+        <span class="my-tooltip-wrapper"><span class="tooltip-hover my-tooltip hidden">Copy Code</span></span>
+        <span class="my-tooltip-wrapper"><span class="tooltip-click my-tooltip hidden">Copied!</span></span>
+      </button>
+    </div>
   </div>
 </div>
 
