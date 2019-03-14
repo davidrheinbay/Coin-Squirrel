@@ -40,8 +40,8 @@
             <p>Earn coins for every euro spent</p>
           </div>
         </div>
-        <%= link_to new_transaction_path do  %>
-        <button class="btn-medium-light">Pay out</button>
+        <%= link_to game_path(current_user.game) do  %>
+        <button class="btn-medium-light">Buy items</button>
         <% end %>
         </div>
       </div>
