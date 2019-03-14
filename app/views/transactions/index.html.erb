@@ -95,6 +95,11 @@
     </div>
 
     <% end %>
+    <% if @transactions.blank? %>
+      <div class="col-xs-12 space-holder-large">
+        <p>You have no transactions yet. Go shopping to earn coins.</p>
+      </div>
+    <% end %>
     <div class="col-xs-12 space-holder"></div>
     <div class="col-xs-12 space-holder"></div>
   </div>
