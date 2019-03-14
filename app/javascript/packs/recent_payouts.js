@@ -17,12 +17,12 @@ const showPayoutCode = () => {
 }
 const copyLink = () => {
   if (document.querySelector('.copy-code')) {
-    let copyEmailBtn = document.querySelector('.copy-code');
-    copyEmailBtn.addEventListener('click', function(event) {
+    let copyCodeBtn = document.querySelector('.copy-code');
+    copyCodeBtn.addEventListener('click', function(event) {
 
-      let emailLink = document.querySelector('.full-code-copy');
+      let code = document.querySelector('.full-code-copy');
       let range = document.createRange();
-      range.selectNode(emailLink);
+      range.selectNode(code);
       window.getSelection().addRange(range);
 
       try {
