@@ -56,7 +56,7 @@ class TransactionsController < ApplicationController
     transaction.game_id = game.id
     transaction.transaction_confirmed_date = DateTime.now
     transaction.eur_currency_rate = ExchangeRate.where("game_id = ? AND currency_origin_short = ? AND created_at < ?", game, 'EUR', DateTime.now).last.rate
-    transaction.user_commission_amount_cents = (transaction.user_commission_amount_cents.to_f / transaction.eur_currency_rate.to_f * 100.to_f).round(0).to_i
+    transaction.user_commission_amount_cents = (transaction.user_commission_amount_cents.to_f / transaction.eur_currency_rate.to_f * 100.to_f).to_i
 
     transaction.user_commission_amount_currency = 'EUR'
 
