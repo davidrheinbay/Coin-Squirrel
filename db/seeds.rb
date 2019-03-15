@@ -237,6 +237,7 @@ games = [
 ]
 
 
+
 games.each do |game|
   gameDB = Game.new(game[:data])
   gameDB.remote_card_image_url = game[:urls][:card_image_url]
