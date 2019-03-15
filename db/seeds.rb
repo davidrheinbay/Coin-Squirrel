@@ -227,9 +227,9 @@ games = [
       card_image_url: 'https://es.me/wp-content/uploads/2019/01/Dota-2-esports-empire-play.jpg',
       logo_image_url: 'https://steamuserimages-a.akamaihd.net/ugc/577865573024972042/BE1429F2D32F1ECB9123A3AA9D9FE2AC61BC4F3E/',
       currency_image_url: 'https://res.cloudinary.com/dmr1qubzk/image/upload/v1552305072/dota2.png',
-      banner_image_url: 'https://res.cloudinary.com/dmr1qubzk/image/upload/v1552462886/dota_banner_big_cropped.jpg',
+      banner_image_url: 'https://res.cloudinary.com/dmr1qubzk/image/upload/v1552639991/ewaiwx8kyjectitzshcm-compressor.jpg',
       game_character_image_url: 'https://gamepedia.cursecdn.com/dota2_gamepedia/thumb/3/31/Dota_Heroes.png/300px-Dota_Heroes.png?version=fe57923c5e34e392f524a291e1b94e41',
-      premium_item_image_url: 'https://res.cloudinary.com/dmr1qubzk/image/upload/v1552402212/qnjfi9hp0pm2zmtpgtzf.png',
+      premium_item_image_url: 'https://res.cloudinary.com/dmr1qubzk/image/upload/v1552586295/bzauc6wfkel2oecovhdr.png',
       shopping_cart_image_url: 'https://gamepedia.cursecdn.com/fortnite_gamepedia/0/08/Shopping_cart_icon.png',
       store_image: "https://res.cloudinary.com/dmr1qubzk/image/upload/v1552322816/dota-store-header.jpg"
     }
