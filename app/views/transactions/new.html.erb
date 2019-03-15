@@ -11,7 +11,7 @@
           </div>
 
           <div class="card-body">
-            <% amount =  current_user.balance * current_user.game.exchange_rates.where(currency_origin_short: "EUR").first.rate %>
+            <% amount =  (current_user.balance_cents * current_user.game.exchange_rates.where(currency_origin_short: "EUR").first.rate / 100).round(0) %>
 
             <%= form_for @transaction, remote: true do |f| %>
 

@@ -1,4 +1,4 @@
-<% amount = current_user.balance * current_user.game.exchange_rates.where(currency_origin_short: "EUR").last.rate %>
+<% amount = (current_user.balance_cents * current_user.game.exchange_rates.where(currency_origin_short: "EUR").last.rate / 100).round(0) %>
 
 <div class="navbar-wagon-item">
   <div class="dropdown">
