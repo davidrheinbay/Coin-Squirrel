@@ -98,7 +98,6 @@ button:focus {
     align-items: center;
     border-bottom: 1px solid rgba(0,0,0,.1);
 
-
     span {
       flex: 1 1 auto;
       margin-left: 20px;
@@ -159,6 +158,7 @@ button:focus {
     padding: 0px 0 5px 0;
     // font-weight: bolder;
     margin: 0px;
+    font-family: "Roboto", "Helventica", "sans-serif";
   }
 
   p {
@@ -256,6 +256,7 @@ button:focus {
     padding: 0px 0 5px 0;
     font-weight: bolder;
     margin: 0px;
+    font-family: "Roboto", "Helventica", "sans-serif";
     }
 
     p {
