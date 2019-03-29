@@ -6,7 +6,7 @@ class PartnerPolicy < ApplicationPolicy
 
   class Scope < Scope
     def resolve
-      scope.where("name != ?", "CoinSquirrel")
+      scope.where("name != ? and deleted = false", "CoinSquirrel")
     end
   end
 
@@ -23,6 +23,10 @@ class PartnerPolicy < ApplicationPolicy
   end
 
   def update?
+    user.admin?
+  end
+
+  def destroy?
     user.admin?
   end
 end
