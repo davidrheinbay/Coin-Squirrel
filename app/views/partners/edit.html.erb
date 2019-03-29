@@ -11,18 +11,18 @@
           <%= form_for @partner do |f| %>
           <%#= f.error_notification %>
 
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group row">
-                  <div class="input-group-prepend">
-                    <i class="material-icons"> sms </i>
-                  </div>
-                  <%= f.text_field :name,
-                              class:"form-controll",
-                              placeholder: 'Coin Squirrel DE',
-                              required: true,
-                              autofocus: true,
-                              input_html: { autocomplete: "name" }%>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <div class="input-group-prepend">
+                  <i class="material-icons"> sms </i>
+                </div>
+                <%= f.text_field :name,
+                class:"form-controll",
+                  placeholder: 'Coin Squirrel DE',
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "name" }%>
                 </div>
 
                 <div class="form-group row">
@@ -30,105 +30,110 @@
                     <i class="material-icons"> business </i>
                   </div>
                   <%= f.text_field :company_entity_name,
-                              class:"form-controll",
-                              placeholder: 'Coin Squirrel GmbH',
-                              required: true,
-                              autofocus: true,
-                              input_html: { autocomplete: "company_entity_name" }%>
-                </div>
-
-                <div class="form-group row">
-                  <div class="input-group-prepend">
-                    ID
+                  class:"form-controll",
+                    placeholder: 'Coin Squirrel GmbH',
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "company_entity_name" }%>
                   </div>
-                  <%= f.text_field :awin_advertiser_id,
-                              class:"form-controll",
-                              placeholder: 'ID: 80..',
-                              required: true,
-                              autofocus: true,
-                              input_html: { autocomplete: "awin_advertiser_id" }%>
-                </div>
 
-                <div class="form-group row">
-                  <div class="input-group-prepend">
-                    <i class="material-icons"> category </i>
-                  </div>
-                  <%= f.text_field :tags,
-                              class:"form-controll",
-                              placeholder: 'Tags: car, rental, holiday..',
-                              required: true,
-                              autofocus: true,
-                              input_html: { autocomplete: "tags" }%>
-                </div>
+                  <div class="form-group row">
+                    <div class="input-group-prepend">
+                      ID
+                    </div>
+                    <%= f.text_field :awin_advertiser_id,
+                    class:"form-controll",
+                      placeholder: 'ID: 80..',
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "awin_advertiser_id" }%>
+                    </div>
 
-                <div class="form-group row">
-                  <div class="input-group-prepend">
-                    <i class="material-icons"> local_atm </i>
-                  </div>
-                  <%= f.number_field :commission_perc,
-                              step: 1.0,
-                              class:"form-controll",
-                              placeholder: 'Commission (%): 10.0',
-                              required: true,
-                              autofocus: true,
-                              input_html: { autocomplete: "commission_perc" }%>
-                </div>
+                    <div class="form-group row">
+                      <div class="input-group-prepend">
+                        <i class="material-icons"> category </i>
+                      </div>
+                      <%= f.text_field :tags,
+                      class:"form-controll",
+                        placeholder: 'Tags: car, rental, holiday..',
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "tags" }%>
+                      </div>
 
-                <div class="form-group row">
-                  <div class="input-group-prepend">
-                    <i class="material-icons"> pie_chart </i>
-                  </div>
-                  <%= f.number_field :user_commission_perc,
-                              step: 1.0,
-                              class:"form-controll",
-                              placeholder: 'User Commission (%): 5.0',
-                              required: true,
-                              autofocus: true,
-                              input_html: { autocomplete: "user_commsission_perc" }%>
-                </div>
+                      <div class="form-group row">
+                        <div class="input-group-prepend">
+                          <i class="material-icons"> local_atm </i>
+                        </div>
+                        <%= f.number_field :commission_perc,
+                        step: 1.0,
+                        class:"form-controll",
+                          placeholder: 'Commission (%): 10.0',
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "commission_perc" }%>
+                        </div>
 
-                <div class="form-group row">
-                  <div class="input-group-prepend">
-                    <i class="material-icons"> link </i>
-                  </div>
-                  <%= f.text_field :referral_link,
-                              class:"form-controll",
+                        <div class="form-group row">
+                          <div class="input-group-prepend">
+                            <i class="material-icons"> pie_chart </i>
+                          </div>
+                          <%= f.number_field :user_commission_perc,
+                          step: 1.0,
+                          class:"form-controll",
+                            placeholder: 'User Commission (%): 5.0',
+                            required: true,
+                            autofocus: true,
+                            input_html: { autocomplete: "user_commsission_perc" }%>
+                          </div>
+
+                          <div class="form-group row">
+                            <div class="input-group-prepend">
+                              <i class="material-icons"> link </i>
+                            </div>
+                            <%= f.text_field :referral_link,
+                            class:"form-controll",
                               placeholder: 'Referral Link: https://...',
                               required: true,
                               autofocus: true,
                               input_html: { autocomplete: "referral_link" }%>
-                </div>
+                            </div>
 
-                <div class="form-group row">
+                            <div class="form-group row">
 
-                  <div class="input-group-prepend">Logo Image</div>
-                  <%= f.file_field :logo_image,
-                           class:"form-control-file" %>
+                              <div class="input-group-prepend">Logo Image</div>
+                              <%= f.file_field :logo_image,
+                              class:"form-control-file" %>
 
-                </div>
-            </div>
+                            </div>
+                          </div>
 
-            <div class="col-md-6">
-                <div class="form-group row">
+                          <div class="col-md-6">
+                            <div class="form-group row">
 
-                  <div class="input-group-prepend">Banner Image</div>
-                  <%= f.file_field :card_image,
-                           class:"form-control-file" %>
+                              <div class="input-group-prepend">Banner Image</div>
+                              <%= f.file_field :card_image,
+                              class:"form-control-file" %>
 
-                </div>
-              </div>
-            </div>
+                            </div>
+                          </div>
+                        </div>
 
 
-            <div class="form-actions">
-              <%= f.submit class:"btn btn-medium-solid" %>
-            </div>
-          <% end %>
+                        <div class="form-actions">
+                          <%= f.submit class:"btn btn-medium-solid" %>
+                        </div>
+                        <% end %>
+
+                      <div class="form-delete">
+                        <%= link_to partner_path(@partner), method:"delete", data: {confirm:"Are you sure? This cannot be reverted"} do %>
+                        Delete partner
+                        <% end %>
+                      </div>
           </div>
-
+        </div>
       </div>
     </div>
   </div>
 </div>
-
 
