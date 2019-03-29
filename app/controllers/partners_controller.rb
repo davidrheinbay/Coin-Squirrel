@@ -44,6 +44,17 @@ class PartnersController < ApplicationController
     end
   end
 
+  def destroy
+    @partner = Partner.find(params[:id])
+    authorize @partner
+    @partner.deleted = true
+    if @partner.save
+      redirect_to partners_path
+    else
+      render edit_partners(@partner)
+    end
+  end
+
   private
 
   def partner_params

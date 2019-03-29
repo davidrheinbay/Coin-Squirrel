@@ -9,6 +9,24 @@
   }
 }
 
+.form-delete {
+ margin: 20px 0px 0px 0px;
+ text-align: center;
+ font-size: 14px;
+
+ a {
+  color: red;
+  text-decoration: none;
+  opacity: 0.7;
+ }
+}
+
+.form-delete:hover {
+  a {
+    opacity: 0.9;
+  }
+}
+
 .form-group {
   display: flex;
   margin: 0 0 30px 0;
