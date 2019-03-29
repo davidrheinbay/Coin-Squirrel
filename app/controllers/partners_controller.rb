@@ -49,6 +49,7 @@ class PartnersController < ApplicationController
     authorize @partner
     @partner.deleted = true
     if @partner.save
+      flash[:success] = "Partner deleted!"
       redirect_to partners_path
     else
       render edit_partners(@partner)
